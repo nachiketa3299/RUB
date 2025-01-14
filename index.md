@@ -42,10 +42,13 @@ title: 저를 소개합니다
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wIU7-DIbJHs?si=O6OLzsyhpoMB1-HY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-조용하고 정적인 공간에서 대부분의 플레이가 진행되는 1인칭 시점의 캐릭터 컨트롤러를 구현해야 했습니다. 또한 캐릭터는 기본 이동, 앉기, 걷기 등의 구별 가능한 운동 상태가 존재하였습니다.
+조용하고 정적인 공간에서 대부분의 플레이가 진행되는 1인칭 시점의 캐릭터 컨트롤러를 구현하는 것이 과제였습니다. 기본 이동, 앉기, 걷기 등에 따라 이동의 효과 (카메라 흔들림, 사운드)가 다르게 느껴져야 했습니다.
 
 ![Locomotion System](./Assets/LocomotionSystem.jpg)
 
+아래처럼 옵저버 패턴을 활용하여 컴포넌트간 커플링을 최대한 줄였습니다. 각 컴포넌트는 자신이 관심 있는 이벤트만 구독하면 되고, 이벤트를 발생하는 주체는 누가 자신을 구독하는지 몰라도 상관 없습니다.
+
+또한 Unity에 이미 존재하는 Cinemachine 컴포넌트들을 적극 활용하여 
 
 ---
 
