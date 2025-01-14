@@ -1,4 +1,5 @@
 ---
+layout: home
 title: 저를 소개합니다
 ---
 
