@@ -7,6 +7,14 @@ layout: home
 
 # Verba arma Romana
 
+$$Latex Test$$ how about this?
+
+```mermaid
+graph TD
+	A -> B
+	B -> C
+```
+
 ## In pellis
 
 Lorem markdownum carinae doleres signa. Tua licent ponitur; in non praefixo
