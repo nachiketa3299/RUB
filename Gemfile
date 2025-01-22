@@ -4,6 +4,14 @@ gem "jekyll", "3.10.0"
 # gem "zenburn-please", git: "https://github.com/nachiketa3299/zenburn-please"
 gem "github-pages", group: :jekyll_plugins
 group :jekyll_plugins do
+gem "kramdown"
+gem "kramdown-parser-gfm"
+gem "webrick"
+gem "csv"
+gem "bigdecimal"
+gem "base64"
+gem "logger"
+gem "jekyll-mermaid"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -5,5 +5,24 @@ email: nachiketa3299@gmail.com
 description: >-
   안녕하세요, 게임 개발자 송재민입니다.
 github_username: nachiketa3299
-remote_theme: no-style-please
-# remote_theme: nachiketa3299/zenburn-please
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+sass:
+  sass_dir: _sass
+  style: compressed
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  toc_levels: 1..4
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1

@@ -1,16 +1,9 @@
 ---
 layout: home
-title: resume
+title: Event Idiots Can Make Games
 ---
 
 # 소개
-
-(초안)
-기술과 예술이 가장 적극적으로 만나는 게임이라는 영역에 관심이 많은 테크 + 인문돌이임을 강조
-
-* 이메일 nachiketa3299@gmail.com
-* 깃허브 
-* 블로그 [Even Idiots Can Make Game](https://argien.tistory.com/)
 
 # Available Skills
 
