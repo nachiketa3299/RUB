@@ -5,8 +5,6 @@ title: resume
 
 # 소개
 
-$latex text?$
-
 (초안)
 기술과 예술이 가장 적극적으로 만나는 게임이라는 영역에 관심이 많은 테크 + 인문돌이임을 강조
 
@@ -23,6 +21,7 @@ $latex text?$
 * Vim
 
 # 참여 프로젝트
+
 
 
 ## "Grim Memories" 프로젝트 <sup><i>2024년 9월 ~ 현재</i></sup>
@@ -60,7 +59,7 @@ $latex text?$
 
 예를 들어 이동 상태가 일반(`NormalJog`)에서 앉아 이동(`CrouchedJog`)으로 바뀌면, 캐릭터가 살금 살금 이동한다는 의미이므로 이동 충격(`LocomotionImpulse`)이 발생하는 주기가 길어집니다. 각 이동 충격에는 *발소리 재생*과 *카메라 떨림*이라는 사건이 발생합니다. 
 
-|<iframe width="560" height="315" src="https://www.youtube.com/embed/wIU7-DIbJHs?si=O6OLzsyhpoMB1-HY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>|
+|{::nomarkdown}<iframe width="560" height="315" src="https://www.youtube.com/embed/wIU7-DIbJHs?si=O6OLzsyhpoMB1-HY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>{:/}|
 |:-:|
 |*[영상]각 상태별 이동 충격의 발생을 디버그 모드에서 시각화하는 영상*|
 
@@ -88,7 +87,7 @@ Unity에 구비되어 있는 `Cinemachine` 관련 컴포넌트들을 적극 활�
 
 또한 상호작용 가능한 오브젝트의 다음과 같은 문제를 해결해야 했습니다.
 
-* 상호작용 오브젝트는 $n(n \geq 1)$개의 `MeshRenderer`가 계층 구조를 형성하고 있을 수 있다.
+* 상호작용 오브젝트는 $$n(n \geq 1)$$개의 `MeshRenderer`가 계층 구조를 형성하고 있을 수 있다.
 * 상호작용을 감지하는 콜라이더의 형태는 상호작용 오브젝트의 메쉬의 형태와 관련이 없을 수도 있다.
 * 여러 상호작용 오브젝트들끼리 공유하는 상태가 존재하기는 하지만, 전이하는 상태와 행동이 기본적으로 매우 다르다.
 
@@ -96,7 +95,9 @@ Unity에 구비되어 있는 `Cinemachine` 관련 컴포넌트들을 적극 활�
 |:-:|
 |*[이미지] 상호작용 오브젝트 `GirlsChest`의 예시*|
 
-|<iframe width="560" height="315" src="https://www.youtube.com/embed/jboTbFeA7Ys?si=RhgfaL5SJVG6ItEp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>|
+  
+
+|{::nomarkdown}<iframe width="560" height="315" src="https://www.youtube.com/embed/jboTbFeA7Ys?si=RhgfaL5SJVG6ItEp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>{:/}|
 |:-:|
 |*[영상] 상호작용 시스템*|
 
@@ -111,7 +112,7 @@ Unity에 구비되어 있는 `Cinemachine` 관련 컴포넌트들을 적극 활�
 FMOD Unity를 사용하는 것은 디자이너 분과 저 모두 처음이었지만, 서로 주도적으로 학습한 후 워크플로우를 구축하였습니다. 그래서 작업 영역이 서로 충돌하지 않으면서, 서로의 피드백이 빠르게 반영되어 멋진 작업물이 나올 수 있었습니다.
 
 
-|<iframe width="560" height="315" src="https://www.youtube.com/embed/b9WOPtTx5T4?si=K8wXhzubScijbV1x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>|
+|{::nomarkdown}<iframe width="560" height="315" src="https://www.youtube.com/embed/b9WOPtTx5T4?si=K8wXhzubScijbV1x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>{:/}|
 |:-:|
 |*[영상] 발소리 시스템*|
 
@@ -155,7 +156,7 @@ Unity의 Localization 패키지를 이용하여 스트링 테이블로 최종 �
 <details>
 <summary>PreBuilder.cs</summary>
 
-```csharp
+{% highlight csharp %}
 using System.Linq;
 
 using UnityEditor;
@@ -230,7 +231,8 @@ namespace BM.Editors
 		}
 	}
 }
-```
+{% endhighlight %}
+
 </details>
 
 |![StartScene](./Images/StartScene.png)|
@@ -281,7 +283,7 @@ namespace BM.Editors
 메트로배니아 장르의 게임 처럼 거대한 맵에서 플랫포밍을 하는 게임으로, 플레이어에게 가시적인 로딩이 없었으면 좋겠다고 생각했습니다. 그래서 게임 월드를 작은 씬들로 쪼개, 필요에 따라 런타임에 로드하고 언로드하는 방식을 구현하려 하였습니다.
 
 여기서 씬의 로드가 필요한 경우는 다음과 같습니다.
-* 주요 오브젝트(예: 캐릭터)가 현재 존재하는 씬과, 해당 씬과 깊이 $n$으로 인접한 씬
+* 주요 오브젝트(예: 캐릭터)가 현재 존재하는 씬과, 해당 씬과 깊이 $$n$$으로 인접한 씬
 
 위와 같은 상태가 아닌 씬들은 모두 언로드가 필요합니다.
 
@@ -289,7 +291,7 @@ namespace BM.Editors
 
 캐릭터와 알 모두 다음과 같은 요청을 보내는 상황이라고 생각하였습니다.
 
-> 내가 현재 존재하는 씬으로부터, 논리적 거리가 $n$이하인 씬들은 로드되어 있어야 하고, 그렇지 않은 씬들은 다른 오브젝트가 요청을 보내지 않았다면 언로드해도 괜찮아.
+> 내가 현재 존재하는 씬으로부터, 논리적 거리가 $$n$$이하인 씬들은 로드되어 있어야 하고, 그렇지 않은 씬들은 다른 오브젝트가 요청을 보내지 않았다면 언로드해도 괜찮아.
 
 이를 위해 씬 로드/언로드 요청을 보내는 `SceneLoadTrigger`를 작성하였습니다. 이 스크립트는 해당 스크립트가 부착된 오브젝트가 어떤 씬의 경계[^3]에 들어갈 때, 해당 씬을 기준으로 설정된 거리 이내로 인접한 씬들을 로드해야 한다고 요청을 보냅니다.
 
