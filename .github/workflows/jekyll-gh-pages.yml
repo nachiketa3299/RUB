@@ -30,13 +30,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Install Ruby and Bundler
-        run: |
-          sudo apt-get install ruby-full -y
-          gem install bundler
-
-      - name: Install dependencies with bundle install
-        run: bundle install
+     
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
