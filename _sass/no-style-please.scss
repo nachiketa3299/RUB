@@ -1,98 +1,157 @@
-// -------------- THEME SWITCHER -------------- //
-@mixin dark-appearance {
-  filter: invert(1);
-  img {
-    filter: invert(1);
+// 색상 변수 설정
+$header-color: #F0DFAF;
+$secondary-color: #DCA3A3;
+$tertiary-color: #7f9f7f;
 
-    &.ioda { filter: invert(0); }
-  }
-  .emoji { filter: invert(1); }
-  iframe {
-    filter: invert(1);
-  }
-}
+$background-color: #3f3f3f;
 
-body[a="dark"] { @include dark-appearance; }
+$border-color: #262626;
+
+$link-unvisited-color: #DFCFAF;
+$link-visited-color: #e0cf9f;
 
 
-@media (prefers-color-scheme: dark) {
-  body[a="auto"] { @include dark-appearance; }
-}
-// -------------------------------------------- //
-
-// bg color is also needed in html in order to
-// block body's background propagation
-// see: https://stackoverflow.com/a/61265706
-html, body { background: white; }
-
-html { height: 100%; scroll-behavior: smooth; }
-
+// 기본 스타일
+html,
 body {
-  color: black;
-  font-family: monospace;
-  font-size: 16px;
-  line-height: 1.4;
+  color: #DCDCCC;
+  background: $background-color;
+  font-size: 15px;
+  line-height: 1.1;
   margin: 0;
   min-height: 100%;
   overflow-wrap: break-word;
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
-.post-meta { text-align: right; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $header-color;
+  font-weight: bold;
+  margin-top: 3rem;
+}
 
-h2, h3, h4, h5, h6 { margin-top: 3rem; }
+strong {
+  color: $secondary-color;
+}
 
-hr { margin: 2rem 0; }
+em {
+  color: $tertiary-color;
+}
 
-p { margin: 1rem 0; }
+* {
+  &:target {
+    background: #f8f89344;
+  }
+}
 
-li { margin: 0.4rem 0; }
+// hr 스타일
+hr {
+  margin: 2rem 0;
+  text-align: center;
+  border: 0;
 
-*:target { background: yellow; }
+  &:before {
+    content: "/////";
+  }
 
+  &:after {
+    content: attr(data-content) "/////";
+  }
+}
+
+a {
+  color: $link-unvisited-color;
+}
+
+// p, li 스타일
+p {
+  margin: 1rem 0;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+// 테이블 스타일
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    border: thin solid $border-color;
+    padding: 0.4rem;
+  }
+}
+
+
+// 개행 코드 블록
+// pre {
+// 	padding: 0px;
+// 	border-radius: 5px;
+// 	overflow: auto;
+// 	background: none;
+// 	color: inherit;
+// 	tab-size: 2;
+
+// 	code {
+// 		font-size: 14px;
+// 		white-space: pre-wrap;
+// 		padding: 0;
+// 		background: none;
+// 		color: inherit;
+// 	}
+// }
+
+// 인용 블록
+blockquote {
+  font-style: italic;
+  border: thin solid $border-color;
+  background-color: $border-color;
+  padding: 1rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+// 이미지
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+// .w 클래스
 .w {
   max-width: 640px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 
-hr {
-  text-align: center;
-  border: 0;
-
-  &:before { content: '/////' }
-  &:after { content: attr(data-content) '/////' }
+// 고유 스타일 설정
+.post-meta {
+  text-align: right;
 }
 
-table { width: 100%; }
-
-table, th, td {
-  border: thin solid black;
-  border-collapse: collapse;
-  padding: 0.4rem;
+#markdown-toc::before {
+  content: "ToC";
+  font-weight: bold;
 }
 
-code {
-  color: white;
-  background: black;
+#markdown-toc::ul {
+  list-style: decimal;
 }
 
-div.highlighter-rouge code {
-  display: block;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  padding: 1rem;
-}
-
-blockquote {
-  font-style: italic;
-  border: thin solid black;
-  padding: 1rem;
-
-  p { margin: 0; }
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
+#markdown-toc {
+  border: 1px solid #aaa;
+  padding: 1.5em;
+  list-style: decimal;
+  display: inline-block;
 }
