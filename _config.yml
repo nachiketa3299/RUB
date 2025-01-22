@@ -18,9 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-domain: nachiketa3299.github.io
-url: https://nachiketa3299.github.io
-baseurl: ""
+# domain: nachiketa3299.github.io
+# url: https://nachiketa3299.github.io
+# baseurl: ""
 
 title: 바보도 게임을 만들 수 있다
 email: nachiketa3299@gmail.com
