@@ -20,7 +20,7 @@
 
 # domain: nachiketa3299.github.io
 # url: https://nachiketa3299.github.io
-baseurl: "/RUB/"
+# baseurl: "/RUB/"
 
 title: 바보도 게임을 만들 수 있다
 email: nachiketa3299@gmail.com
@@ -51,7 +51,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-sass:
-  sass_dir: _sass
-  style: compressed
