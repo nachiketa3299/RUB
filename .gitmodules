@@ -1,0 +1,9 @@
+[submodule "themes/jughead"]
+	path = themes/jughead
+	url = https://github.com/ananthb/jughead
+[submodule "themes/bloggraph"]
+	path = themes/bloggraph
+	url = https://github.com/desmondlzy/bloggraph.git
+[submodule "themes/hugo-theme-nostyleplease"]
+	path = themes/hugo-theme-nostyleplease
+	url = https://github.com/hanwenguo/hugo-theme-nostyleplease

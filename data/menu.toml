@@ -1,0 +1,32 @@
+
+[[entries]]
+title = "<strong>Links</strong>"
+
+[[entries.entries]]
+title = "nachiketa3299@gmail.com"
+
+[[entries.entries]]
+title = "github/nachiketa3299"
+url = "https://github.com/nachiketa3299"
+
+[[entries]]
+title = "<strong>Portfolio</strong>"
+url = "portfolio/"
+
+[[entries]]
+title = "<strong>All Posts</strong>"
+
+[entries.post_list]
+limit = 5
+show_more = true
+show_more_text = "See archive..."
+show_more_url = "posts"
+
+[[entries]]
+title = "<strong>Posts by Category</strong>"
+
+[entries.post_list]
+section = "posts"
+show_more = true
+show_more_text = "See more posts..."
+show_more_url = "posts"
