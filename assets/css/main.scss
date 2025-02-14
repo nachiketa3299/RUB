@@ -1,3 +1,10 @@
+@import url('https://iosevka-webfonts.github.io/iosevka/Iosevka.css');
+
+.site-title {
+  font-family: 'Iosevka Web Oblique';
+  font-weight: bolder;
+}
+
 // -------------- THEME SWITCHER -------------- //
 @mixin theme($--bg-color, $--primary-text-color, $--secondary-text-color, $--link-color, $--visited-link-color, $--highlight) {
   background-color: $--bg-color;
@@ -31,7 +38,7 @@
   code:not(pre > code) {
     background-color:
       /*$--primary-text-color*/
-      #dfdede91;
+      #a1c6c791;
     color: #000000
       /*$--bg-color*/
     ;
@@ -99,7 +106,7 @@ html {
 
 body {
   // font-family: monospace;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.4;
   margin: 0;
   min-height: 100%;
@@ -162,6 +169,7 @@ td {
 }
 
 code {
+  font-family: 'Iosevka web';
   text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;

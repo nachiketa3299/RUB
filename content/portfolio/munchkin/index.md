@@ -27,11 +27,15 @@ toc = true
 
 만약 플레이어가 월드에 배치한 알이 깨져 버리면, 월드의 시작 지점인 "둥지"에 있는 알이 활성화됩니다. 즉, 처음부터 다시 도전해야 한다는 뜻이죠.
 
+![world-map](./images/world_map.png)
+
 Munchkin은 기본적으로 어려운 게임입니다. 플레이어가 조작하는 닭은 온갖 이유로 허무하게 실패하고 죽으며, 이러한 극적인 실패의 순간이 게임이 내세우는 주요 코미디 요소 중 하나입니다. 
 
 하지만 이 게임은 실패하는 것에 관한 게임은 아닙니다. 반복되는 실패 속에서 플레이어가 "닭"과 "알"의 생애주기를 이해하고, 그것이 환경과 상호작용 하는 법칙들을 학습하면서 포기하지 않고 나아가, 결국에는 승리를 거머쥐는 쾌감을 느끼게 하는 게임입니다.
 
-**기획 문서들**
+![character-concept](./images/character_concept.jpg)
+
+**전체 기획 문서들은 아래와 같습니다**
 - [전체 콘셉트](https://substantial-panther-211.notion.site/9a3725e57d7b41a5891e7c0fe1c0d3d5?pvs=4)
 - [기획 용어 정리](https://substantial-panther-211.notion.site/a19b8ac4a4904419a9b0a693b6b12ae4?pvs=4)
 - [게임의 생애주기](https://substantial-panther-211.notion.site/61fe3ea8d1bb4b14b68105bb148ddb04?pvs=4)
@@ -68,7 +72,7 @@ Munchkin은 기본적으로 어려운 게임입니다. 플레이어가 조작하
 		* > "내가 지금 `Scene11`에 진입하였으므로, 해당 씬을 기준으로 거리가 2 이내인 씬은 다른 `SceneLoadTrigger`가 없다면 언로드해도 좋다. 만일 거리가 2 이내인 씬 중 로드되지 않은 씬이 있다면, 로드되어야 한다."
 		* 어떤 씬을 기준으로 거리가 n이하인 씬은, 언급한 `SceneDependencyData`의 그래프의 탐색 결과를 사용합니다.
 
-[참고] Unity에서 존재하는 `SceneAsset`은 `UnityEditor`에 존재하고, 빌드 게임에서는 사용할 수 없으므로 "씬"의 레퍼런스를 관리하기 위해 외부 애셋(`SceneReference.cs`와 `SceneReferencePropertyDrawer.cs`)을 사용하였습니다. ([출처](https://github.com/NibbleByte/UnitySceneReference/blob/master/Assets/DevLocker/Utils/SceneReference.cs))
+[참고] Unity에서 존재하는 `SceneAsset`은 `UnityEditor`에 존재하고, 빌드 게임에서는 사용할 수 없으므로 "씬"의 레퍼런스 직렬화를 관리하기 위해 외부 애셋(`SceneReference.cs`와 `SceneReferencePropertyDrawer.cs`)을 사용하였습니다. ([출처](https://github.com/NibbleByte/UnitySceneReference/blob/master/Assets/DevLocker/Utils/SceneReference.cs))
 
 ![SceneDependencyData](images/SceneDependencyData.png)
 
