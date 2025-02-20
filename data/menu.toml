@@ -11,11 +11,11 @@ url = "https://github.com/nachiketa3299"
 
 [[entries]]
 title = "# ️projects"
-url = "projects/"
+url = "posts/projects/"
 
 [[entries]]
 title = "# ps"
-url = "ps/"
+url = "posts/ps/"
 
 [entries.post_list]
 limit = 10
@@ -26,9 +26,9 @@ section = "ps"
 
 [[entries]]
 title = "# dev posts"
-url = "dev/"
+url = "posts/dev/"
 [entries.post_list]
-section = "dev"
+section = "posts/dev"
 # section = "posts/dev/"
 # show_more = true
 # show_more_url = "posts/dev/"
