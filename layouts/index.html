@@ -1,9 +1,9 @@
 {{ define "main" }}
 
 <header>
-    <h1 class="site-title"> {{ $.Site.Title }}</h1>
+    <h1>{{ $.Site.Title }}</h1>
     {{- if $.Site.Params.theme_config.show_description -}}
-    <p>{{ $.Site.Params.description }}</p>
+        <p>{{ $.Site.Params.description }}</p>
     {{- end -}}
 </header>
 {{ .Content }}

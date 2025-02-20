@@ -1,14 +1,14 @@
-+++
-title = "Portfolio"
-+++
+---
+title : "포트폴리오"
+---
 
-## Available Skills
+## 기술 스택
 
 - Unity 5(2D + 3D)
 - Unreal Engine 4
 - C++/C, C#, Python, Lua, Dart
 - CMake
-- Git
+- Git/Github
 - Visual Studio / Visual Studio Code
 - Vim
 
@@ -22,3 +22,8 @@ title = "Portfolio"
 | [Munchkin]({{<relref "munchkin">}}) | 팀장, 메인 프로그래머, 메인 기획자 | 2024-06 ~ 2024-09 |
 | [Alien]({{<relref "alien">}})| 팀장, 메인 프로그래머, 메인 기획자| 2024-03 ~ 2024-06 |
 | [Unreal Labs]({{<relref "unreal_labs">}})| 연구 학생(팀장) | 2023-09 ~ 2023-12 |
+
+## 개인 프로젝트
+
+* Calgo
+* Soda Engine

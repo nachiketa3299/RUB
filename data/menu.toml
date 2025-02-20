@@ -1,6 +1,6 @@
 
 [[entries]]
-title = "<strong>Links</strong>"
+title = "# links"
 
 [[entries.entries]]
 title = "nachiketa3299@gmail.com"
@@ -10,23 +10,30 @@ title = "github/nachiketa3299"
 url = "https://github.com/nachiketa3299"
 
 [[entries]]
-title = "<strong>PORTFOLIOs</strong>"
-url = "portfolio/"
-
-# [[entries]]
-# title = "<strong>All Posts</strong>"
-
-# [entries.post_list]
-# limit = 5
-# show_more = true
-# show_more_text = "See archive..."
-# show_more_url = "posts"
+title = "# ️projects"
+url = "projects/"
 
 [[entries]]
-title = "<strong>Posts by Category</strong>"
+title = "# ps"
+url = "ps/"
 
 [entries.post_list]
-section = "posts"
-show_more = true
-show_more_text = "See more posts..."
-show_more_url = "posts"
+limit = 10
+section = "ps"
+# section = "ps"
+# show_more = true
+# show_more_url = "posts/ps/"
+
+[[entries]]
+title = "# dev posts"
+url = "dev/"
+[entries.post_list]
+section = "dev"
+# section = "posts/dev/"
+# show_more = true
+# show_more_url = "posts/dev/"
+
+[[entries]]
+title = "# all posts"
+[entries.post_list]
+limit = 10
