@@ -1,9 +1,48 @@
 @import url('https://iosevka-webfonts.github.io/iosevka/Iosevka.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
+.footnotes {
+  font-size: small
+}
+
+.site-date {
+  font-size: small
+}
+
+.site-list-date {
+  color:#777777
+}
+
+// .site-menu-item {
+//   font-style: italic
+// }
+
 .site-title {
-  font-family: 'Iosevka Web Oblique';
-  font-weight: bolder;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(2,0,36,1) 0%, 
+    rgba(9,9,121,1) 0%, 
+    rgba(0,212,255,1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  // -webkit-text-stroke: .7px rgb(255, 0, 0);
+  text-align: center;
+  font-size: xx-large;
+  font-style: bold
+}
+
+.single-title {
+  text-align: center;
+  font-size: x-large;
+  font-style: bold
+}
+
+.site-footer {
+  font-size:small;
+  text-align: right;
 }
 
 // -------------- THEME SWITCHER -------------- //

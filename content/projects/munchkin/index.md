@@ -1,8 +1,8 @@
-+++
-title = "Project: Munchkin"
-date = "2025-01-23"
-toc = true
-+++
+---
+title: "Project: Munchkin"
+date: 2025-01-23
+toc: true
+---
 
 ## 프로젝트 개괄
 

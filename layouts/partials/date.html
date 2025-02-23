@@ -1,0 +1,6 @@
+<time datetime="{{ .Date }}" class="site-date">
+	{{ if .Date }}
+	{{ .Date | time.Format site.Params.theme_config.date_format }}
+	{{ end }}
+
+</time>

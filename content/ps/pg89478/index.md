@@ -1,6 +1,6 @@
 ---
-date: 2025-02-20
 title: "[프로그래머스] LV1 택배 상자 꺼내기"
+date: 2025-02-20
 ---
 
 [\[프로그래머스\] LV1 택배 상자 꺼내기](https://school.programmers.co.kr/learn/courses/30/lessons/389478?language=cpp#)
@@ -18,7 +18,6 @@ title: "[프로그래머스] LV1 택배 상자 꺼내기"
 | `상자에 적힌 값` -> `격자 내에서 상자의 절대 위치`
 
 우리는 상자 격자의 최대 너비 `w`를 알고 있으므로, `num_gx`와 `num_gy`는 다음과 같다.
-
 
 ```cpp
 int const num_gy = (num - 1) / w;

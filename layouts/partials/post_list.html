@@ -33,8 +33,12 @@
 <ul>
     {{- range $post := $posts -}}
     <li>
-        <span>{{- ($post.Date | time.Format site.Params.theme_config.date_format) }}</span>
         <a href="{{ $post.Permalink | relURL }}">{{ $post.Title }}</a>
+        {{ if $post.Date }}
+        <span class="site-list-date">
+        <sup>{{- ($post.Date | time.Format site.Params.theme_config.date_format) }}</sup>
+        </span>
+        {{ end }}
     </li>
     {{ end }}
     {{- if and .show_more $limit_exceeded }}

@@ -15,7 +15,7 @@ lineNos = false
 tabWidth = 2
 codeFences = true
 lineNumbersInTable = false
-style = 'rrt'
+# style = 'api'
 
 [params]
 [params.theme_config]

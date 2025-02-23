@@ -3,12 +3,10 @@
 
 <article>
     <p class="post-meta">
-        <time datetime="{{ .Date }}">
-            {{ .Date | time.Format site.Params.theme_config.date_format }}
-        </time>
+        {{ partial "date.html" . }}
     </p>
 
-    <h1>{{ .Title }}</h1>
+    <h1 class="single-title">{{ .Title }}</h1>
 
     {{ if .Params.toc }}
         <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>

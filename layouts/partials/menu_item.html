@@ -10,11 +10,13 @@
 <ul>
     {{- range $item := .collection -}}
     <li>
+    <span class="site-menu-item">
     {{- with $item.url -}} {{/* url 있으면 링크 생성 */}}
         <a href="{{ $item.url | relURL }}">{{ safeHTML $item.title }}</a>
     {{- else -}} {{/* 없으면 걍 타이틀 텍스트만 생성 */}}
         {{ safeHTML $item.title }}
     {{- end -}}
+    </span>
     </li>
 
     {{- if $item.entries }} {{/* 재귀적으로 호출하여 리스트를 만듦*/}}
