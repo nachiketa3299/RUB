@@ -10,28 +10,29 @@ title = "github/nachiketa3299"
 url = "https://github.com/nachiketa3299"
 
 [[entries]]
-title = "# ️projects"
+title = "# portfolios"
 url = "posts/projects/"
 
 [[entries]]
-title = "# ps"
+title = "# section: ps"
 url = "posts/ps/"
+	[entries.post_list]
+	section = "ps"
+	limit = 10
+	# section = "ps"
 
-[entries.post_list]
-limit = 10
-section = "ps"
-# section = "ps"
-# show_more = true
-# show_more_url = "posts/ps/"
+	# section = "ps"
+	# show_more = true
+	# show_more_url = "posts/ps/"
 
 [[entries]]
-title = "# dev posts"
-url = "posts/dev/"
-[entries.post_list]
-section = "posts/dev"
-# section = "posts/dev/"
-# show_more = true
-# show_more_url = "posts/dev/"
+title = "# section: dev"
+	[entries.post_list]
+	limit = 5
+	section = "dev"
+	# section = "posts/dev/"
+	# show_more = true
+	# show_more_url = "posts/dev/"
 
 [[entries]]
 title = "# all posts"

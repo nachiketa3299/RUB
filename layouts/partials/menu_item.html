@@ -1,21 +1,38 @@
+{{/*  
+
+"context" : 값
+"collection" : 값  
+
+위와 같은 형태로 넘어옴
+
+*/}}
+
 <ul>
     {{- range $item := .collection -}}
     <li>
-        {{- with $item.url -}}
+    {{- with $item.url -}} {{/* url 있으면 링크 생성 */}}
         <a href="{{ $item.url | relURL }}">{{ safeHTML $item.title }}</a>
-        {{- else -}}
+    {{- else -}} {{/* 없으면 걍 타이틀 텍스트만 생성 */}}
         {{ safeHTML $item.title }}
-        {{- end -}}
+    {{- end -}}
     </li>
 
-    {{- if $item.entries }}
-    {{ partial "menu_item.html" (dict "context" . "collection" $item.entries) }}
+    {{- if $item.entries }} {{/* 재귀적으로 호출하여 리스트를 만듦*/}}
+        {{ partial "menu_item.html" (dict "context" . "collection" $item.entries) }}
     {{- end -}}
 
     {{- if $item.post_list -}}
-    {{ partial "post_list.html" (dict "context" . "section" $item.post_list.section "limit" $item.post_list.limit
-    "show_more" $item.post_list.show_more "show_more_text" $item.post_list.show_more_text "show_more_url"
-    $item.post_list.show_more_url) -}}
+
+        {{ partial "post_list.html" (dict 
+            "context" . 
+            "section" $item.post_list.section 
+            "limit" $item.post_list.limit
+            "show_more" $item.post_list.show_more 
+            "show_more_text" $item.post_list.show_more_text 
+            "show_more_url" $item.post_list.show_more_url) 
+        -}}
+
     {{- end -}}
+
     {{- end -}}
 </ul>

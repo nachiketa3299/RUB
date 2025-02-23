@@ -10,13 +10,20 @@ unsafe = true
 
 [markup]
 [markup.highlight]
-lineNos = true
+anchorLineNos = false
+lineNos = false
 tabWidth = 2
 codeFences = true
 lineNumbersInTable = false
+style = 'rrt'
 
 [params]
 [params.theme_config]
 appearance = 'light'
 back_home_text = "<<back"
-isShowFooter = false
+isShowFooter = true
+isListGroupByDate = false
+
+# wtf is this
+[taxonomies]
+tag = "tags"
