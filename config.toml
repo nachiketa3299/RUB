@@ -6,24 +6,22 @@ title = 'Even idiots can make game'
 theme = 'hugo-theme-nostyleplease'
 
 [markup.goldmark.renderer]
-unsafe = true
+  unsafe = true
 
 [markup]
-[markup.highlight]
-anchorLineNos = false
-lineNos = false
-tabWidth = 2
-codeFences = true
-lineNumbersInTable = false
-# style = 'api'
+  [markup.highlight]
+    anchorLineNos = false
+    lineNos = false
+    tabWidth = 2
+    codeFences = true
+    lineNumbersInTable = false
 
 [params]
-[params.theme_config]
-appearance = 'light'
-back_home_text = "<<back"
-isShowFooter = true
-isListGroupByDate = false
+  [params.theme_config]
+    appearance = 'light'
+    back_home_text = "<< 뒤로"
+    isShowFooter = true
+    isListGroupByDate = false
 
-# wtf is this
 [taxonomies]
-tag = "tags"
+  tag = "tags"

@@ -1,0 +1,76 @@
+{{ define "main" }}
+{{ partial "back_link.html" . }}
+
+<h1 class="single-title"> {{ .Title }} </h1>
+
+{{ .Content }}
+
+{{ $projects := where .RegularPages "Params.project.type" "eq" "team" }}
+{{ $projects := sort $projects "Params.project.order"}}
+
+<h2>팀 프로젝트 경험</h2>
+
+<table>
+  <tr>
+    <th>프로젝트명</th>
+    <th>직책</th>
+    <th>기간</th>
+  </tr>
+
+{{- range $project := $projects -}}
+
+<tr>
+  <td>
+    <a href="{{ $project.Permalink | relURL }}">
+    {{- $project.Title -}}
+    </a>
+  </td>
+{{- $positions := $project.Params.project.position -}}
+
+<td>
+{{- if $positions -}}
+  {{- range $idx, $pos := $positions -}}
+{{- $pos -}}{{- if lt $idx (sub (len $positions) 1) -}}, {{ end -}}
+  {{- end -}}
+{{- else -}}
+    직책 정보 없음
+{{- end -}}
+</td>
+
+<td>
+  {{ $start := $project.Params.project.start_date }}
+  {{ $end := $project.Params.project.end_date }}
+  {{- $start }} ~ {{ $end -}}
+</td>
+
+</tr>
+{{- end -}}
+
+</table>
+
+<h2>개인 프로젝트</h2>
+
+{{ $projects := where .RegularPages "Params.project.type" "eq" "personal" }}
+<table>
+  <tr>
+    <th>프로젝트명</th>
+    <th>요약</th>
+  </tr>
+{{- range $project := $projects -}}
+  <tr>
+    <td>
+    <a href="{{ $project.Permalink | relURL }}">
+      {{- $project.Title -}}
+    </a>
+    </td>
+
+    <td>
+      {{- $project.Params.project.description -}}
+    </td>
+
+  </tr>
+{{- end -}}
+</table>
+
+
+{{ end }}

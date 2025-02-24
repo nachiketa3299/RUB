@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ partial "back_link.html" . }}
+
+<h1 class="single-title"> {{ .Title }} </h1>
+
+{{ .Content }}
+
+<h2>게시글이 존재하는 문제 풀이 리스트</h2>
+
+{{ partial "post_list.html" (dict "context" . "section" .Section)}}
+
+{{ end }}

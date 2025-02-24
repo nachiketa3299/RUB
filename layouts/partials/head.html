@@ -7,14 +7,15 @@
 
   <title>
     {{ if not .IsHome }}
-    {{ .Title }}
+      {{ .Title }}
     {{ else }}
-    {{ $.Site.Title }}
+      {{ $.Site.Title }}
     {{ end }}
   </title>
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="{{ $.Site.Params.favicon | relURL }}" />
+  {{ partial "favicons.html" }}
+
   {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
   {{ $sass := resources.Get "css/main.scss" }}
   {{ $style := $sass | css.Sass $options | resources.Fingerprint "sha512" }}

@@ -5,6 +5,10 @@
     <p class="post-meta">
         {{ partial "date.html" . }}
     </p>
+		{{ .Title }}
+		{{ if .Params.ps_solve_date }}
+			Solved At: {{ .Params.ps_solve_date | time.Format "2006-01-02" }}
+		{{ end }}
 
     <h1 class="single-title">{{ .Title }}</h1>
 

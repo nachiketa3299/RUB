@@ -11,7 +11,7 @@ url = "https://github.com/nachiketa3299"
 
 [[entries]]
 title = "# PORTFOLIOS"
-url = "projects/"
+url = "portfolio/"
 
 [[entries]]
 title = "# SECTION: PS"
@@ -32,8 +32,10 @@ url = "dev"
 	show_more_url = "posts/dev/"
 
 [[entries]]
-title = "# ALL POSTS"
+title = "# OTHER POSTS"
+url = "posts"
 
-[entries.post_list]
-limit = 5
-show_more = true
+	[entries.post_list]
+	section = "posts"
+	limit = 5
+	show_more = true

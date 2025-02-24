@@ -1,7 +1,17 @@
 ---
-title: "Project: Munchkin"
+title: "프로젝트: 먼치킨"
 date: 2025-01-23
 toc: true
+
+project:
+  type: team
+  order: 1
+  start_date: "2024-06"
+  end_date: "2024-09"
+  position: 
+    - "메인 프로그래머"
+    - "메인 기획자"
+    - "팀장"
 ---
 
 ## 프로젝트 개괄

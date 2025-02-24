@@ -1,10 +1,10 @@
 ---
 date: 2025-02-20
 title: "[프로그래머스] LV1 최소 직사각형"
-section: ps
+layout: ps-single
+ps_link: https://school.programmers.co.kr/learn/courses/30/lessons/86491
+ps_solve_date: 2025-02-20
 ---
-
-{{<show_param "section">}}
 
 [\[프로그래머스\] LV1 최소 직사각형](https://school.programmers.co.kr/learn/courses/30/lessons/86491)
 
@@ -44,6 +44,6 @@ int solution(vector<vector<int>> sizes) {
 그림으로 보면 훨씬 이해가 쉽다.
 굳이 설명이 필요하지 않을 정도로 직관적이다. 
 
-![](./images/00.png)
+![](./images/00.png "긴 쪽을 가로, 짧은 쪽을 세로로 정하기 전(왼쪽), 정한 후(오른쪽)")
 
 어렵게 생각하지 말자.

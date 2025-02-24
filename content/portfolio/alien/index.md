@@ -1,7 +1,17 @@
 ---
-title: "Project: Alien"
+title: "프로젝트: 에일리언"
 date: 2025-01-24
 toc: true
+
+project:
+  type: team
+  order: 2
+  start_date: "2024-03"
+  end_date: "2024-06"
+  position: 
+    - "메인 프로그래머"
+    - "메인 기획자"
+    - "팀장"
 ---
 
 ## 프로젝트 개괄
@@ -12,7 +22,8 @@ toc: true
 * **직책**: 팀장, 메인 프로그래머, 전체 기획자
 * **목표**: 공모전 제출(BIC)
 * **게임 개요**:
-	* Alien 프로젝트의 가제는 \<외계인 대책반\>으로, 귀여운 여고생 전사들이 지구를 침공한 미지의 외계인들에 용감하게 맞서 싸우는 3D 3인칭 액션 로그라이트 장르의 PC 게임
+
+> 프로젝트: 에일리언의 가제는 \<외계인 대책반\>으로, 귀여운 여고생 전사들이 지구를 침공한 미지의 외계인들에 용감하게 맞서 싸우는 3D 3인칭 액션 로그라이트 장르의 PC 게임
 
 ## 주요 기여 사항
 
@@ -40,7 +51,8 @@ toc: true
 
 플레이어블 캐릭터는 여고생과 여고생을 따르는 외계인 무기 "기가스"입니다.
 
-![blade-character-concept](images/blade_with_gigas.png)
+![blade-character-concept](images/blade_with_gigas.png "'블레이더' 캐릭터 컨셉 아트")
+
 여고생 캐릭터(좌)와 여고생을 따르는 도검형 외계인 무기(우)
 
 외계인 무기들은 대검, 도끼, 대포 등 흔히 액션 게임에서 볼 수 있는 그것들이고, "살아있는" 무기이므로 게임을 플레이하면서 역동적으로 그 외형과 기능이 변화합니다.
@@ -53,27 +65,24 @@ toc: true
 
 이 게임이 다른 게임과 구별되는 가장 독특한 점은, 이러한 "액션"을 무작위적으로 습득할 수 있다는 것입니다. 액션은 "액션 토큰"이라는 단위의 형태로 구분되어 있고, 게임을 시작하면 아주 기본적인 토큰만 주어집니다. 게임을 플레이하면서 액션 토큰을 무작위로 얻을 수 있고, 플레이어는 캐릭터의 "액션 세트"에 각 액션 토큰들을 배열하여 자신만의 액션 콤보를 만들 수 있습니다. 캐릭터마다 고유한 액션 세트가 주어지고, 액션 토큰들의 성능은 상황에 따라, 획득한 다른 액션 토큰들이 액션 세트에 배열된 맥락에 따라 달라집니다.
 
-![](images/action_token.png)
+![](images/action_token.png "액션 토큰의 예시")
 
-액션 토큰의 예시
-
-![](images/action_set.png)
-
-'블레이더' 캐릭터의 액션 세트의 예시
+![](images/action_set.png "'블레이더' 캐릭터의 액션 세트의 예시")
 
 때문에 플레이어는 게임을 플레이 하면서 다양한 액션 토큰들을 획득하여, 이들을 상황에 맞게 조합해 자신만의 액션 맵을 지닌 캐릭터를 육성하면서, 로그라이트의 런(Run)을 완료하는 것을 목표로 하게 됩니다.
 
 이러한 기본 골격 외에, 에너미 시스템, 액션 토큰 및 액션 세트 기획, 상태 이상 시스템 등 많은 것들을 기획하였습니다.
 
-![notion_status_effect](images/notion_effect.png)
+![notion_status_effect](images/notion_effect.png "상태 이상 축적 시스템 기획")
 
 ![blade_multiple](images/blade_multiple.jpg)
 
-## 캐릭터 시스템 작성 및 애니메이션 적용
+### 캐릭터 시스템 작성 및 애니메이션 적용
 
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dN3sstEcAsE?si=VfxIelOArk4sfVxa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-더미 애니메이션 프로토타입
+<figcaption>더미 애니메이션 프로토타입</figcaption>
+</figure>
 
 플레이어의 입력에 다채롭게 반응하는 캐릭터 시스템을 작성하는 것이 목표였습니다. 
 
@@ -119,19 +128,20 @@ protected override void Move()
 
 영상에서는 `_velocity`와 크게 다른 방향의 입력이 들어오는 경우 캐릭터 애니메이션이 입력 방향과 `_velocity` 방향의 차에 비례하여 살짝 Pivoting 되는 것까지 구현되어 있습니다.
 
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fuZlXEv7Pgw?si=PfUfqEm7Zti2Oxkf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>애니메이션 애셋 구매 후 적용 테스트</figcaption>
+</figure>
 
 이후에는 애니메이션 세트를 구매하여 진행하였고, 기존의 Pivoting 애니메이션 로직은 구매한 애니메이션과 어울리지 않아 폐기하였습니다. 
 
-## 캐릭터 - 에너미 프레임워크 / AI 설계
+### 캐릭터 - 에너미 프레임워크 / AI 설계
 
 Unreal Engine의 [게임플레이 프레임워크](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/gameplay-framework-in-unreal-engine)를 참고하였습니다. 게임 월드에 배치된 폰(Pawn)이 *컨트롤러의 의지*라는 추상화된 명령을 기반으로 작동하도록 하여, AI Enemy의 로직과 플레이어 캐릭터의 로직의 재사용성을 높였습니다.
 
 예를 들어 폰의 움직임을 담당하는 컴포넌트인 `MoveAction`은 이 시스템에서 *입력* 을 *이동 행동* 으로 번역하는 것이 아니라, *추상화된 컨트롤러의 지시*를 *이동 행동*으로 번역합니다. 때문에 `MoveAction` 컴포넌트의 함수성을 Enemy와 Character 모두에게 쉽게 적용할 수 있었습니다.
 
-![controller-example-diagram](./images/controller_diagram.png)
-
-작동 구조를 다이어그램으로 표현하면 위와 같습니다.
+![controller-example-diagram](./images/controller_diagram.png "전체 시스템의 개략")
 
 ```mermaid
 classDiagram
@@ -217,28 +227,39 @@ classDiagram
 
 예를 들어, 시각을 의미하는 감각 컴포넌트인 `Vision`은 부채꼴 내부에 대상들이 존재하는지, 존재한다면 중간에 장애물이 있는지 확인하여, 주시 대상을 감각할 수 있는 상태인지 판단하고 맞는 이벤트를 발생시킵니다.
 
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Mg-cqosl_gk?si=HWFAsTVfga8xf2R6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>감각 기관에 인지된 대상을 따라가는 예제</figcaption>
+</figure>
 
 `AIController`는 자신이 빙의한 `EnemyBase`가 정확히 어떤 타입인지 몰라도 되고, 그 `EnemyBase`가 어떤 과정을 통해 주시 대상을 인지하게 되었는지도 몰라도 됩니다. 대신에 단순히 월드 위에 배치된 `EnemyBase`의 인지 정보를 받아들여 해당 정보를 처리하여 다음에 어떤 행동을 취할 것인지 결정하고, 빙의한 `EnemyBase`에게 명령을 내립니다.
 
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7mBNiVyho0Y?si=gd1Z51MlYtiwOFbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>감각 기관에 인지된 플레이어를 따라가는 예제</figcaption>
+</figure>
 
 상기 시스템으로 구성된 Enemy와 Character의 예. `MoveAction` 컴포넌트를 재사용하여, 똑같은 시스템으로 구동되는 영상입니다.
 
+### 에너미 캐릭터 모델링 + 애니메이션 작업
 
-## 에너미 캐릭터 모델링 + 애니메이션 작업
+![](./images/gigas_howto.png "직접 기획한 컨셉 아트")
 
-![](./images/gigas_howto.png)
-
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2CD5fHXqrN0?si=UjhkCg3Xj9RT0FmT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>IK 적용 후 Idle 애니메이션 재생</figcaption>
+</figure>
 
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FGk9ZIb7RTA?si=2QDOIp60Ob24nEuz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>Run 애니메이션 작업</figcaption>
+</figure>
 
 게임에 등장할 에너미의 비주얼 컨셉을 잡고, 모델링과 리깅을 진행하고, 애니메이션을 만들어 게임에 적용햐였습니다.
 
-## [실패] 액션 세트 에디터 작성
+### [실패] 액션 세트 에디터 작성
 
-![action-set-editor](./images/action_set_editor.png)
+![action-set-editor](./images/action_set_editor.png "UI 툴킷 이용한 액션 세트 노드 에디터")
 
 Unity의 UI Toolkit을 이용해, 노드 방식으로 캐릭터의 액션 세트를 편집하고, 저장하고 로드한 후 런타임에 수정하는 시스템을 구축할 계획이었습니다.
 
