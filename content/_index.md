@@ -2,6 +2,6 @@
 layout: 'home'
 ---
 
-![]("logo.jpg" "rznbrn의 블로그")
+![](logo.jpg "rznbrn의 블로그")
 
 ---
