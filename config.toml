@@ -33,3 +33,5 @@ theme = 'hugo-theme-nostyleplease'
 [services]
   [services.disqus]
     shortname = 'even-idiots-can-make-games'
+  [services.googleAnalytics]
+    id = 'G-TF4NJ6XV1W'
