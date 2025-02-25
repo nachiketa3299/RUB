@@ -1,3 +1,7 @@
+* DOING 댓글 시스템(Disqus)
+* TODO PS 싱글 목록으로
+* DONE PS 싱글 페이지 헤더 생성
+* DONE Footer에 Github 리포로 가는 링크 추가
 * DONE 코드 폰트 가독성 좋은 것으로 수정 (250224)
 	* Iosevka를 IBM Plex Mono로 변경
 * DONE 메인 메뉴 가독성 향상 (250224)

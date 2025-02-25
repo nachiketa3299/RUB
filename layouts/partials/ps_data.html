@@ -1,0 +1,28 @@
+<table class = "ps_data">
+  <tr>
+    <th>링크</th>
+    <td>
+      {{ $link := .Params.ps.link }}
+
+      {{ if $link }}
+      <a href="{{ $link }}">{{ .Title }}</a>
+      {{ else }}
+      {{ .Title }}
+      {{ end }}
+    </td>
+  </tr>
+  <tr>
+    <th>풀이일</th>
+    <td>
+      {{ $sdate := .Params.ps.solved }}
+
+      {{ if $sdate }}
+<time datetime="{{ $sdate }}">
+      {{ $sdate | time.Format "2006-01-02" }}
+</time>
+      {{ else }}
+      풀이 실패
+      {{ end }}
+    </td>
+  </tr>
+</table>

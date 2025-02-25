@@ -1,0 +1,20 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.indentSize": "tabSize",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "files.associations": {
+    "*.h": "cpp",
+    "*.hpp": "cpp",
+    "*.cc": "cpp",
+    "iostream": "cpp",
+    "iosfwd": "cpp",
+    "deque": "cpp",
+    "string": "cpp",
+    "vector": "cpp",
+    "limits": "cpp",
+    "*.c": "c",
+    "xutility": "cpp"
+  },
+}

@@ -10,11 +10,15 @@ theme = 'hugo-theme-nostyleplease'
 
 [markup]
   [markup.highlight]
-    anchorLineNos = false
-    lineNos = false
+    anchorLineNos = true
+    lineNos = true
     tabWidth = 2
     codeFences = true
     lineNumbersInTable = false
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+    ordered = false
 
 [params]
   [params.theme_config]
@@ -25,3 +29,7 @@ theme = 'hugo-theme-nostyleplease'
 
 [taxonomies]
   tag = "tags"
+
+[services]
+  [services.disqus]
+    shortname = 'rznbrn'
