@@ -32,5 +32,4 @@ theme = 'hugo-theme-nostyleplease'
 
 [services]
   [services.disqus]
-    shortname = '
-even-idiots-can-make-games'
+    shortname = 'even-idiots-can-make-games'
