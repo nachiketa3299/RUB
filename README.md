@@ -1,6 +1,9 @@
-* DOING Google Analytics 추가 (250225)
-* DONE 댓글 시스템(Disqus) (250225)
 * TODO PS 싱글 목록으로 
+
+---
+
+* DONE Google Analytics 추가 (250225)
+* DONE 댓글 시스템(Disqus) (250225)
 * DONE PS 싱글 페이지 헤더 생성 (250225)
 * DONE Footer에 Github 리포로 가는 링크 추가 (250225)
 * DONE 코드 폰트 가독성 좋은 것으로 수정 (250224)
