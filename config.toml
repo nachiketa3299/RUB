@@ -35,3 +35,5 @@ theme = 'hugo-theme-nostyleplease'
     shortname = 'even-idiots-can-make-games'
   [services.googleAnalytics]
     id = 'G-TF4NJ6XV1W'
+
+enableRobotsTxt = true
