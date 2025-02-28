@@ -15,6 +15,7 @@
     "vector": "cpp",
     "limits": "cpp",
     "*.c": "c",
-    "xutility": "cpp"
+    "xutility": "cpp",
+    "queue": "cpp"
   },
 }
