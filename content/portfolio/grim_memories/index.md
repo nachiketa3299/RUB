@@ -117,7 +117,7 @@ stateDiagram
 FMOD Unity를 사용하는 것은 디자이너 분과 저 모두 처음이었지만, 서로 주도적으로 학습한 후 워크플로우를 구축하였습니다. 그래서 작업 영역이 서로 충돌하지 않으면서, 서로의 피드백이 빠르게 반영되어 멋진 작업물이 나올 수 있어 기뻤습니다.
 
 
-{{ ytb "https://www.youtube.com/embed/b9WOPtTx5T4?si=K8wXhzubScijbV1x" "발소리 시스템" }}
+{{< ytb "https://www.youtube.com/embed/b9WOPtTx5T4?si=K8wXhzubScijbV1x" "발소리 시스템" >}}
 
 발소리 시스템
 
