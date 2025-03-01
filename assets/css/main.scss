@@ -92,12 +92,6 @@
     color: $--primary-text-color;
   }
 
-  table,
-  th,
-  td {
-    border: thin solid $--primary-text-color;
-  }
-
   .toc {
     border: thin solid $--primary-text-color;
     padding: 1rem;
@@ -149,7 +143,7 @@ html {
 
 body {
   // font-family: monospace;
-  font-size: 17px;
+  font-size: 1em;
   line-height: 1.4;
   margin: 0;
   min-height: 100%;
@@ -176,9 +170,15 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1.5rem;
+  // margin-top: 1.5rem;
   font-family: "Noto Serif KR", sans-serif;
 }
+h1 { font-size:  2em; }
+h2 { font-size:  1.5em; }
+h3 { font-size:  1.17em; }
+h4 { font-size:  1em; }
+h5 { font-size:  0.83em; }
+h6 { font-size:  0.67em; }
 
 p {
   margin: 1rem 0;
@@ -216,17 +216,6 @@ pre {
   /* Fix pre content overflowing parent without scroll bar */
 }
 
-table {
-  width: 100%;
-}
-
-table,
-th,
-td {
-  border-collapse: collapse;
-  padding: 0.4rem;
-}
-
 code {
   font-family: 'IBM Plex Mono';
   text-size-adjust: 100%;
@@ -257,16 +246,35 @@ blockquote {
   }
 }
 
-img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-}
-
-figcaption {
+figcaption.rub_caption {
   text-align: center;
   opacity: 0.7;
 }
+
+figure.rub_img {
+  text-align: center;
+  margin: 0;
+  width: 800px;
+  img {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+
+}
+
+figure.ytb-player {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px
+  }
+}
+
 
 details {
   padding: 1rem;
@@ -302,14 +310,23 @@ details[open] summary {
   max-width: 400px;
 }
 
-.ytb-player {
-  max-width: 800px;
-  margin: auto;
-  text-align: center
+
+
+table.pf_table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td, tr {
+    text-align: center;
+  }
+
+  td {
+    border-bottom: 1px solid #c5c5c5
+  }
+
+  th {
+    background: #c7c7c7;
+  }
 }
 
-.ytb-player iframe {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 10px
-}
+

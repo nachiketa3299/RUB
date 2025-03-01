@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<a href="{{ .Site.BaseURL }}portfolio/">[뒤로]</a>
+
+
+<article>
+    <p class="post-meta">
+        {{ partial "date.html" . }}
+    </p>
+
+    <h1 class="single-title">{{ .Title }}</h1>
+
+    {{ if .Params.toc }}
+        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
+            {{ .TableOfContents }}
+        </aside>
+    {{ end }}
+
+    {{ .Content }}
+</article>
+
+{{ end }}

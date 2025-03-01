@@ -128,10 +128,7 @@ protected override void Move()
 
 영상에서는 `_velocity`와 크게 다른 방향의 입력이 들어오는 경우 캐릭터 애니메이션이 입력 방향과 `_velocity` 방향의 차에 비례하여 살짝 Pivoting 되는 것까지 구현되어 있습니다.
 
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fuZlXEv7Pgw?si=PfUfqEm7Zti2Oxkf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>애니메이션 애셋 구매 후 적용 테스트</figcaption>
-</figure>
+{{< ytb "https://www.youtube.com/embed/fuZlXEv7Pgw?si=PfUfqEm7Zti2Oxkf" "애니메이션 애셋 구매 후 적용 테스트" >}}
 
 이후에는 애니메이션 세트를 구매하여 진행하였고, 기존의 Pivoting 애니메이션 로직은 구매한 애니메이션과 어울리지 않아 폐기하였습니다. 
 
@@ -227,17 +224,11 @@ classDiagram
 
 예를 들어, 시각을 의미하는 감각 컴포넌트인 `Vision`은 부채꼴 내부에 대상들이 존재하는지, 존재한다면 중간에 장애물이 있는지 확인하여, 주시 대상을 감각할 수 있는 상태인지 판단하고 맞는 이벤트를 발생시킵니다.
 
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Mg-cqosl_gk?si=HWFAsTVfga8xf2R6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>감각 기관에 인지된 대상을 따라가는 예제</figcaption>
-</figure>
+{{< ytb "https://www.youtube.com/embed/Mg-cqosl_gk?si=HWFAsTVfga8xf2R6" "감각 기관에 인지된 대상을 따라가는 예제" >}}
 
 `AIController`는 자신이 빙의한 `EnemyBase`가 정확히 어떤 타입인지 몰라도 되고, 그 `EnemyBase`가 어떤 과정을 통해 주시 대상을 인지하게 되었는지도 몰라도 됩니다. 대신에 단순히 월드 위에 배치된 `EnemyBase`의 인지 정보를 받아들여 해당 정보를 처리하여 다음에 어떤 행동을 취할 것인지 결정하고, 빙의한 `EnemyBase`에게 명령을 내립니다.
 
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7mBNiVyho0Y?si=gd1Z51MlYtiwOFbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>감각 기관에 인지된 플레이어를 따라가는 예제</figcaption>
-</figure>
+{{< ytb "https://www.youtube.com/embed/7mBNiVyho0Y?si=gd1Z51MlYtiwOFbu" "감각 기관에 인지된 플레이어를 따라가는 예제" >}}
 
 상기 시스템으로 구성된 Enemy와 Character의 예. `MoveAction` 컴포넌트를 재사용하여, 똑같은 시스템으로 구동되는 영상입니다.
 
@@ -245,15 +236,9 @@ classDiagram
 
 ![](./images/gigas_howto.png "직접 기획한 컨셉 아트")
 
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2CD5fHXqrN0?si=UjhkCg3Xj9RT0FmT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>IK 적용 후 Idle 애니메이션 재생</figcaption>
-</figure>
+{{< ytb "https://www.youtube.com/embed/2CD5fHXqrN0?si=UjhkCg3Xj9RT0FmT" "IK 적용 후 Idle 애니메이션 재생" >}}
 
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FGk9ZIb7RTA?si=2QDOIp60Ob24nEuz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>Run 애니메이션 작업</figcaption>
-</figure>
+{{< ytb "https://www.youtube.com/embed/FGk9ZIb7RTA?si=2QDOIp60Ob24nEuz" "Run 애니메이션 작업" >}}
 
 게임에 등장할 에너미의 비주얼 컨셉을 잡고, 모델링과 리깅을 진행하고, 애니메이션을 만들어 게임에 적용햐였습니다.
 
