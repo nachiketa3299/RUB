@@ -1,6 +1,4 @@
 {{ define "main" }}
-{{ partial "back_link.html" . }}
-
 <h1 class="single-title"> {{ .Title }} </h1>
 
 {{ .Content }}
@@ -8,47 +6,87 @@
 {{ $projects := where .RegularPages "Params.project.type" "eq" "team" }}
 {{ $projects := sort $projects "Params.project.order"}}
 
-<h2>팀 프로젝트 경험</h2>
+<h1>기술 스택</h1>
+
+<ul>
+  <li>Unity 5</li>
+  <li>C#, C++, Python, CMake</li>
+  <li>Unreal Engine 4</li>
+  <li>Git/Github</li>
+  <li>Vim</li>
+</ul>
+
+공통적으로 총 4개의 프로젝트에서 핵심 개발자로 참여하며, VCS 및 브랜치 전략, 프로젝트 스탠다드 등 주요 기술적 의사결정을 주도하였습니다.
+
+<h1>팀 프로젝트 경험</h1>
 
 <table>
   <tr>
     <th>프로젝트명</th>
+    <th>작업물</th>
     <th>직책</th>
+    <th>규모</th>
     <th>기간</th>
   </tr>
 
 {{- range $project := $projects -}}
 
 <tr>
+  <!-- 프로젝트명 -->
   <td>
     <a href="{{ $project.Permalink | relURL }}">
     {{- $project.Title -}}
     </a>
   </td>
-{{- $positions := $project.Params.project.position -}}
 
-<td>
-{{- if $positions -}}
-  {{- range $idx, $pos := $positions -}}
-{{- $pos -}}{{- if lt $idx (sub (len $positions) 1) -}}, {{ end -}}
+  <!-- 작업물 -->
+  <td>
+    {{- $genres := $project.Params.project.genres -}}
+    {{- if $genres -}}
+      {{- range $idx, $genre := $genres -}}
+      {{- $genre -}}{{- if lt $idx (sub (len $genres) 1) -}}, {{ end -}}
+      {{- end -}}
+    {{- else -}}
+      장르 정보 없음
+    {{- end -}}
+  </td>
+
+
+  <!-- 직책 -->
+  <td>
+  {{- $positions := $project.Params.project.position -}}
+  {{- if $positions -}}
+    {{- range $idx, $pos := $positions -}}
+  {{- $pos -}}{{- if lt $idx (sub (len $positions) 1) -}}, {{ end -}}
+    {{- end -}}
+  {{- else -}}
+      직책 정보 없음
   {{- end -}}
-{{- else -}}
-    직책 정보 없음
-{{- end -}}
-</td>
+  </td>
 
-<td>
-  {{ $start := $project.Params.project.start_date }}
-  {{ $end := $project.Params.project.end_date }}
-  {{- $start }} ~ {{ $end -}}
-</td>
+  <!-- 규모 -->
+  <td>
+  {{- $size := $project.Params.project.size -}}
+  {{- if $size -}}
+    {{ $size }}명
+  {{- else -}}
+    규모 정보 없음
+  {{- end -}}
+  </td>
+
+  <!-- 기간 -->
+  <td>
+    {{ $start := $project.Params.project.start_date }}
+    {{ $end := $project.Params.project.end_date }}
+    {{- $start }} ~ {{ $end -}}
+  </td>
 
 </tr>
 {{- end -}}
 
 </table>
 
-<h2>개인 프로젝트</h2>
+<h1>개인 프로젝트</h1>
 
 {{ $projects := where .RegularPages "Params.project.type" "eq" "personal" }}
 <table>

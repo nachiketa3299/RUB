@@ -1,5 +1,5 @@
 ---
-title: "프로젝트: 에일리언"
+title: "에일리언"
 date: 2025-01-24
 toc: true
 
@@ -12,11 +12,14 @@ project:
     - "메인 프로그래머"
     - "메인 기획자"
     - "팀장"
+  size: 4
+  genres:
+    - 3인칭 액션 로그라이트
 ---
 
 ## 프로젝트 개괄
 
-<img src="images/ap_logo.jpg" width=80%>
+![](images/ap_logo.jpg "에일리언 프로젝트 로고")
 
 * **팀 규모**: 4명
 * **직책**: 팀장, 메인 프로그래머, 전체 기획자
@@ -79,10 +82,7 @@ project:
 
 ### 캐릭터 시스템 작성 및 애니메이션 적용
 
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dN3sstEcAsE?si=VfxIelOArk4sfVxa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>더미 애니메이션 프로토타입</figcaption>
-</figure>
+{{< ytb "https://www.youtube.com/embed/dN3sstEcAsE?si=VfxIelOArk4sfVxa" "더미 애니메이션 프로토타입" >}}
 
 플레이어의 입력에 다채롭게 반응하는 캐릭터 시스템을 작성하는 것이 목표였습니다. 
 

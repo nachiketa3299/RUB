@@ -1,5 +1,5 @@
 ---
-title: "프로젝트: 그림 메모리즈"
+title: "그림 메모리즈"
 date: 2025-01-24
 toc: true
 
@@ -11,12 +11,12 @@ project:
   position: 
     - "메인 프로그래머"
     - "PM"
+  size: 8
+  genres:
+    - 1인칭 방탈출
 ---
 
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EZtdZAEcpg8?si=08tsFxncRMNzdaYe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>트레일러</figcaption>
-</figure>
+{{< ytb "https://www.youtube.com/embed/EZtdZAEcpg8?si=08tsFxncRMNzdaYe"  "트레일러" >}}
 
 ## 프로젝트 개괄
 
@@ -74,10 +74,7 @@ stateDiagram
 
 이러한 설계는 카메라 흔들림을 하드코딩하는 것보다, 에디터에서 쉽게 수정하고 테스트할 수 있는 환경을 제공했습니다. 
 
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wIU7-DIbJHs?si=O6OLzsyhpoMB1-HY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>각 상태별 이동 충격의 발생을 디버그 모드에서 시각화하는 영상</figcaption>
-</figure>
+{{< ytb "https://www.youtube.com/embed/wIU7-DIbJHs?si=O6OLzsyhpoMB1-HY" "각 상태별 이동 충격의 발생을 디버그 모드에서 시각화하는 영상" >}}
 
 ### 상호작용 시스템 구현
 
@@ -109,11 +106,7 @@ stateDiagram
 ![Interactable Editor Example](images/InteractableExample.png "상호작용 오브젝트 'GirlsChest'의 예시")
 
   
-
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jboTbFeA7Ys?si=RhgfaL5SJVG6ItEp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>완성된 상호작용 시스템</figcaption>
-</figure>
+{{< ytb "https://www.youtube.com/embed/jboTbFeA7Ys?si=RhgfaL5SJVG6ItEp" "완성된 상호작용 시스템" >}}
 
 ### FMOD Unity를 활용한 사운드 시스템 구축
 
@@ -124,10 +117,7 @@ stateDiagram
 FMOD Unity를 사용하는 것은 디자이너 분과 저 모두 처음이었지만, 서로 주도적으로 학습한 후 워크플로우를 구축하였습니다. 그래서 작업 영역이 서로 충돌하지 않으면서, 서로의 피드백이 빠르게 반영되어 멋진 작업물이 나올 수 있어 기뻤습니다.
 
 
-<figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/b9WOPtTx5T4?si=K8wXhzubScijbV1x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>발소리 시스템</figcaption>
-</figure>
+{{ ytb "https://www.youtube.com/embed/b9WOPtTx5T4?si=K8wXhzubScijbV1x" "발소리 시스템" }}
 
 발소리 시스템
 

@@ -1,5 +1,5 @@
 ---
-title: "활동 기록: 언리얼 랩스"
+title: "언리얼 랩스"
 date: 2025-02-14
 toc: true
 
@@ -10,6 +10,9 @@ project:
   end_date: "2024-12"
   position: 
   - "연구 학생"
+  size: 15
+  genres:
+    - 스터디 및 발표 
 ---
 
 ## 개요

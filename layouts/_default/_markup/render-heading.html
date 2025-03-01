@@ -1,0 +1,11 @@
+{{ $level := .Level }}
+{{ $tocID := "TableOfContents" }}
+
+<h{{ $level }} id="{{ .Anchor | safeURL }}">
+   <a href="#{{ $tocID }}" style="text-decoration: none; color: inherit;">
+        <span class="header-anchor">
+            H{{ $level }}
+        </span>
+    </a>
+    {{ .Text | safeHTML }}
+</h{{ $level }}>
