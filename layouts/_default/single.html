@@ -9,9 +9,7 @@
     <h1 class="single-title">{{ .Title }}</h1>
 
     {{ if .Params.toc }}
-        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
-            {{ .TableOfContents }}
-        </aside>
+    {{ .TableOfContents }}
     {{ end }}
 
     {{ .Content }}

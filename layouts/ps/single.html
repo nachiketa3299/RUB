@@ -11,9 +11,7 @@
         {{ partial "ps_data.html" . }}
 
     {{ if .Params.toc }}
-        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
-            {{ .TableOfContents }}
-        </aside>
+    {{ .TableOfContents }}
     {{ end }}
 
     {{ .Content }}

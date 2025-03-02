@@ -305,10 +305,6 @@ details[open] summary {
   padding: 1rem;
 }
 
-.ps_data {
-  font-size: .9em;
-  max-width: 400px;
-}
 
 
 
@@ -329,4 +325,22 @@ table.pf_table {
   }
 }
 
+table.ps_table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  max-width: 400px;
 
+  border: 1px solid #79a8ff;
+
+  tr th {
+    text-align: center;
+    background: #c7fbff;
+    border: 1px solid #79a8ff;
+    font-weight: normal;
+  }
+
+  tr td {
+    text-align: left;
+    border: 1px solid #79a8ff;
+  }
+}
