@@ -4,7 +4,7 @@
   <figcaption class="rub_caption">{{ .Title }}</figcaption>
 </figure>
 {{ else }}
-<figure class="rub_caption">
+<figure class="rub_img">
   <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}"/>
 </figure>
 {{ end }}
