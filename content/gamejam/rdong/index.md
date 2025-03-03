@@ -5,6 +5,4 @@ gamejam:
   github: https://github.com/nachiketa3299/RDong
 ---
 
-<div style="display: flex; justify-content: center;">
-<iframe src="{{ games/RDong/ | relURL }}" width="368" height="690" frameborder="0" scrolling="no"></iframe>
-</div>
+{{< game "RDong" "368" "690" >}}
