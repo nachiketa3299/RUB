@@ -1,7 +1,6 @@
 ---
 title: 코테 리뷰 아카이브
 section: ps
-layout: ps-section
 date: 2025-02-20
 ---
 

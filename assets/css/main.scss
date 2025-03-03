@@ -344,3 +344,12 @@ table.ps_table {
     border: 1px solid #79a8ff;
   }
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  th, td, tr {
+    border: #000000 1px solid;
+  }
+}

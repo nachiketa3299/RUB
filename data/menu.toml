@@ -18,18 +18,29 @@ title = "# SECTION: PS"
 url = "ps"
 	[entries.post_list]
 	section = "ps"
-	limit = 5
+	limit = 3
 	show_more = true
-	show_more_url = "posts/ps/"
+	show_more_url = "ps"
+	show_more_text = "더보기..."
 
 [[entries]]
 title = "# SECTION: DEV"
 url = "dev"
 	[entries.post_list]
-	limit = 5
+	limit = 3
 	section = "dev"
 	show_more = true
-	show_more_url = "posts/dev/"
+	show_more_url = "dev"
+	show_more_text = "더보기.."
+
+[[entries]]
+title = "# SECTION: REVIEW"
+url = "review"
+	[entries.post_list]
+	limit = 3
+	section = "review"
+	show_more = true
+	show_more_url = "review"
 
 [[entries]]
 title = "# OTHER POSTS"
