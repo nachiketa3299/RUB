@@ -50,3 +50,4 @@ url = "posts"
 	section = "posts"
 	limit = 5
 	show_more = true
+
