@@ -19,10 +19,6 @@ int main() {
 
   for (int i = 0; i < M; ++i) {
     string  i_cmd; getline(cin, i_cmd);
-    // char i_cmd[3 + 1]; 
-    // scanf("%s", i_cmd);
-
-    // cout << "i: " << i << ", cmd: " << i_cmd << '\n';
 
     switch (i_cmd[CMD_I]) {
       case 'L': // 커서를 왼쪽으로 한 칸 옮기기
