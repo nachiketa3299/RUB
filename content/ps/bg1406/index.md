@@ -1,5 +1,5 @@
 ---
-title: "[백준] 에디터"
+title: "[백준] S2 에디터"
 date: 2025-03-04
 toc: true
 ps:
