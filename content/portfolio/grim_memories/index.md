@@ -14,6 +14,7 @@ project:
   size: 8
   genres:
     - 1인칭 방탈출
+  github: https://github.com/WHALE59/Project_BM
 ---
 
 {{< ytb "https://www.youtube.com/embed/EZtdZAEcpg8?si=08tsFxncRMNzdaYe"  "트레일러" >}}
@@ -23,6 +24,7 @@ project:
 * **팀 규모**: 7명
 * **직책**: 메인 프로그래머, PM
 * **목표**: 공모전 제출, Itch.io와 Steam에 게임 데모 출시
+* **깃헙 링크**: [Project_BM](https://github.com/WHALE59/Project_BM)
 * **기술 사양**
 * **게임 개요**:
 

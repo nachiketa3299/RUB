@@ -29,6 +29,7 @@
     <th>직책</th>
     <th>규모</th>
     <th>기간</th>
+    <th>GitHub</th>
   </tr>
 
 {{- range $project := $projects -}}
@@ -81,6 +82,15 @@
     {{ $start := $project.Params.project.start_date }}
     {{ $end := $project.Params.project.end_date }}
     {{- $start }} ~ {{ $end -}}
+  </td>
+  <!-- GitHub -->
+  <td>
+    {{ $github := $project.Params.project.github }}
+    {{- if $github -}}
+    <a href="{{ $github }}">[링크]</a>
+    {{- else -}}
+    Private
+    {{- end -}}
   </td>
 
 </tr>
