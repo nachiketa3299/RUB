@@ -1,8 +1,7 @@
 {{ $game_name := .Get 0 }}
-{{ $width := .Get 1 }}
-{{ $height := .Get 2 }}
 {{ $game_url := printf "games/%s" $game_name | relURL }}
 
-<div style="display: flex; justify-content: center;">
-<iframe src="{{ $game_url }}" width="{{ $width }}" height="{{ $height }}" frameborder="0" scrolling="no"></iframe>
-</div>
+<iframe class="game-player" src="{{ $game_url }}" frameborder="1" scrolling="no"
+  width="{{ .Get 1 }}"
+  height="{{ .Get 2 }}"
+></iframe>

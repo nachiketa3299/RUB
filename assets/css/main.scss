@@ -164,21 +164,17 @@ body {
   line-height: 1.2;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   // margin-top: 1.5rem;
   font-family: "Noto Serif KR", sans-serif;
 }
-h1 { font-size:  2em; }
-h2 { font-size:  1.5em; }
-h3 { font-size:  1.17em; }
-h4 { font-size:  1em; }
-h5 { font-size:  0.83em; }
-h6 { font-size:  0.67em; }
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.83em; }
+h6 { font-size: 0.67em; }
 
 p {
   margin: 1rem 0;
@@ -273,6 +269,16 @@ figure.ytb-player {
     aspect-ratio: 16/9;
     border-radius: 10px
   }
+}
+
+iframe.game-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  overflow: auto;
 }
 
 
