@@ -10,11 +10,12 @@ using namespace std;
 int main() {
   string str; cin >> str; // [a-z], [100'000]
   int M; cin >> M; // [1, 500'000]
-  cin.ignore();
+
+  cin.ignore(); 
 
   list<char> l_str(str.begin(), str.end());
 
-  // 자기가 가리키는 문자 바로 앞의 위치에 있음
+  // 커서는 자기가 가리키는 문자 바로 앞의 위치에 있음
   auto cursor = l_str.end();
 
   for (int i = 0; i < M; ++i) {
@@ -45,9 +46,5 @@ int main() {
     }
   }
 
-  for (char const& c: l_str) {
-    cout << c;
-  }
+  for (char c: l_str) cout << c;
 }
-
-// it = prev(it) 에서 it 가 begin이면 정의되지 않은 행동
