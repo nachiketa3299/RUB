@@ -19,6 +19,8 @@ theme = 'hugo-theme-nostyleplease'
     startLevel = 1
     endLevel = 3
     ordered = false
+  [markup.goldmark.extensions.extras.mark]
+    enable = true
 
 [params]
   [params.theme_config]
