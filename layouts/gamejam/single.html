@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ partial "back_link.html" . }}
+
+<article>
+    <p class="post-meta">
+        {{ partial "date.html" . }}
+    </p>
+
+    <h1 class="single-title">{{ .Title }}</h1>
+
+    본 게임의 소스 코드는 <a href="{{ .Params.gamejam.github }}">여기</a>서 확인할 수 있습니다.
+
+    {{ if .Params.toc }}
+    {{ .TableOfContents }}
+    {{ end }}
+
+    {{ .Content }}
+</article>
+
+{{ partial "disqus.html" . }}
+
+{{ end }}
