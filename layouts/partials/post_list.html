@@ -21,12 +21,13 @@
 
 {{- $limit_exceeded:= "" -}}
 {{- if (and .limit (gt (len $posts) .limit)) -}}
-{{- $limit_exceeded = true -}}
+    {{- $limit_exceeded = true -}}
 {{- else -}}
-{{- $limit_exceeded = false -}}
+    {{- $limit_exceeded = false -}}
 {{ end }}
 
 {{- if (gt (len $posts) 0) }}
+
 {{- if .limit }}
 {{ $posts = (first .limit $posts ) }}
 {{ end }}

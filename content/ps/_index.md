@@ -2,10 +2,27 @@
 title: 코테 리뷰 아카이브
 section: ps
 date: 2025-02-20
+toc: true
 ---
 
-코딩테스트 준비를 위한 사이트
+# 목표
+
+## 할 것 
+
+* 하루에 한 문제씩 풀면서 알고리즘에 대한 감각 잃지 말기
+* C/C++ 문법 자유자재로 활용할 수 있도록, 그리고 STL도 능동적으로 활용하기
+* 어떤 문제를 왜 그렇게 풀었는가 누가 물어보면 차근차근 대답할 수 있도록 리뷰 노트 작성하기
+
+## 하지 말 것
+
+* 한 문제를 45분 이상 붙잡고 있는 것
+* 복잡하게 생각하고 복잡하게 코딩하는 것
+* "초능력 풀이"를 이해하지 않고 넘어가는 것
+
+# 코딩테스트 준비를 위한 사이트
 
 * [백준](https://www.acmicpc.net/)
 * [프로그래머스](https://school.programmers.co.kr/learn/challenges?order=recent&levels=1&languages=c%2Ccpp&partIds=33882)
 * [LeetCode](https://leetcode.com/)
+
+---

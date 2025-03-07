@@ -43,6 +43,15 @@ url = "review"
 	show_more_url = "review"
 
 [[entries]]
+title = "# SECTION: DEV_BOOKS"
+url = "dev_books"
+	[entries.post_list]
+	limit = 3
+	section = "dev_books"
+	show_more = true
+	show_more_url = "dev_books"
+
+[[entries]]
 title = "# SECTION: GAME JAM"
 url = "gamejam"
 	[entries.post_list]

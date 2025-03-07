@@ -4,5 +4,9 @@
 <h1>{{ .Title }}</h1>
 
 {{ .Content }}
+
+<p><code>{{ .Section }}</code> 섹션에 속하는 게시물 입니다:</p>
+
 {{ partial "post_list.html" (dict "context" . "section" .Section)}}
+
 {{ end }}
