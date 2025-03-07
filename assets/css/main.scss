@@ -250,7 +250,8 @@ figcaption.rub_caption {
 figure.rub_img {
   text-align: center;
   margin: 0;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   img {
     width: 100%;
     display: block;
