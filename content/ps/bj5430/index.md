@@ -103,8 +103,6 @@ ps:
 
 ### [예제] 숫자와 문자열 간 변환
 
-**숫자를 문자열로**
-
 ```cpp{lineNos=false}
 int i_num = 42;
 float f_num = 34.2f;
@@ -158,6 +156,8 @@ while (std::getline(ss, word_buff, ',')) {
 * `std::regex_token_iterator`
 
 방법을 사용하면 된다.
+
+이 문제에서도 `"[1,2,3]"` 과 같이 주어지는 수열 문자열을 파싱하기 위해 사용되었다.
 
 ### [예제] 다양한 형식의 여러 값을 한 줄에 출력
 
