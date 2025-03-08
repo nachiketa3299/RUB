@@ -6,7 +6,7 @@
         site.RegularPages "Section" .section) 
     -}}
 {{- else -}}
-    {{/*  {{- if (eq .context.Kind "taxonomy") -}}
+    {{- if (eq .context.Kind "taxonomy") -}}
         {{- $posts = .context.Pages -}}
     {{- else -}}
         {{- if (eq .context.Kind "term") -}}
@@ -14,7 +14,7 @@
         {{- else -}}
             {{- $posts = site.RegularPages }}
         {{- end -}}
-    {{- end -}}  */}}
+    {{- end -}}
 {{ end }}
 
 {{ $posts := sort (sort $posts "Date" "desc") "Lastmod" "desc" }}
