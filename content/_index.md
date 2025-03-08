@@ -20,4 +20,8 @@ layout: 'home'
 
 <figcaption class="rub_caption">rznbrn의 블로그</figcaption>
 
+* \# LINKS
+  * nachiketa3299@gmail.com
+  * [github/nachiketa3299](https://github.com/nachiketa3299)
+
 ---

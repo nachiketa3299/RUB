@@ -16,13 +16,30 @@
   font-size: small
 }
 
-.site-list-date {
-  color:#777777
+.rub_page_list_date {
+  color:#777777;
+  font-family: "IBM Plex Mono";
 }
 
-// .site-menu-item {
-//   font-style: italic
-// }
+.rub_page_list_item:hover {
+  background-color: #f78fe736;
+  border-radius: 3px;
+}
+
+.rub_section_list_item {
+  font-style: bold;
+  border: 1px dashed #79a8ff;
+  border-radius: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: .1px 10px;
+  text-align: center;
+  background-color: #c7fbff87;
+}
+
+.rub_section_list_item:hover {
+  background-color: #f78fe736;
+}
 
 .site-title {
   color: transparent;

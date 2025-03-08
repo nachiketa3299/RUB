@@ -9,32 +9,36 @@
 
 <ul>
     {{- range $item := .collection -}}
-    <li>
-    <span class="site-menu-item">
-    {{- with $item.url -}} {{/* url 있으면 링크 생성 */}}
-        <a href="{{ $item.url | relURL }}">{{ safeHTML $item.title }}</a>
-    {{- else -}} {{/* 없으면 걍 타이틀 텍스트만 생성 */}}
-        {{ safeHTML $item.title }}
-    {{- end -}}
-    </span>
-    </li>
+        <li>
+            <span class="rub_section_list_item">
 
-    {{- if $item.entries }} {{/* 재귀적으로 호출하여 리스트를 만듦*/}}
-        {{ partial "menu_item.html" (dict "context" . "collection" $item.entries) }}
-    {{- end -}}
+                {{- $sectionPage := site.GetPage $item.post_list.section -}}  {{/* 섹션 정보를 가져옴 */}}
+                {{- $postCount := 0 -}}
+                {{- if $sectionPage -}}
+                    {{- $postCount = len $sectionPage.Pages -}}  {{/* 실제 섹션의 게시글 수 */}}
+                {{- end -}}
 
-    {{- if $item.post_list -}}
+                {{- with $item.url -}} {{/* url 있으면 링크 생성 */}}
+                    <a href="{{ $item.url | relURL }}">{{ safeHTML $item.title }}</a> -- {{ $postCount }}
+                {{- else -}} {{/* 없으면 걍 타이틀 텍스트만 생성 */}}
+                    {{ safeHTML $item.title }} - ({{ $postCount }})
+                {{- end -}}
+            </span>
+        </li>
 
-        {{ partial "post_list.html" (dict 
-            "context" . 
-            "section" $item.post_list.section 
-            "limit" $item.post_list.limit
-            "show_more" $item.post_list.show_more 
-            "show_more_text" $item.post_list.show_more_text 
-            "show_more_url" $item.post_list.show_more_url) 
-        -}}
+        {{- if $item.entries }} {{/* 재귀적으로 호출하여 리스트를 만듦 */}}
+            {{ partial "menu_item.html" (dict "context" . "collection" $item.entries) }}
+        {{- end -}}
 
-    {{- end -}}
-
+        {{- if $item.post_list -}}
+            {{ partial "post_list.html" (dict 
+                "context" . 
+                "section" $item.post_list.section 
+                "limit" $item.post_list.limit
+                "show_more" $item.post_list.show_more 
+                "show_more_text" $item.post_list.show_more_text 
+                "show_more_url" $item.post_list.show_more_url) 
+            -}}
+        {{- end -}}
     {{- end -}}
 </ul>
