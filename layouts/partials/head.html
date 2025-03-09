@@ -45,4 +45,10 @@
 
   <!-- Google Analytics -->
   {{ partial "google_analytics.html" . }}
+
+  <!-- plantuml -->
+
+  {{ $sass := resources.Get "css/main.scss" }}
+  {{ $puml := resources.Get "js/plantuml.js" }}
+  <script src="{{"js/plantuml.js" | relURL }}" charset="utf-8"></script>
 </head>
