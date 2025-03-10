@@ -1,35 +1,17 @@
-class Parent {
-public:
-  Parent() {}
-  ~Parent() {}
+#include <iostream>
 
-private:
-  int p = 10;
+
+class Super {
+public:
+  int i_;
 };
 
-class ChildA {
+class Derived: public Super {
 public:
-  ChildA() {}
-  ~ChildA() {}
-
-private:
-  char arr[10] { 'c' };
-};
-
-class ChildB {
-public:
-  ChildB() {
-    vec = new char[10] { 'a' };
-  }
-  ~ChildB() {
-    delete[] vec;
-  }
-
-private:
-  char *vec;
+  Derived(): i_(10) {}
+  double d_;
 };
 
 int main() {
-  ChildB b0();
-  ChildB b1 = ChildB();
+  Derived d;
 }
