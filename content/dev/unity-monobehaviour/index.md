@@ -307,11 +307,9 @@ Component <|-- Behaviour
 또한 모노비헤이비어를 사용하면 코루틴을 관리할 수도 있다.
 
 ## 클래스 다이어그램
-
 {{< puml >}}
 @startuml
 hide empty members
-
 class MonoBehaviour {
   + destroyCancellationToken
   + didAwake
@@ -319,7 +317,7 @@ class MonoBehaviour {
   + runInEditMode
   + useGUILayout
 
-  코루틴 관련
+  ..코루틴 관련..
   + CancelInvoke()
   + Invoke()
   + InvokeRepeating()
@@ -327,8 +325,7 @@ class MonoBehaviour {
   + StartCoroutine()
   + StopCoroutine()
   + StopAllCoroutines()
-
-  기본 생명주기
+  ..기본 생명주기..
   + Awake()
   + OnEnable()
   + Start()
@@ -337,20 +334,16 @@ class MonoBehaviour {
   + LateUpdate()
   + OnDisable()
   + OnDestroy()
-
-  애니메이션 관련
+  ..애니메이션 관련..
   + OnAnimatorIK()
   + OnAnimatorMove()
-
-  애플리케이션 상태 관련
+  ..애플리케이션 상태 관련..
   + OnApplicationFocus()
   + OnApplicationPause()
   + OnApplicationQuit()
-
-  오디오 관련
+  ..오디오 관련..
   + OnAudioFilterRead()
-
-  렌더링 관련
+  ..렌더링 관련..
   + OnPreCull()
   + OnBecameVisible()
   + OnBecameInvisible()
@@ -358,8 +351,7 @@ class MonoBehaviour {
   + OnPostRender()
   + OnRenderImage()
   + OnWillRenderObject()
-
-  물리 관련
+  ..물리 관련..
   + OnCollisionEnter()
   + OnCollisionStay()
   + OnCollisionExit()
@@ -373,23 +365,18 @@ class MonoBehaviour {
   + OnTriggerStay2D()
   + OnTriggerExit2D()
   + OnControllerColliderHit()
-
-  조인트 관련
+  ..조인트 관련..
   + OnJointBreak()
   + OnJointBreak2D()
-
-  파티클 관련
+  ..파티클 관련..
   + OnParticleCollision()
   + OnParticleSystemStopped()
   + OnParticleTrigger()
   + OnParticleUpdateJobScheduled()
-
-
-  트랜스폼 변화 감지
+  ..트랜스폼 변화 감지..
   + OnTransformChildrenChanged()
   + OnTransformParentChanged()
-
-  멀티플레이어
+  ..멀티플레이어..
   + OnPlayerConnected()
   + OnPlayerDisconnected()
   + OnNetworkInstantiate()
@@ -400,31 +387,31 @@ class MonoBehaviour {
   + OnMasterServerEvent()
   + OnSerializeNetworkView()
   + OnSeverInitialized()
-
-  기타
+  ..기타..
   + OnValidate()
   + Reset()
   + {static} print()
   + OnDrawGizmos()
   + OnDrawGizmosSelected()
   + OnGUI()
-
-  입력 관련
-  + OnMouseDown()
-  + OnMouseDrag()
-  + OnMouseEnter()
-  + OnMouseExit()
-  + OnMouseOver()
-  + OnMouseUp()
-  + OnMouseUpAsButton()
 }
 
 Object <|-- Component
 Object <|-- GameObject
 Component <|-- Behaviour
 Behaviour <|-- MonoBehaviour
+
 @enduml
 {{< /puml >}}
+
+아래는 위 이미지에서 짤린 함수들..
++ OnMouseDown()
++ OnMouseDrag()
++ OnMouseEnter()
++ OnMouseExit()
++ OnMouseOver()
++ OnMouseUp()
++ OnMouseUpAsButton()
 
 # Transform
 

@@ -29,6 +29,7 @@
 {{- if (gt (len $posts) 0) }}
     {{- if .limit }}
         {{ $posts = (first .limit $posts ) }}
+    {{ else }}
     {{ end }}
 
     <ul>
@@ -36,16 +37,16 @@
             <li>
                 <a class="rub_page_list_item" href="{{ $post.Permalink | relURL }}">{{ $post.Title }}</a>
                 <span class="rub_page_list_date">
-                    {{ if not (eq $post.Date $post.Lastmod) }}
-                        <sup>
-                            {M: {{- (sub now.Unix $post.Lastmod.Unix) | div 86400 }}d before}
-                        </sup>
+                    {{ if $post.Lastmod }}
+                      <sup>
+                          {M: {{- ($post.Lastmod | time.Format site.Params.theme_config.date_format) }}}
+                      </sup>
                     {{ end }}
 
                     {{ if $post.Date }}
-                        <sup>
-                            {C: {{- ($post.Date | time.Format site.Params.theme_config.date_format) }}}
-                        </sup>
+                      <sup>
+                          {C: {{- ($post.Date | time.Format site.Params.theme_config.date_format) }}}
+                      </sup>
                     {{ end }}
                 </span>
             </li>

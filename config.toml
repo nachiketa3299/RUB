@@ -39,3 +39,5 @@ theme = 'hugo-theme-nostyleplease'
     id = 'G-TF4NJ6XV1W'
 
 enableRobotsTxt = true
+
+timeZone = "Asia/Seoul"
