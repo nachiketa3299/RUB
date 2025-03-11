@@ -16,6 +16,7 @@
     "limits": "cpp",
     "*.c": "c",
     "xutility": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "algorithm": "cpp"
   },
 }
