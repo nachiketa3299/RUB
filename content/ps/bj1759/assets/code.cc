@@ -1,71 +1,60 @@
 #include <iostream>
 #include <vector>
-#include <string>
 #include <algorithm>
-#include <set>
 
 using namespace std;
 
-vector<string> generate(const vector<char>& chars, int size) {
-  vector<bool> mask(chars.size(), false); 
-  fill(mask.begin(), mask.begin() + size, true);
-  reverse(mask.begin(), mask.end());
+#define V_MIN 1
+#define C_MIN 2
 
-  vector<string> ret;
+bool is_vowel(char c) {
+  switch (c) {
+    case 'a': case 'e': case 'u': case 'i': case 'o':
+      return true;
+    default:
+      return false;
+  }
+}
 
-  do {
-    string comb = "";
+void gen_print(
+  const vector<char>& letters, int idx, int size, 
+  vector<char>& buff, int vcount, int ccount
+) {
+  // Pruning
+  if (vcount + C_MIN > size) return;
+  if (ccount + V_MIN > size) return;
 
-    for (int i = 0; i < mask.size(); ++i) {
-      if (mask[i]) {
-        comb += chars[i];
-      }
+  if (buff.size() == size) {
+    for (const auto& c: buff) {
+      cout << c;
     }
+    cout << '\n';
+    return;
+  }
 
-    ret.push_back(comb);
-  } while (next_permutation(mask.begin(), mask.end()));
+  for (int i = idx; i < letters.size(); ++i) {
+    const char& c = letters[i];
+    buff.push_back(c);
 
-  return ret;
+    if (is_vowel(c)) 
+      gen_print(letters, i + 1, size, buff, vcount + 1, ccount);
+    else      
+      gen_print(letters, i + 1, size, buff, vcount, ccount + 1);
+
+    buff.pop_back(); // Backtracking
+  }
 }
 
 int main() {
   int L, C; cin >> L >> C;
-  vector<char> vows, cons;
-  for (int i = 0; i < C; ++i) {
-    char c; cin >> c;
-    switch (c) {
-    case 'a': case 'e': case 'i': case 'o': case 'u':
-      vows.push_back(c);
-      break;
-    default:
-      cons.push_back(c);
-      break;
-    }
+
+  vector<char> letters(C);
+  for (auto& letter: letters) {
+    cin >> letter;
   }
 
-  if (cons.size() < 2 || vows.size() < 1)  return 0;
+  sort(letters.begin(), letters.end());
+  vector<char> buff; buff.reserve(L);
 
-  vector<string> passwords;
-
-  for (int vsize = 1; vsize <= L; ++vsize) {
-    int csize = L - vsize;
-
-    if (csize < 2)
-      break;
-    
-    vector<string> c_vows = generate(vows, vsize);
-    vector<string> c_cons = generate(cons, csize);
-
-    for (const string& c_vow: c_vows) {
-      for (const string& c_con: c_cons) {
-        string password = c_vow + c_con;
-        sort(password.begin(), password.end());
-        passwords.push_back(password);
-      }
-    }
-  }
-
-  for (const string& password: passwords) {
-    cout << password << '\n';
-  }
+  gen_print(letters, 0, L, buff, 0, 0);
 }
