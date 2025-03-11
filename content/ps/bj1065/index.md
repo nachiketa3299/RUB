@@ -2,6 +2,7 @@
 title: "[백준] 1065 S4 한수"
 date: 2025-03-10
 toc: true
+lastmod: 2025-03-11
 ps:
   solved: 2025-03-10
   link: https://www.acmicpc.net/problem/1065
