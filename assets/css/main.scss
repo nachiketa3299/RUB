@@ -232,6 +232,8 @@ pre {
   padding: 1em;
   overflow-x: auto;
   /* Fix pre content overflowing parent without scroll bar */
+
+  border-radius: 0.5em;
 }
 
 code {
@@ -242,6 +244,7 @@ code {
   -webkit-text-size-adjust: 100%;
 
   white-space: pre-wrap;
+
 }
 
 code:not(pre > code) {
@@ -254,6 +257,8 @@ code.has-jax {
   background: inherit !important;
   border: none !important;
   font-size: 100%;
+
+
 }
 
 blockquote {

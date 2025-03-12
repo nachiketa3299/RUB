@@ -1,5 +1,5 @@
 ---
-title: "[백준] G5 AC"
+title: "[백준] 5430 G5 AC"
 date: 2025-03-07
 toc: true
 
