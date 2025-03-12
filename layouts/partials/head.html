@@ -2,8 +2,13 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   {{ if .IsPage }}
-  <meta name="description" content="{{ .Summary }}"> {{ end }}
+    <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Summary }}{{ end }}">
+    {{ with .Params.keywords }}
+      <meta name="keywords" content='{{ delimit . ", " }}'>
+    {{ end }}
+  {{end}}
 
   <title>
     {{ if not .IsHome }}
@@ -12,7 +17,6 @@
       {{ $.Site.Title }}
     {{ end }}
   </title>
-
 
   {{ partial "favicons.html" }}
 
@@ -47,8 +51,5 @@
   {{ partial "google_analytics.html" . }}
 
   <!-- plantuml -->
-
-  {{ $sass := resources.Get "css/main.scss" }}
-  {{ $puml := resources.Get "js/plantuml.js" }}
-  <script src="{{"js/plantuml.js" | relURL }}" charset="utf-8"></script>
+  <script src='{{"js/plantuml.js" | relURL }}' charset="utf-8"></script>
 </head>

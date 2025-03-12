@@ -1,6 +1,8 @@
 ---
 title: "[C++] 중괄호 초기화의 모든 것"
 toc: true
+description: "C++의 중괄호 초기화의 등장 배경과 장점, 사용법을 설명합니다."
+keywords: ["C++", "중괄호 초기화", "Braced Initialization", "모던 C++", "균일 초기화", "유니폼 초기화"]
 date: 2025-03-12
 ---
 
