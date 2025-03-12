@@ -57,7 +57,10 @@ int main() {
         cnt_to_remove * TIME_REMOVE + cnt_to_place * TIME_PLACE
       };
 
-      if (c_time < min_time || (c_time == min_time && c_height > proper_height)) {
+      if (
+        c_time < min_time || 
+        (c_time == min_time && c_height > proper_height)
+      ) {
         min_time = c_time;
         proper_height = c_height;
       }
