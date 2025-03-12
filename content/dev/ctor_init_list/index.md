@@ -75,10 +75,6 @@ int main() {
 
 [^2]: 초기화자 내에서 사용되는 모든 이름과 표현식은 해당 생성자의 범위 내에서 평가되므로, 해당 클래스 멤버와 접근 가능한 범위의 이름들만 사용할 수 있다.
 
-
-
-
-
 # 객체의 생성
 
 유도 클래스의 생성자가 호출될 때, 기초 클래스의 기본 생성자가 자동으로 호출된다.
@@ -137,4 +133,7 @@ C++ 코어 가이드라인에는 클래스 멤버에 직접 초기화를 명시�
 
 # 참고 문헌
 
-부모 클래스의 멤버에 대해서는 부모 클래스의 생성자에게 초기화를 맡겨야 하며, 직접 멤버를 초기화 할 수는 없다.* [Constructors and member initializer lists/cppreference](https://en.cppreference.com/w/cpp/language/constructor)
+부모 클래스의 멤버에 대해서는 부모 클래스의 생성자에게 초기화를 맡겨야 하며, 직접 멤버를 초기화 할 수는 없다.
+
+* [Constructors and member initializer lists/cppreference](https://en.cppreference.com/w/cpp/language/constructor)
+

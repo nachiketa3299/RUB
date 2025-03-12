@@ -17,6 +17,7 @@
     "*.c": "c",
     "xutility": "cpp",
     "queue": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "array": "cpp"
   },
 }
