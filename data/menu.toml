@@ -4,16 +4,6 @@
 # url = "portfolio/"
 
 [[entries]]
-title = "# SECTION: PS"
-url = "ps"
-	[entries.post_list]
-	section = "ps"
-	limit = 3
-	show_more = true
-	show_more_url = "ps"
-	show_more_text = "더보기..."
-
-[[entries]]
 title = "# SECTION: DEV"
 url = "dev"
 	[entries.post_list]
@@ -22,6 +12,16 @@ url = "dev"
 	show_more = true
 	show_more_url = "dev"
 	show_more_text = "더보기.."
+
+[[entries]]
+title = "# SECTION: PS"
+url = "ps"
+	[entries.post_list]
+	section = "ps"
+	limit = 3
+	show_more = true
+	show_more_url = "ps"
+	show_more_text = "더보기..."
 
 [[entries]]
 title = "# SECTION: REVIEW"
