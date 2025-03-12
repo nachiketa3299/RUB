@@ -7,13 +7,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
 
-
 .footnotes {
-  font-size: small
+  font-size: small;
 }
 
 .site-date {
-  font-size: small
+  font-size: small;
 }
 
 .rub_page_list_date {
@@ -27,18 +26,23 @@
 }
 
 .rub_section_list_item {
-  font-style: bold;
-  border: 1px dashed #79a8ff;
+  font-style: bolder;
+  font-family: "IBM Plex Mono";
   border-radius: 3px;
   box-sizing: border-box;
   cursor: pointer;
   padding: .1px 10px;
   text-align: center;
-  background-color: #c7fbff87;
+  background-color: rgb(0, 153, 255);
+  box-shadow: 1px 1px 2px rgb(0, 0, 0);
+  a {
+    color: white !important;
+  }
+  color: white !important;
 }
 
 .rub_section_list_item:hover {
-  background-color: #f78fe736;
+  background-color: #a042f8;
 }
 
 .site-title {
@@ -98,12 +102,8 @@
   }
 
   code:not(pre > code) {
-    background-color:
-      /*$--primary-text-color*/
-      #dfdddd;
-    color: #000000
-      /*$--bg-color*/
-    ;
+    background-color: #dfdddd;
+    color: #000000;
     font-weight: 500;
     border-radius: 0.25em;
   }
@@ -174,15 +174,21 @@ body {
 .header-anchor {
   display: inline-flex;
   align-items: center;
-  // background-color: rgba(200, 200, 200, 0.3);
-  color: rgb(65, 93, 255);
   font-size: 0.5em;
   padding: 2px 6px;
-  border: 1px dashed rgb(65, 93, 255);
+  color: rgb(164, 177, 252);
+  border: 1px solid rgb(164, 177, 252);
   border-radius: 4px;
   vertical-align: middle;
   font-family: "IBM Plex Mono";
   line-height: 1.2;
+}
+
+#TableOfContents {
+  background: rgb(255, 255, 255);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+  border: 1px solid rgb(164, 177, 252);
+  border-radius: .5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -257,8 +263,6 @@ code.has-jax {
   background: inherit !important;
   border: none !important;
   font-size: 100%;
-
-
 }
 
 blockquote {
@@ -284,7 +288,6 @@ figure.rub_img {
     display: block;
     margin: auto;
   }
-
 }
 
 figure.ytb-player {
@@ -308,7 +311,6 @@ iframe.game-player {
 
   overflow: auto;
 }
-
 
 details {
   padding: 1rem;
@@ -338,9 +340,6 @@ details[open] summary {
 .toc {
   padding: 1rem;
 }
-
-
-
 
 table.pf_table {
   width: 100%;

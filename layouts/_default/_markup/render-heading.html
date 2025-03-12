@@ -2,10 +2,10 @@
 {{ $tocID := "TableOfContents" }}
 
 <h{{ $level }} id="{{ .Anchor | safeURL }}">
+    {{ .Text | safeHTML }}
    <a href="#{{ $tocID }}" style="text-decoration: none; color: inherit;">
         <span class="header-anchor">
-            H{{ $level }}
+            🔗{{ $level }} 
         </span>
     </a>
-    {{ .Text | safeHTML }}
 </h{{ $level }}>

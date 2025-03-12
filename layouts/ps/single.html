@@ -8,7 +8,9 @@
 
     <h1 class="single-title">{{ .Title }}</h1>
 
-        {{ partial "ps_data.html" . }}
+    {{ partial "ps_data.html" . }}
+
+    <br>
 
     {{ if .Params.toc }}
     {{ .TableOfContents }}
