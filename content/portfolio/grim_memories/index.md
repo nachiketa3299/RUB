@@ -17,22 +17,27 @@ project:
   github: https://github.com/WHALE59/Project_BM
 ---
 
+<br>
+
 {{< ytb "https://www.youtube.com/embed/EZtdZAEcpg8?si=08tsFxncRMNzdaYe"  "트레일러" >}}
 
-## 프로젝트 개괄
+# 프로젝트 개괄
 
 * **팀 규모**: 7명
 * **직책**: 메인 프로그래머, PM
 * **목표**: 공모전 제출, Itch.io와 Steam에 게임 데모 출시
 * **깃헙 링크**: [Project_BM](https://github.com/WHALE59/Project_BM)
-* **기술 사양**
+* **기술 사양**:
+	* Unity 2022.3.48fl 
+	* Git Fork / Github Flow
+	* FMOD for Unity 2.02.24
 * **게임 개요**:
 
 > 프로젝트: 그림 메모리즈는 1인칭 시점의 공포 테마 방 탈출 게임으로, 선형적인 스토리와 영화같은 연출을 앞세우는 게임입니다. 동일한 공간을 두 가지 다른 테마에서 플레이할 수 있는 것이 특장점 입니다.
 
-## 주요 기여 사항
+# 주요 기여 사항
 
-### 1인칭 캐릭터 컨트롤러 구현
+## 1인칭 캐릭터 컨트롤러 구현
 
 ```mermaid
 stateDiagram
@@ -78,7 +83,7 @@ stateDiagram
 
 {{< ytb "https://www.youtube.com/embed/wIU7-DIbJHs?si=O6OLzsyhpoMB1-HY" "각 상태별 이동 충격의 발생을 디버그 모드에서 시각화하는 영상" >}}
 
-### 상호작용 시스템 구현
+## 상호작용 시스템 구현
 
 조준자로 검출한 오브젝트와 상호작용할 수 있는 시스템을 구현했습니다.
 
@@ -110,7 +115,7 @@ stateDiagram
   
 {{< ytb "https://www.youtube.com/embed/jboTbFeA7Ys?si=RhgfaL5SJVG6ItEp" "완성된 상호작용 시스템" >}}
 
-### FMOD Unity를 활용한 사운드 시스템 구축
+## FMOD Unity를 활용한 사운드 시스템 구축
 
 사운드 디자이너 분과 게임에서 더 질좋은 사운드 경험을 위해 FMOD Unity를 사용하기로 협의하였습니다.  FMOD Event 디자인의 일부에 참여하였고, 전체 게임의 사운드 프로그래밍을 담당하였습니다.
 
@@ -131,7 +136,7 @@ FMOD Unity를 사용하는 것은 디자이너 분과 저 모두 처음이었지
 
 이에 더해, 단발성 오브젝트 3D 효과음, 앰비언스와 UI 2D 효과음들을 작업하였습니다.
 
-### Localization 협업 시스템 구축
+## Localization 협업 시스템 구축
 
 Unity의 Localization 패키지를 이용하여 스트링 테이블로 최종 플레이어에게 전달되는 모든 문자열을 관리하였습니다. 그리고 해당 문자열 테이블을 Google SpreadSheet로 Push / Pull 할 수 있게 만들어 기획자분들이 쉽게 내용을 변경하고 게임에 적용할 수 있게 시스템을 구축하였습니다.
 
@@ -141,7 +146,7 @@ Unity의 Localization 패키지를 이용하여 스트링 테이블로 최종 �
 
 ![Localization-In-Game](images/LocalizationIngame.png "인게임")
 
-### 개발 편의를 위한 에디터 도구 개발
+## 개발 편의를 위한 에디터 도구 개발
 
 저희 게임은 카메라와 캐릭터 등, 씬 전환에 따라 언로드되면 안 되는 오브젝트들이 존재하는 상주 씬(PersistentGameplay) 에 월드 씬을 Additive로 로드하는 구조로 작동합니다. 
 

@@ -1,12 +1,14 @@
 {{ define "main" }}
 <h1 class="single-title"> {{ .Title }} </h1>
 
+{{ .TableOfContents }}
+
 {{ .Content }}
 
 {{ $projects := where .RegularPages "Params.project.type" "eq" "team" }}
 {{ $projects := sort $projects "Params.project.order"}}
 
-<h1>기술 스택</h1>
+{{ "# 기술 스택" | markdownify }}
 
 <ul>
   <li>Unity5</li>
@@ -17,7 +19,7 @@
 </ul>
 
 
-<h1>팀 프로젝트 포트폴리오</h1>
+{{ "# 팀 프로젝트 포트폴리오" | markdownify }}
 
 <p>총 3개의 개발 프로젝트 중 2개의 프로젝트에서 <strong>팀장</strong>으로 활동하였습니다.</p>
 <p>모든 개발 프로젝트에서 <strong>핵심 클라이언트 프로그래머</strong>로 작업하였고, 프로젝트의 주요 기술적 의사결정들을 주도하였습니다.</p>
@@ -98,7 +100,7 @@
 
 </table>
 
-<h1>개인 프로젝트 포트폴리오</h1>
+{{ "# 개인 프로젝트 포트폴리오" | markdownify }}
 
 {{ $projects := where .RegularPages "Params.project.type" "eq" "personal" }}
 <table class="pf_table">
@@ -122,7 +124,7 @@
 {{- end -}}
 </table>
 
-<h1>기타 활동</h1>
+{{ "# 기타 활동" | markdownify }}
 
 <ul>
   <li>
