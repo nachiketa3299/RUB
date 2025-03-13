@@ -1,0 +1,139 @@
+@import 'variables';
+@import 'mixins';
+
+// 기술 스택 컨테이너 스타일
+// 기술 스택을 표시하는 인라인 박스 컴포넌트
+.rub_tech_cont {
+  @include card-style;
+  padding: $spacing-xs $spacing-md;
+  font-family: $font-mono;
+  color: $text-secondary-color;
+}
+
+// 페이지 리스트 아이템 호버 효과
+.rub_page_list_item {
+  @include hover-effect;
+}
+
+// 섹션 리스트 아이템 스타일
+// 메인 페이지의 섹션 네비게이션 버튼
+.rub_section_list_item {
+  font-style: bolder;
+  font-family: $font-mono;
+  border-radius: $border-radius-lg;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: $spacing-xs $spacing-lg;
+  text-align: center;
+  background-color: $primary-color;
+  box-shadow: $shadow-lg rgba(0, 0, 0, 1);
+
+  a {
+    color: $background-color !important;
+  }
+  color: $background-color !important;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+// 헤더 앵커 링크 스타일
+// 헤딩 옆에 표시되는 링크 아이콘
+.rub-header-anchor {
+  display: inline-block;
+  font-size: $font-size-xs;
+  padding: $spacing-xs $spacing-md;
+  color: $accent-color;
+  border: 1px solid $accent-color;
+  border-radius: $border-radius-lg;
+  vertical-align: middle;
+  font-family: $font-mono;
+  line-height: 1.2;
+  margin-left: $spacing-sm;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+// 헤더 앵커 호버 효과
+h1:hover .rub-header-anchor,
+h2:hover .rub-header-anchor,
+h3:hover .rub-header-anchor,
+h4:hover .rub-header-anchor,
+h5:hover .rub-header-anchor,
+h6:hover .rub-header-anchor {
+  opacity: 1;
+}
+
+// 목차 스타일
+// 페이지 우측에 고정되는 목차
+#TableOfContents {
+  background: $background-color;
+  box-shadow: $shadow-md rgba(0, 0, 0, 0.1);
+  border: 1px solid $accent-color;
+  border-radius: $border-radius-md;
+}
+
+// 푸터 스타일
+.site-footer {
+  font-size: $font-size-sm;
+  text-align: right;
+}
+
+// 접을 수 있는 details 컴포넌트 스타일
+details {
+  border: thin solid $accent-color;
+  border-radius: $border-radius-sm;
+  box-shadow: $shadow-md $accent-color;
+  padding: $spacing-md;
+
+  // summary 버튼 스타일
+  summary {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    margin: -$spacing-md;
+    margin-bottom: 0;
+    padding: $spacing-md;
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
+  }
+
+  // 화살표 아이콘 스타일
+  summary::before {
+    content: "▶";
+    font-size: $font-size-base;
+    transition: transform 0.2s ease;
+  }
+
+  // 펼쳐진 상태 스타일
+  &[open] {
+    summary {
+      border-bottom: 1px solid $accent-color;
+      margin-bottom: $spacing-md;
+    }
+
+    // 화살표 회전 효과
+    summary::before {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+// 목차 컨테이너 스타일
+.toc {
+  border: thin solid $text-color;
+  padding: $spacing-lg;
+}
+
+// 이미지 캡션 스타일
+figcaption {
+  color: $text-secondary-color;
+}
+
+// 인용구 스타일
+blockquote {
+  border: thin solid $text-color;
+} 

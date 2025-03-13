@@ -1,0 +1,39 @@
+// Colors
+$primary-color: #3548cf;      // 주요 강조 색상
+$secondary-color: #8f0075;    // 보조 강조 색상
+$accent-color: rgb(164, 177, 252);  // 액센트 색상
+$text-color: #000000;         // 기본 텍스트 색상
+$text-secondary-color: #595959;  // 보조 텍스트 색상
+$background-color: #ffffff;    // 배경 색상
+$border-color: rgb(164, 177, 252);  // 테두리 색상
+
+// Typography
+$font-primary: "Noto Sans KR", Arial, Helvetica, sans-serif;  // 기본 본문 폰트
+$font-mono: "IBM Plex Mono";  // 코드, 기술 스택용 모노스페이스 폰트
+$font-heading: "IBM Plex Sans KR", sans-serif;  // 제목용 폰트
+$font-title: "Anton";  // 사이트 타이틀용 특수 폰트
+
+// Spacing
+$spacing-xs: 0.2em;   // 매우 작은 여백
+$spacing-sm: 0.4em;   // 작은 여백
+$spacing-md: 0.6em;   // 중간 여백
+$spacing-lg: 1rem;    // 큰 여백
+$spacing-xl: 1.5rem;  // 매우 큰 여백
+
+// Border radius
+$border-radius-sm: 0.25em;  // 작은 반경
+$border-radius-md: 0.5em;   // 중간 반경
+$border-radius-lg: 3px;     // 큰 반경
+
+// Font sizes
+$font-size-xs: 0.67em;   // 매우 작은 텍스트
+$font-size-sm: 0.83em;   // 작은 텍스트
+$font-size-base: 1em;    // 기본 텍스트 크기
+$font-size-lg: 1.17em;   // 큰 텍스트
+$font-size-xl: 1.5em;    // 매우 큰 텍스트
+$font-size-xxl: 2em;     // 초대형 텍스트
+
+// Shadows
+$shadow-sm: 0.5px 0.5px 0.5px 0.5px;  // 작은 그림자
+$shadow-md: 1px 1px 1px 0px;          // 중간 그림자
+$shadow-lg: 1px 1px 2px;              // 큰 그림자 

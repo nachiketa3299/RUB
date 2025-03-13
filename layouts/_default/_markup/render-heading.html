@@ -1,12 +1,4 @@
 {{ $level := .Level }}
-{{ $tocID := "TableOfContents" }}
-{{ if $tocID }}
-  <h{{ $level }} id="{{ .Anchor | safeURL }}">
-    {{ .Text | safeHTML }}
-    <a href="#{{ $tocID }}" style="text-decoration: none; color: inherit;">
-      <span class="header-anchor">
-          🔗{{ $level }} 
-      </span>
-    </a>
-  </h{{ $level }}>
-{{ end }}
+<h{{ $level }} id="{{ .Anchor | safeURL }}" data-level="{{ $level }}" class="markdown-heading">
+  <span class="heading-marker"><a href="#{{ .Anchor | safeURL }}">#</a></span>{{ .Text | safeHTML }}
+</h{{ $level }}>

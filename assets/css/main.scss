@@ -1,11 +1,15 @@
 @import url('https://iosevka-webfonts.github.io/iosevka/Iosevka.css');
-
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+@import 'components';
 
 .rub_tech_cont {
   border-radius: 0.25em;
@@ -47,31 +51,53 @@
   cursor: pointer;
   padding: .1px 10px;
   text-align: center;
-  background-color: rgb(0, 153, 255);
-  box-shadow: 1px 1px 2px rgb(0, 0, 0);
+  background-color: #a7d1ff;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   a {
-    color: white !important;
+    color: #4a4a4a !important;
   }
-  color: white !important;
+  color: #4a4a4a !important;
 }
 
 .rub_section_list_item:hover {
-  background-color: #a042f8;
+  background-color: #ffd1f7;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .site-title {
   color: transparent;
   background-image: linear-gradient(
-    to right,
-    rgba(2,0,36,1) 0%, 
-    rgba(9,9,121,1) 0%, 
-    rgba(0,212,255,1) 100%
+    -45deg,
+    #0066cc,
+    #e5a0e5,
+    #00a1ff,
+    #dda0dd
   );
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
   text-align: center;
-  font-style: bold;
-  font-family: "Anton";
+  font-family: "IBM Plex Sans KR";
+  animation: gradient 24s ease infinite;
+  width: 100%;
+  margin: 0 auto;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  font-size: 2.5em;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .single-title {
@@ -85,173 +111,7 @@
   text-align: right;
 }
 
-// -------------- THEME SWITCHER -------------- //
-@mixin theme($--bg-color, $--primary-text-color, $--secondary-text-color, $--link-color, $--visited-link-color, $--highlight) {
-  background-color: $--bg-color;
-
-  color: $--primary-text-color;
-
-  a {
-    color: $--link-color;
-
-    &:visited {
-      color: $--visited-link-color;
-    }
-  }
-
-  details {
-    border: thin solid rgb(164, 177, 252);
-    border-radius: .25em;
-    box-shadow: 1px 1px 1px 0px rgb(164, 177, 252);
-  }
-
-  details summary {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 0px;
-
-    h1, h2, h3, h4, h5, h6 {
-      margin: 0;
-    }
-  }
-
-  details summary::before {
-    content: "▶";
-    font-size: 1em;
-    transition: transform 0.2s ease;
-  }
-
-  details[open] summary {
-    border-bottom: 1px solid rgb(164, 177, 252);
-  }
-
-  details[open] summary::before {
-    transform: rotate(90deg);
-  }
-
-  pre {
-    background: $--bg-color;
-  }
-
-  code:not(pre > code) {
-    background-color: #dfdddd;
-    color: #000000;
-    font-weight: 500;
-    border-radius: 0.25em;
-  }
-
-  *:target {
-    background: $--highlight;
-    color: $--primary-text-color;
-  }
-
-  .toc {
-    border: thin solid $--primary-text-color;
-    padding: 1rem;
-  }
-
-  figcaption {
-    color: $--secondary-text-color;
-  }
-
-  blockquote {
-    border: thin solid $--primary-text-color;
-  }
-}
-
-@mixin dark-appearance {
-  @include theme(#000000, #ffffff, #000000, #79a8ff, #f78fe7, #2f3849); // modus-vivendi
-}
-
-@mixin light-appearance {
-  @include theme(#ffffff, #000000, #595959, #3548cf, #8f0075, #dae5ec); // modus-operandi
-}
-
-body[a="dark"] {
-  @include dark-appearance;
-}
-
-body[a="light"] {
-  @include light-appearance;
-}
-
-@media (prefers-color-scheme: dark) {
-  body[a="auto"] {
-    @include dark-appearance;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body[a="auto"] {
-    @include light-appearance;
-  }
-}
-
-// -------------------------------------------- //
-
-html {
-  height: 100%;
-  font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;
-}
-
-body {
-  // font-family: monospace;
-  font-size: 1em;
-  line-height: 1.4;
-  margin: 0;
-  min-height: 100%;
-  overflow-wrap: break-word;
-}
-
-.header-anchor {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.5em;
-  padding: 2px 6px;
-  color: rgb(164, 177, 252);
-  border: 1px solid rgb(164, 177, 252);
-  border-radius: 4px;
-  vertical-align: middle;
-  font-family: "IBM Plex Mono";
-  line-height: 1.2;
-}
-
-#TableOfContents {
-  background: rgb(255, 255, 255);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
-  border: 1px solid rgb(164, 177, 252);
-  border-radius: .5em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  // margin-top: 1.5rem;
-  font-family: "IBM Plex Sans KR", sans-serif;
-}
-
-h1 { font-size: 2em; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.17em; }
-h4 { font-size: 1em; }
-h5 { font-size: 0.83em; }
-h6 { font-size: 0.67em; }
-
-p {
-  margin: 1rem 0;
-}
-
-li {
-  margin: 0.4rem 0;
-}
-
-a {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
+// Additional styles that don't fit into components
 hr {
   text-align: center;
   border: 0;
@@ -265,31 +125,26 @@ hr {
     content: attr(data-content) '/////'
   }
   color: rgb(182, 182, 182);
-  font-family: "IBM Plex Mono";
+  font-family: $font-mono;
 }
 
 pre {
   padding: 1em;
   overflow-x: auto;
-  /* Fix pre content overflowing parent without scroll bar */
-
   border-radius: 0.5em;
 }
 
-code {
-  font-family: 'IBM Plex Mono';
+code:not(pre > code) {
+  font-family: $font-mono;
   text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-
   white-space: pre-wrap;
-
-}
-
-code:not(pre > code) {
-  padding: 0.1em 0.2em;
-  font-size: 90%;
+  background-color: #f5f5f5;
+  color: #0066cc;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
 }
 
 code.has-jax {
@@ -297,19 +152,7 @@ code.has-jax {
   background: inherit !important;
   border: none !important;
   font-size: 100%;
-}
-
-blockquote {
-  padding: 1rem;
-
-  p {
-    margin: 0;
-  }
-}
-
-figcaption.rub_caption {
-  text-align: center;
-  opacity: 0.7;
+  color: inherit !important;
 }
 
 figure.rub_img {
@@ -317,6 +160,7 @@ figure.rub_img {
   margin: 0;
   width: 100%;
   max-width: 800px;
+  box-sizing: border-box;
   img {
     width: 100%;
     display: block;
@@ -324,10 +168,27 @@ figure.rub_img {
   }
 }
 
+.plantuml-diagram {
+  text-align: center;
+  margin: 2em auto;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  
+  .plantuml-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 figure.ytb-player {
   max-width: 800px;
   margin: auto;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 
   iframe {
     width: 100%;
@@ -340,39 +201,170 @@ iframe.game-player {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
-
   overflow: auto;
 }
 
-details {
-  padding: 1rem;
-}
-
-details summary {
-  text-decoration: none;
-}
-
-details[open] summary {
-  margin-bottom: 0.5em;
-  padding-bottom: 0.5em;
-}
-
 .post-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-between;
 }
 
 .w {
   max-width: 800px;
   margin: 0 auto;
   padding: 4rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.toc {
-  padding: 1rem;
+.markdown-heading {
+  position: relative;
+  padding-left: 0;
+}
+
+.heading-marker {
+  position: absolute;
+  left: -2rem;
+  width: 1.5rem;
+  text-align: right;
+  color: #0066cc;
+  font-family: "IBM Plex Mono";
+  font-weight: normal;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.heading-separator {
+  margin-right: 0.5rem;
+  opacity: 0.5;
+}
+
+.markdown-heading:hover .heading-marker {
+  opacity: 1;
+}
+
+.markdown-heading a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav#TableOfContents {
+  position: relative;
+  margin-top: 2em;
+  padding: 1.2em;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5em;
+  background-color: white;
+  font-size: 0.9em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1200px) {
+  nav#TableOfContents {
+    position: fixed;
+    top: 2em;
+    left: calc(50% + 400px + 2rem);
+    width: 350px;
+    max-height: calc(100vh - 4em);
+    overflow-y: auto;
+    z-index: 100;
+    box-shadow: none !important;
+    
+    ul {
+      padding-left: 0;
+      margin: 0;
+      list-style-type: none;
+      
+      li {
+        position: relative;
+        margin-bottom: 0.8em;
+        padding-left: 1.2em;
+        white-space: normal;
+        line-height: 1.4;
+        word-break: keep-all;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0.6em;
+          width: 4px;
+          height: 4px;
+          background-color: #0066cc;
+          border-radius: 50%;
+          opacity: 0.7;
+        }
+
+        &:hover::before {
+          opacity: 1;
+        }
+      }
+
+      ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+
+        li::before {
+          width: 3px;
+          height: 3px;
+          background-color: #666;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  nav#TableOfContents {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  nav#TableOfContents {
+    position: relative;
+    left: auto;
+    width: 100%;
+    max-height: none;
+    margin: 2em 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 80%;
+  }
+  
+  pre, code {
+    font-size: 80%;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 80%;
+  }
+  
+  .plantuml-diagram {
+    .plantuml-image {
+      max-width: 100%;
+    }
+  }
+}
+
+blockquote {
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  border-radius: 0.5em;
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 table.pf_table {
@@ -396,7 +388,6 @@ table.ps_table {
   border-collapse: collapse;
   font-size: 0.9em;
   max-width: 400px;
-
   border: 1px solid #79a8ff;
 
   tr th {
@@ -419,4 +410,27 @@ table {
   th, td, tr {
     border: #000000 1px solid;
   }
+}
+
+mark {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  mix-blend-mode: multiply;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+.link-favicon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: middle;
+  display: inline-block;
 }

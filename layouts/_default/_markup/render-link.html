@@ -1,0 +1,8 @@
+{{ $url := urls.Parse .Destination }}
+{{ $favicon := printf "https://www.google.com/s2/favicons?domain=%s&sz=16" $url.Host }}
+<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener"{{ end }}>
+  {{ if $url.Host }}
+  <img src="{{ $favicon }}" alt="" class="link-favicon" />
+  {{ end }}
+  {{ .Text | safeHTML }}
+</a> 

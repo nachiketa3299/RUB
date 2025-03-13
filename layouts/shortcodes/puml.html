@@ -1,6 +1,19 @@
 <div class="plantuml-diagram">
     <textarea class="plantuml-code" style="display:none;">
+    @startuml
+    skinparam defaultFontName "Courier"
+    skinparam defaultFontSize 14
+    skinparam class {
+        BackgroundColor white
+        BorderColor black
+        ArrowColor black
+        AttributeBackgroundColor white
+        AttributeBorderColor black
+        MethodBackgroundColor white
+        MethodBorderColor black
+    }
     {{ .Inner }}
+    @enduml
     </textarea>
     <img class="plantuml-image" src="" alt="PlantUML Diagram"/>
 </div>

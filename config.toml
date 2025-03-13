@@ -10,11 +10,17 @@ theme = 'hugo-theme-nostyleplease'
 
 [markup]
   [markup.highlight]
-    anchorLineNos = true
-    lineNos = true
-    tabWidth = 2
+    anchorLineNos = false
     codeFences = true
-    lineNumbersInTable = false
+    guessSyntax = false
+    hl_Lines = ''
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "github-dark"
+    tabWidth = 2
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 3
