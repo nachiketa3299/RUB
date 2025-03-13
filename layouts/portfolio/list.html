@@ -1,8 +1,6 @@
 {{ define "main" }}
 <h1 class="single-title"> {{ .Title }} </h1>
 
-{{ .TableOfContents }}
-
 {{ .Content }}
 
 {{ $projects := where .RegularPages "Params.project.type" "eq" "team" }}

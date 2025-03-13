@@ -1,0 +1,18 @@
+{{ $path := .Get "path" }}
+{{ $size := .Get "size" | default "1.5em" }}
+{{ $sup := .Get "sup"}}
+
+{{ if not $path }}
+  <p>SVG 파일 경로를 지정해주세요!</p>
+{{ else }}
+  {{ $svg := readFile $path }}
+  <span class="rub_tech_cont">
+    <span class="svg-icon" style="width: {{ $size }}; height: {{ $size }}; display: inline-block; vertical-align: middle;">
+      {{ $svg | safeHTML }}
+
+    </span>
+  {{ if $sup }}
+    {{ $sup }}
+  {{ end }}
+  </span>
+{{ end }}

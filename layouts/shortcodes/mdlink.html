@@ -1,1 +1,1 @@
-{{ $page := .Site.GetPage (.Get 0) }} [{{ $page.Title }}]({{ $page.RelPermalink }})
+{{ $page := .Site.GetPage (.Get 0) }} {{ $title := (.Get 1) | default $page.Title }} [{{ $title }}]({{ $page.RelPermalink }})

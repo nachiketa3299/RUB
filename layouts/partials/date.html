@@ -1,6 +1,8 @@
 <time datetime="{{ .Date }}" class="site-date">
 	{{ if .Date }}
-	{{ .Date | time.Format site.Params.theme_config.date_format }}
+		<div class="rub_page_list_date">{C:{{ .Date | time.Format site.Params.theme_config.date_format }}}</div>
 	{{ end }}
-
+	{{ if .Lastmod }}
+		<div class="rub_page_list_date">{M:{{ .Lastmod | time.Format site.Params.theme_config.date_format }}}</div>
+	{{ end }}
 </time>

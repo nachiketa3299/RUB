@@ -1,0 +1,1 @@
+{{ $open := (.Get 1) | default "" }}<details {{ $open }}><summary>{{- .Get 0 | markdownify -}}</summary> {{ .Inner | markdownify }} </details>
