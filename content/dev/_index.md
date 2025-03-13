@@ -9,6 +9,9 @@ title: 개발 관련 포스트
 * [ ] RDong 프로젝트 진행 하면서, Unity의 Rigidbody2D 컴포넌트와 그 충돌 처리(+Collider)에 대한 개괄 작성하기
 * [ ] C++ `std::find`, `std::find_if`, `std::find_first_of`, `std::find_end` 계열 함수 사용법 및 실세계의 활용법 작성
 * [ ] C++ `std::string` 관련 메서드 및 활용법 작성
-* [x] [디자인 패턴] 싱글턴에 관한 게시글 업데이트
 
 ---
+
+* [x] [C++] 중괄호 초기화에 대해서
+* [x] [C++] 가상성에 대해서
+* [x] [디자인 패턴] 싱글턴에 관한 게시글 업데이트
