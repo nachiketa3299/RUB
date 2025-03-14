@@ -46,3 +46,73 @@ ps:
 # 코드
 
 {{< hlc "assets/code.cc" "cpp" >}}
+
+# 기타
+
+## 2차원 좌표의 회전 변환
+
+2차원 공간에서 한 점 $(x, y)$을 **원점 $(0, 0)$을 기준**으로 반시계 방향으로 $\theta$만큼 회전시키는 공식은 다음과 같다.
+
+$$
+x^\prime = x\cos{\theta}-y\sin{\theta}  
+$$
+$$
+y^\prime = x\sin{\theta}+y\cos{\theta}
+$$
+
+이를 행렬 형태로 표현하면 아래와 같다.
+
+$$
+\begin{pmatrix} x^\prime \\\ y^\prime \end{pmatrix} =
+\begin{pmatrix} \cos\theta & -\sin\theta \\\ \sin\theta & \cos\theta \end{pmatrix}
+\begin{pmatrix} x \\\ y \end{pmatrix}
+$$
+
+다시한 번 주의할 점은 이게 원점을 기준으로 하는 회전 변환이라는 것이다. ==이 문제에서도 그러므로 모든 테트로미노가 **로컬 좌표계에서 원점에 붙어 있도록 의도**하였다.==
+
+
+## 범위 기반 `for` 문은 C 스타일 배열도 순회가 가능하다
+
+`T[]` 형식으로 선언된 배열에만 해당된다. `T*`로 Decay 되어버린 배열로는 순회가 안 된다. (이는 배열 형식 자체가 크기에 대한 정보를 가지고 있기 때문)
+
+```cc{lineNos=false}
+int[] arr{0, 1, 2};
+int* aptr = new int[3];
+
+for (int& e: arr) { /* works */ }
+for (int& e: aptr) { /* not works */ }
+```
+
+## 벡터 합치기
+
+대중적으로 두 가지 방식이 있다. (둘다 캐퍼시티를 초과하면 재할당이 일어나므로 주의한다. 결과 벡터의 길이를 대충 알고있다면, 미리 예약해 두는 것도 좋다.)
+
+첫 번째는:
+
+```cc{lineNos=false}
+std::vector<T> dst, src;
+
+dst.insert(
+  dst.end(),
+  std::make_move_iterator(src.begin()),
+  std::make_move_iterator(std.end())
+);
+```
+
+반복자 어답터인 `std::make_move_iterator`를 이용하면 `src`의 요소에 복사를 발생시키지 않고, 마치 각 요소에 대해 `std::move(*it)`가 적용된 것처럼 작동한다.
+
+두 번째는:
+
+```cc{lineNos=false}
+std::vector<T> dst, src;
+
+std::move(
+  src.begin(), 
+  src.end(),
+  std::back_inserter(dst)
+)
+```
+
+둘 다 `src`를 이동시키기 때문에 연산이 끝난 후 `src`에 대한 접근을 조심해야 한다. 이동 후에 `src.clear()`를 써서 가독성을 높여 실수를 방지할 수도 있다. [^1]
+
+[^1]: `src.clear()` 호출 없어도 `src` 내용을 전부 이동시켰으면 `src`는 빈 상태가 된다.
