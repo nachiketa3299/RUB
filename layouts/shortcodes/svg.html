@@ -6,13 +6,12 @@
   <p>SVG 파일 경로를 지정해주세요!</p>
 {{ else }}
   {{ $svg := readFile $path }}
-  <span class="rub_tech_cont">
-    <span class="svg-icon" style="width: {{ $size }}; height: {{ $size }}; display: inline-block; vertical-align: middle;">
+  <span class="rub-tech-badge">
+    <span class="rub-svg-icon" style="width: {{ $size }}; height: {{ $size }};">
       {{ $svg | safeHTML }}
-
     </span>
-  {{ if $sup }}
-    {{ $sup }}
-  {{ end }}
+    {{ if $sup }}
+    <span class="rub-tech-label">{{ $sup }}</span>
+    {{ end }}
   </span>
 {{ end }}

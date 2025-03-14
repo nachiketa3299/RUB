@@ -136,4 +136,39 @@ figcaption {
 // 인용구 스타일
 blockquote {
   border: thin solid $text-color;
+}
+
+// SVG 아이콘과 기술 뱃지 스타일
+.rub-tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: $spacing-xs $spacing-sm;
+  background-color: rgba($primary-color, 0.1);
+  border: 1px solid $primary-color;
+  border-radius: $border-radius-md;
+  font-family: $font-mono;
+  color: $text-color;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: rgba($primary-color, 0.2);
+    transform: translateY(-1px);
+    box-shadow: $shadow-sm rgba($primary-color, 0.2);
+  }
+
+  .rub-svg-icon {
+    display: inline-block;
+    vertical-align: middle;
+    
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+    }
+  }
+
+  .rub-tech-label {
+    font-size: $font-size-sm;
+  }
 } 
