@@ -48,6 +48,15 @@ toc: true
 * [[백준] 2252 줄 세우기](https://www.acmicpc.net/problem/2252)<sup>{25-03-15}</sup>
 * [[백준] 1766 문제집](https://www.acmicpc.net/problem/1766)<sup>{25-03-15}</sup>
   * [ ] 우선 순위 큐 정의법 한번 정리
+</details>
+<details>
+<summary>위상 정렬</summary>
+* [ ] [[백준] 9664 G4 N-Queen](https://www.acmicpc.net/problem/9663)
+* [[백준] 15649 S3 N과 M(1)](https://www.acmicpc.net/problem/15649)
+* [[백준] 15650 S3 N과 M(2)](https://www.acmicpc.net/problem/15650)
+* [[백준] 15651 S3 N과 M(3)](https://www.acmicpc.net/step/34)
+* [[백준] 15652 S3 N과 M(4)](https://www.acmicpc.net/problem/15652)
+* [[백준] 14888 S1 연산자 끼워넣기](https://www.acmicpc.net/problem/14888)
 
 </details>
 
