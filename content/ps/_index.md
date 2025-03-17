@@ -57,7 +57,12 @@ toc: true
 * [[백준] 15651 S3 N과 M(3)](https://www.acmicpc.net/step/34)
 * [[백준] 15652 S3 N과 M(4)](https://www.acmicpc.net/problem/15652)
 * [[백준] 14888 S1 연산자 끼워넣기](https://www.acmicpc.net/problem/14888)
+</details>
 
+<details>
+<summary>그래프 탐색</summary>
+* [[백준] 10451 S3 순열 사이클](https://www.acmicpc.net/problem/10451)
+  * 사이클 탐색
 </details>
 
 ---
