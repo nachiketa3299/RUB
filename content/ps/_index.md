@@ -2,7 +2,7 @@
 title: 코테 리뷰 아카이브
 section: ps
 date: 2025-02-20
-astmod: 2025-03-15
+lastmod: 2025-03-21
 toc: true
 ---
 
@@ -62,7 +62,9 @@ toc: true
 <details>
 <summary>그래프 탐색</summary>
 * [[백준] 10451 S3 순열 사이클](https://www.acmicpc.net/problem/10451)
-  * 사이클 탐색
+  * 사이클 탐색 (이지만 사실 그냥 그래프 덩어리 세기)
+* [[백준] 10026 G5 적록색약](https://www.notion.so/192bab1deb2e805789acdeebbf63d242?p=1bcbab1deb2e80fdbbcfc532bd276ba5&pm=s)
+  * "인접"을 재정의하여 그래프 덩어리 세기
 </details>
 
 ---
