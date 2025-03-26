@@ -182,4 +182,12 @@ ps_db:
     link: https://www.acmicpc.net/problem/1874
     solved:
       - date: 2025-03-03
+  - site: 백준
+    title: 계단 오르기
+    id: 2579
+    rank: S3
+    link: https://www.acmicpc.net/problem/2579
+    solved:
+      - date: 2025-03-26
+      - date: 2025-03-27
 
