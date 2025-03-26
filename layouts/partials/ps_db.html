@@ -1,0 +1,84 @@
+{{ $psData := .Site.Data.ps_db.ps_db }}
+{{ $style := resources.Get "css/ps_db.css" | resources.Minify }}
+{{ $script := resources.Get "js/ps_db.js" | resources.Minify }}
+
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+<script src="{{ $script.RelPermalink }}"></script>
+
+{{/* 날짜 데이터를 JavaScript로 전달하기 위한 스크립트 */}}
+<script>
+  window.psData = [
+    {{ range $psData }}
+    {
+      site: "{{ .site }}",
+      title: "{{ .title }}",
+      id: {{ if .id }}{{ .id }}{{ else }}null{{ end }},
+      rank: "{{ .rank }}",
+      link: "{{ .link }}",
+      tags: {{ if .tags }}[{{ range .tags }}"{{ . }}",{{ end }}]{{ else }}[]{{ end }},
+      solved: {{ if .solved }}{{ with (first 1 .solved) }}{{ $latest := index . 0 }}{{ $date := time $latest.date }}{{ $now := now }}{{ $diff := $now.Sub $date }}{{ $days := int (div $diff.Hours 24) }}{{ $days }}{{ end }}{{ else }}null{{ end }}
+    },
+    {{ end }}
+  ];
+</script>
+
+{{/* 데이터 정렬을 위한 함수 정의 */}}
+{{ define "getDays" }}
+  {{ $value := . }}
+  {{ if eq $value "-" }}
+    {{ 999999 }}
+  {{ else if eq $value "오늘" }}
+    {{ 0 }}
+  {{ else }}
+    {{ $days := replaceRE "[^0-9]" "" $value }}
+    {{ int $days }}
+  {{ end }}
+{{ end }}
+
+<table class="ps_db_table" id="psTable">
+  <thead>
+    <tr>
+      <th data-sort="site">사이트</th>
+      <th data-sort="title">문제</th>
+      <th data-sort="rank">난이도</th>
+      <th data-sort="tags">태그</th>
+      <th data-sort="solved">풀이일</th>
+      <th data-sort="review">리뷰</th>
+
+      {{/*  <th>복습 필요</th>
+      <th>풀이 기록</th>  */}}
+
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $psData }}
+    <tr>
+      <td>{{ .site }}</td>
+      <td><a href="{{ .link }}" target="_blank">{{ .title }}</a></td>
+      <td><span class="rank" data-rank="{{ .rank }}">{{ .rank }}</span></td>
+      <td>{{ if .tags }}{{ delimit .tags ", " }}{{ else }}-{{ end }}</td>
+      <td class="solved-date" data-days="{{ if .solved }}{{ with (first 1 .solved) }}{{ $latest := index . 0 }}{{ $date := time $latest.date }}{{ $now := now }}{{ $diff := $now.Sub $date }}{{ $days := int (div $diff.Hours 24) }}{{ $days }}{{ end }}{{ else }}-1{{ end }}"></td>
+
+      {{/*  <td>{{ if .review_required }}✅{{ else }}❌{{ end }}</td>
+      <td>
+        {{ range .solved }}
+        <p>{{ .date }} ({{ .time }}분) - {{ .note | markdownify }} {{ if .sole_solved }}🔥{{ end }}</p>
+        {{ end }}
+      </td>  */}}
+      <td>
+        {{ if .id }}
+          {{ $page := $.Site.GetPage (printf "ps/bj%d" .id) }}
+          {{ if $page }}
+            <a href="{{ $page.RelPermalink }}" target="_blank">📄 리뷰 보기</a>
+          {{ else }}
+            ❌
+          {{ end }}
+        {{ else }}
+          ❌
+        {{ end }}
+      </td>
+
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

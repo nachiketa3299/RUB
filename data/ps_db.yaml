@@ -1,0 +1,185 @@
+ps_db:
+  - site: 백준
+    title: ATM
+    id: 11399
+    rank: S4
+    link: https://www.acmicpc.net/problem/11399
+    tags: [동적 계획법]
+    review_required: False
+    solved: 
+      - date: 2025-03-22
+        time: 20
+        note: 너무 쉬워서 오히려 당황
+        sole_solved: True
+  - site: 백준
+    title: 카드 정렬하기
+    id: 1715
+    rank: G4
+    link: https://www.acmicpc.net/problem/1715
+    tags: [동적 계획법]
+    review_required: True
+    solved: 
+      - date: 2025-03-24
+        time: 30
+        note: 어려움
+        sole_solved: False
+  - site: 백준
+    title: 수열
+    id: 2491
+    rank: S4
+    link: https://www.acmicpc.net/problem/2491
+    tags: [동적 계획법]
+    review_required: False
+    solved:
+      - date: 2025-03-26
+        time: 20
+        note: |
+          DP 문제인 줄 알았는데, 아닌가봄
+        sole_solved: False
+  - site: 백준
+    title: 줄 세우기
+    id: 2252
+    rank: G3
+    link: https://www.acmicpc.net/problem/2252
+    tags: [위상 정렬]
+    solved: 
+      - date: 2025-03-15
+  - site: 백준
+    title: 문제집
+    id: 1766
+    rank: G2
+    link: https://www.acmicpc.net/problem/1766
+    tags: [위상 정렬]
+    solved: 
+      - date: 2025-03-15
+        note: 우선 순위 큐 정의법 한 번 정리할 것
+  - site: 백준
+    title: N-Queen
+    id: 9663
+    rank: G4
+    link: https://www.acmicpc.net/problem/9663
+    tags: [백 트래킹]
+    solved: 
+      - date: 2025-03-16
+  - site: 백준
+    title: N과 M (1)
+    id: 15649
+    rank: S3
+    tags: [백 트래킹]
+    solved: 
+      - date: 2025-03-16
+    link: https://www.acmicpc.net/problem/15649
+  - site: 백준
+    title: N과 M (2)
+    id: 15650
+    rank: S3
+    tags: [백 트래킹]
+    link: https://www.acmicpc.net/problem/15650
+    solved: 
+      - date: 2025-03-16
+  - site: 백준
+    title: N과 M (3)
+    id: 15651
+    rank: S3
+    tags: [백 트래킹]
+    link: https://www.acmicpc.net/problem/15651
+    solved: 
+      - date: 2025-03-16
+  - site: 백준
+    title: N과 M (4)
+    id: 15652
+    rank: S3
+    tags: [백 트래킹]
+    link: https://www.acmicpc.net/problem/15652
+    solved: 
+      - date: 2025-03-16
+  - site: 백준
+    title: 연산자 끼워넣기
+    id: 14888
+    rank: S1
+    tags: [백 트래킹]
+    link: https://www.acmicpc.net/problem/14888
+    solved: 
+      - date: 2025-03-16
+  - site: 백준
+    title: 순열 사이클
+    id: 10451
+    rank: S3
+    tags: [백 트래킹]
+    link: https://www.acmicpc.net/problem/10451
+    solved: 
+      - date: 2025-03-16
+        note: 사이클 탐색 (이지만 사실 그냥 그래프 덩어리 세기)
+  - site: 백준
+    title: 적록색약
+    id: 10026
+    rank: G5
+    tags: [백 트래킹]
+    link: https://www.acmicpc.net/problem/10026
+    solved: 
+      - date: 2025-03-16
+        note: 인접을 재정의하여 그래프 덩어리 세기
+  - site: 백준
+    title: 테트로미노
+    id: 14500
+    rank: G4
+    link: https://www.acmicpc.net/problem/14500
+    solved:
+      - date: 2025-03-14
+  - site: 백준
+    title: 마인크래프트
+    id: 18111
+    rank: S2
+    link: https://www.acmicpc.net/problem/18111
+    solved:
+      - date: 2025-03-11
+  - site: 백준
+    title: 암호 만들기
+    id: 1759
+    rank: G5
+    link: https://www.acmicpc.net/problem/1759
+    solved:
+      - date: 2025-03-11
+  - site: 백준
+    title: 한수
+    id: 1065
+    rank: S4
+    link: https://www.acmicpc.net/problem/1065
+    solved:
+      - date: 2025-03-09
+  - site: 백준
+    title: AC
+    id: 5430
+    rank: G4
+    link: https://www.acmicpc.net/problem/5430
+    solved:
+      - date: 2025-03-07
+  - site: 백준
+    title: 팰린드롬 만들기
+    id: 1213
+    rank: S3
+    link: https://www.acmicpc.net/problem/1213
+    solved:
+      - date: 2025-03-06
+  - site: 백준
+    title: 오큰수
+    id: 17298
+    rank: G4
+    link: https://www.acmicpc.net/problem/17298
+    solved:
+      - date: 2025-03-05
+  - site: 백준
+    title: 에디터
+    id: 1406
+    rank: S3
+    link: https://www.acmicpc.net/problem/1406
+    solved:
+      - date: 2025-03-04
+  - site: 백준
+    title: 스택 수열
+    id: 1874
+    rank: S2
+    link: https://www.acmicpc.net/problem/1874
+    solved:
+      - date: 2025-03-03
+

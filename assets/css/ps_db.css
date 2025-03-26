@@ -1,0 +1,100 @@
+.ps_db_table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  margin: 0.5rem 0 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 6px !important;
+  border: 1px solid #e0e0e0 !important;
+}
+
+.ps_db_table th {
+  background-color: #1a73e8 !important;
+  color: white !important;
+  padding: 2px 8px !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid #1557b0 !important;
+  font-size: 0.9em !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  position: relative !important;
+  border: none !important;
+}
+
+.ps_db_table th:first-child {
+  border-top-left-radius: 6px !important;
+}
+
+.ps_db_table th:last-child {
+  border-top-right-radius: 6px !important;
+}
+
+.ps_db_table th:hover {
+  background-color: #1557b0 !important;
+}
+
+.ps_db_table th::after {
+  content: "↕" !important;
+  position: absolute !important;
+  right: 4px !important;
+  opacity: 0.5 !important;
+}
+
+.ps_db_table th.asc::after {
+  content: "↑" !important;
+  opacity: 1 !important;
+}
+
+.ps_db_table th.desc::after {
+  content: "↓" !important;
+  opacity: 1 !important;
+}
+
+.ps_db_table td {
+  padding: 1px 8px !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  color: #202124 !important;
+  text-align: center !important;
+  line-height: 1.1 !important;
+  font-size: 0.9em !important;
+  border: none !important;
+}
+
+.ps_db_table tr:last-child td {
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.ps_db_table tr:last-child td:first-child {
+  border-bottom-left-radius: 6px !important;
+}
+
+.ps_db_table tr:last-child td:last-child {
+  border-bottom-right-radius: 6px !important;
+}
+
+.ps_db_table tr:hover {
+  background-color: #f8f9fa !important;
+}
+
+.ps_db_table a {
+  color: #1a73e8 !important;
+  text-decoration: none !important;
+  transition: color 0.2s !important;
+  display: inline-block !important;
+}
+
+.ps_db_table a:hover {
+  color: #1557b0 !important;
+  text-decoration: underline !important;
+}
+
+.ps_db_table .rank {
+  font-weight: 600 !important;
+  display: inline-block !important;
+}
+
+.ps_db_table .rank[data-rank^="S"] { color: #1a73e8 !important; }
+.ps_db_table .rank[data-rank^="G"] { color: #f1c40f !important; }
+.ps_db_table .rank[data-rank^="B"] { color: #8b4513 !important; } 
