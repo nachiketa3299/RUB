@@ -1,6 +1,6 @@
 ---
 title: "[알고리즘] 순열과 조합"
-draft: true
+draft: false
 toc: true
 date: 2025-03-27
 ---
