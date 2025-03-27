@@ -12,6 +12,7 @@ int n, k; // n in [1, 10^2] k in [1, 10^4]
 // 구성은 갖고 순서만 다른 것은 같은 경우이다.
 
 vector<int> coins;
+vector<int> dp;
 
 int main() {
 
@@ -20,6 +21,17 @@ int main() {
   for (int i = 0; i < n; ++i) {
     cin >> coins[i]; // [1, 10^5]
   }
+
+  dp = vector<int>(k + 1);
+  dp[0] = 1;
+
+  for (const int& coin_val: coins) {
+    for (int c = coin_val; c <= k; ++c) {
+      dp[c] += dp[c - coin_val];
+    }
+  }
+
+  cout << dp[k];
 
   return 0;
 }

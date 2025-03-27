@@ -184,10 +184,21 @@ ps_db:
       - date: 2025-03-03
   - site: 백준
     title: 계단 오르기
+    tags: [동적 계획법]
     id: 2579
     rank: S3
     link: https://www.acmicpc.net/problem/2579
     solved:
       - date: 2025-03-26
       - date: 2025-03-27
+  - site: 백준
+    title: 동전 1
+    tags: [동적 계획법]
+    id: 2293
+    rank: G4
+    link: https://www.acmicpc.net/problem/2293
+    solved:
+      - date: 2025-03-27
+        sole_solved: False
+        note: "dp를 생각하는 것 자체가 너무 어려운데?"
 
