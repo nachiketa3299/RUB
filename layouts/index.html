@@ -9,6 +9,40 @@
 
 {{ .Content }}
 
-{{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
+<!-- Recent Posts Section -->
+<section>
+    <h2>Recent Posts</h2>
+    <ul>
+        {{ $recent := where .Site.RegularPages "Type" "not in" (slice "page") }}
+        {{ $recent = sort $recent "Lastmod" "desc" | first 8 }}
+        {{ range $recent }}
+        <li>
+            <span class="rub_page_list_section">{{ upper .Type }}</span>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <span class="rub_page_list_date">
+                {{ .Date.Format "2006-01-02" }}
+                {{ if ne .Lastmod .Date }}
+                    <span class="modified-date">{{ .Lastmod.Format "2006-01-02" }}</span>
+                {{ end }}
+            </span>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+
+<!-- Section Links -->
+<section class="sections-list">
+    <h2>Sections</h2>
+    <ul>
+        {{ range .Site.Sections }}
+            {{ if and (ne .Type "page") (ne .Title "포트폴리오: 송재민") (ne .Title "Drafts") }}
+            <li>
+                <a href="{{ .Permalink }}">{{ upper .Type }}</a>
+                <span class="rub_page_list_date">{{ len .Pages }} POSTS</span>
+            </li>
+            {{ end }}
+        {{ end }}
+    </ul>
+</section>
 
 {{ end }}

@@ -35,18 +35,13 @@
     <ul>
         {{- range $post := $posts -}}
             <li>
-                <a class="rub_page_list_item" href="{{ $post.Permalink | relURL }}">{{ $post.Title }}</a>
+                <a href="{{ $post.Permalink | relURL }}">{{ $post.Title }}</a>
                 <span class="rub_page_list_date">
-                    {{ if $post.Lastmod }}
-                      <sup>
-                          {M: {{- ($post.Lastmod | time.Format site.Params.theme_config.date_format) }}}
-                      </sup>
-                    {{ end }}
-
                     {{ if $post.Date }}
-                      <sup>
-                          {C: {{- ($post.Date | time.Format site.Params.theme_config.date_format) }}}
-                      </sup>
+                        {{- ($post.Date | time.Format site.Params.theme_config.date_format) }}
+                    {{ end }}
+                    {{ if and $post.Lastmod (ne $post.Lastmod $post.Date) }}
+                        <span class="modified-date">{{- ($post.Lastmod | time.Format site.Params.theme_config.date_format) }}</span>
                     {{ end }}
                 </span>
             </li>

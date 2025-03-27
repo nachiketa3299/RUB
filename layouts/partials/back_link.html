@@ -1,1 +1,7 @@
-<a href="{{ "" | relURL }}">{{ $.Site.Params.theme_config.back_home_text }}</a>
+<div class="back-link-container">
+  {{ if .IsSection }}
+    <a href="{{ .RelPermalink | replaceRE "/[^/]+/$" "/" }}">← Home</a>
+  {{ else }}
+    <a href="{{ .Section | relURL }}">← {{ .Section | title }}</a>
+  {{ end }}
+</div>
