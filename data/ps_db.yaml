@@ -200,5 +200,6 @@ ps_db:
     solved:
       - date: 2025-03-27
         sole_solved: False
-        note: "dp를 생각하는 것 자체가 너무 어려운데?"
+        note: |
+          dp를 생각하는 것 자체가 어렵고, 왜 금액 기준 순회는 안되는지?
 
