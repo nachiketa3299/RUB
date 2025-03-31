@@ -198,6 +198,10 @@ ps_db:
     rank: G4
     link: https://www.acmicpc.net/problem/2293
     solved:
+      - date: 2025-03-31
+        sole_solved: False
+        note: |
+          ++c인 이유에 대해서 다시 생각해보기
       - date: 2025-03-27
         sole_solved: False
         note: |
@@ -213,5 +217,17 @@ ps_db:
         sole_solved: False
         note: |
           왜 내 방식이 실제로 더 빠르다고 나오는지?
+  - site: 백준
+    title: 무한 수열
+    tags: [해시 테이블, 메모이제이션]
+    id: 1351
+    rank: G5
+    link: https://www.acmicpc.net/problem/1351
+    solved:
+      - date: 2025-03-31
+        sole_solved: False
+        note: |
+          왜 메모이제이션을 꼭 해야하는지에 대한 내용을 기술할 것
+
 
 
