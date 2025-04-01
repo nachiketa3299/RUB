@@ -228,6 +228,9 @@ ps_db:
         sole_solved: False
         note: |
           왜 메모이제이션을 꼭 해야하는지에 대한 내용을 기술할 것
+      - date: 2025-04-01
+        sole_solved: True
+        note: "단일 재귀시 복잡도"
 
 
 
