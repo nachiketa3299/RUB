@@ -249,6 +249,9 @@ ps_db:
         sole_solved: False
         note: |
           마지막에 왜 long long을 써야 하는지에 대해서 고찰할 것
+      - date: 2025-04-02
+        sole_solved: True
+        note: "이진 탐색을 이용한 풀이"
 
 
 
