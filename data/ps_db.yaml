@@ -217,6 +217,9 @@ ps_db:
         sole_solved: False
         note: |
           왜 내 방식이 실제로 더 빠르다고 나오는지?
+      - date: 2025-04-01
+        sole_solved: False
+        note: "rbegin.base()는 end()임. std::list도 범위 기반 순회 가능"
   - site: 백준
     title: 무한 수열
     tags: [해시 테이블, 메모이제이션]
@@ -231,6 +234,25 @@ ps_db:
       - date: 2025-04-01
         sole_solved: True
         note: "단일 재귀시 복잡도"
+  - site: 백준
+    title: 두 배열의 합
+    tags: [해시 테이블, 메모이제이션]
+    id: 2143
+    rank: G3
+    link: https://www.acmicpc.net/problem/2143
+    solved:
+      - date: 2025-04-01
+        sole_solved: False
+        note: |
+          풀려던게 맞았음, 복잡도 구하는 연습 아무리 해봐야 실전에서 못 써먹으면 소용 없음
+      - date: 2025-04-02
+        sole_solved: False
+        note: |
+          마지막에 왜 long long을 써야 하는지에 대해서 고찰할 것
+
+
+
+
 
 
 
