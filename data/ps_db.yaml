@@ -94,6 +94,14 @@ ps_db:
     solved: 
       - date: 2025-03-16
   - site: 백준
+    title: N과 M (5)
+    id: 15654
+    rank: S3
+    tags: [백 트래킹]
+    link: https://www.acmicpc.net/problem/15654
+    solved: 
+      - date: 2025-04-02
+  - site: 백준
     title: 연산자 끼워넣기
     id: 14888
     rank: S1
@@ -236,7 +244,7 @@ ps_db:
         note: "단일 재귀시 복잡도"
   - site: 백준
     title: 두 배열의 합
-    tags: [해시 테이블, 메모이제이션]
+    tags: [해시 테이블, 메모이제이션, 이진 탐색]
     id: 2143
     rank: G3
     link: https://www.acmicpc.net/problem/2143
@@ -252,6 +260,57 @@ ps_db:
       - date: 2025-04-02
         sole_solved: True
         note: "이진 탐색을 이용한 풀이"
+  - site: 백준
+    title: 비슷한 단어
+    tags: [문자열]
+    id: 2607
+    rank: S2
+    link: https://www.acmicpc.net/problem/2607
+    solved:
+      - date: 2025-04-02
+        sole_solved: True
+        note: 근데 조금 지저분함
+  - site: 백준
+    title: 최소비용 구하기
+    tags: [최단 경로, 다익스트라]
+    id: 1916
+    rank: G5
+    link: https://www.acmicpc.net/problem/1916
+    solved:
+      - date: 2025-04-02
+        sole_solved: False
+  - site: 백준
+    title: LCS
+    tags: [문자열, 동적 계획법]
+    id: 9251
+    rank: G5
+    link: https://www.acmicpc.net/problem/9251
+    solved:
+      - date: 2025-04-02
+        sole_solved: False
+        note: 이거 반드시 복습 해야함, 그리고 시리즈가 있음
+      - date: 2025-04-02
+  - site: 백준
+    title: 어린 왕자
+    tags: [수학]
+    id: 1004
+    rank: S3
+    link: https://www.acmicpc.net/problem/1004
+    solved:
+      - date: 2025-04-07
+        sole_solved: True
+      - date: 2024-05-20
+        sole_solved: True
+  - site: 백준
+    title: 행렬 곱셈
+    tags: [분할 정복, 행렬]
+    id: 10830
+    rank: G4
+    link: https://www.acmicpc.net/problem/10830
+    solved:
+      - date: 2025-04-08
+        sole_solved: False
+        note: 잘 와닿지 않음
 
 
 
