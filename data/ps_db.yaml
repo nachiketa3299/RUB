@@ -311,6 +311,35 @@ ps_db:
       - date: 2025-04-08
         sole_solved: False
         note: 잘 와닿지 않음
+  - site: 백준
+    title: 단어 뒤집기 2
+    tags: [문자열, 회문]
+    rank: S3
+    id: 17413
+    link: https://www.acmicpc.net/problem/17413
+    solved:
+      - date: 2025-04-09
+        sole_solved: True
+  - site: 백준
+    title: 괄호의 값
+    tags: [스택]
+    rank: G5
+    id: 2504
+    link: https://www.acmicpc.net/problem/2504
+    solved:
+      - date: 2025-04-10
+        sole_solved: False
+      - date: 2025-04-11
+        sole_solved: False
+  - site: 백준
+    title: 숫자 정사각형
+    tags: [완전 탐색]
+    id: 1051
+    rank: S3
+    link: https://www.acmicpc.net/problem/1051
+    solved:
+      - date: 2025-04-11
+        sole_solved: False
 
 
 

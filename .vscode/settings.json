@@ -18,6 +18,7 @@
     "xutility": "cpp",
     "queue": "cpp",
     "algorithm": "cpp",
-    "array": "cpp"
+    "array": "cpp",
+    "stack": "cpp"
   },
 }
