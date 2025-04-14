@@ -340,6 +340,15 @@ ps_db:
     solved:
       - date: 2025-04-11
         sole_solved: False
+  - site: 백준
+    title: 선분 위의 점
+    tags: [이진 탐색]
+    id: 11663
+    rank: S3
+    link: https://www.acmicpc.net/problem/11663
+    solved:
+      - date: 2025-04-14
+        sole_solved: False
 
 
 
