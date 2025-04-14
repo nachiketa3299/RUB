@@ -3,8 +3,8 @@ title: "[백준] 10830 G4 행렬 곱셉"
 toc: true
 date: 2025-04-07
 ps:
-  link: https://www.acmicpc.net/problem/10830
-  solved: 2025-04-08
+  site: 백준
+  id: 10830
 ---
 
 # 접근
@@ -50,7 +50,7 @@ $$
 
 우선 행렬 곱셈 함수인 `mul`은 아래와 같다.
 
-```cpp
+```cpp{lineNos=false}
 using mat_t = vector<vector<long long>>;
 
 mat_t mul(const mat_t& l, const ma_t& r) {
@@ -72,7 +72,7 @@ mat_t mul(const mat_t& l, const ma_t& r) {
 
 행렬 지수승 최적화 재귀 함수는 아래와 같다.
 
-```cpp
+```cpp{lineNos=false}
 mat_t f(const mat_t& A, long long n) {
   // 기저 사례
   if (n == 1) {
@@ -95,28 +95,28 @@ mat_t f(const mat_t& A, long long n) {
 
 예를 들어 $A^{11}$의 경우 다음과 같이 재귀가 호출된다.
 
-* ```cpp
+* ```cpp{lineNos=false}
   f(A, 11) = mul(A, f(A, 10));
   ```
-  * ```cpp
+  * ```cpp{lineNos=false}
     // f(A, 10)
     half = f(A, 5)
     f(A, 10) = mul(half, half);
     ```
-    * ```cpp
+    * ```cpp{lineNos=false}
       f(A, 5) = mul(A, f(A, 4));
       ```
-      * ```cpp
+      * ```cpp{lineNos=false}
         // f(A, 4)
         half = f(A, 2);
         f(A, 4) = mul(half, half);
         ```
-        * ```cpp
+        * ```cpp{lineNos=false}
           // f(A, 2)
           half = f(A, 1);
           f(A, 4) = mul(half, half);
           ```
-          * ```cpp
+          * ```cpp{lineNos=false}
             f(A, 1) = A; // 기저 사례
             ```
 

@@ -1,10 +1,10 @@
 ---
-title: "[프로그래머스] LV1 K번째 수"
+title: "[프로그래머스] 42748 LV1 K번째 수"
 date: 2025-02-25
 
 ps:
-  link: https://school.programmers.co.kr/learn/courses/30/lessons/42748?language=cpp
-  solved: 2025-02-25
+  site: 프로그래머스
+  id: 42748
 ---
 
 아주 쉬운 문제이지만 반복자 관련 복습을 위하여 리뷰 노트를 작성한다.

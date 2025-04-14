@@ -4,8 +4,8 @@ date: 2025-03-06
 toc: true
 
 ps:
-  solved: 2025-03-06
-  link: https://www.acmicpc.net/problem/1213
+  site: 백준
+  id: 1213
 ---
 
 # 접근

@@ -1,6 +1,11 @@
 ---
-title: "[프로그래머스] LV1 택배 상자 꺼내기"
+title: "[프로그래머스] 389478 LV1 택배 상자 꺼내기"
 date: 2025-02-20
+toc: true
+
+ps:
+  site: 프로그래머스
+  id: 389478
 ---
 
 [\[프로그래머스\] LV1 택배 상자 꺼내기](https://school.programmers.co.kr/learn/courses/30/lessons/389478?language=cpp#)

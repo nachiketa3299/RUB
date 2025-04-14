@@ -140,27 +140,43 @@ hr {
 }
 
 pre {
-  padding: 1em;
-  overflow-x: auto;
-  border-radius: 0.5em;
-  font-size: 1em;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto !important;
+  font-size: 1.1em;
+  font-family: "IBM Plex Mono";
+  padding: 0.5em;
+  margin: 0.5em 0;
   background-color: rgba(0, 0, 0, 0.02);
-  border-left: 4px solid #0066cc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: pre !important;
+  word-wrap: normal !important;
+  display: block;
+  max-width: 100%;
+  
+  code {
+    display: block;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 600;
+    white-space: pre !important;
+    word-wrap: normal !important;
+    min-width: 100%;
+    overflow-x: auto !important;
+    max-width: none;
+  }
 }
 
 code:not(pre > code) {
-  font-family: $font-mono;
-  text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  white-space: pre-wrap;
-  background-color: #f5f5f5;
+  font-family: "IBM Plex Mono";
+  background-color: transparent;
   color: #0066cc;
-  padding: 0.2em 0.4em;
+  padding: 0.05em 0.1em;
   border-radius: 3px;
+  font-weight: 600;
   font-size: 0.9em;
+  border: 1px solid #000000;
 }
 
 code.has-jax {
@@ -187,6 +203,27 @@ figure.rub_img {
     display: block;
     margin: auto;
     border-radius: 2px;
+    margin-bottom: 0.5rem;
+    cursor: zoom-in;
+  }
+}
+
+.image-hover-container {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: auto;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: white;
+  cursor: pointer;
+  
+  img {
+    display: block;
+    max-width: none;
+    max-height: 90vh;
+    margin: 0;
   }
 }
 
@@ -289,6 +326,15 @@ nav#TableOfContents {
   width: 100%;
   box-sizing: border-box;
   border-left: 4px solid #0066cc;
+
+  &::before {
+    content: "목차";
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: #000000;
+    font-family: "IBM Plex Mono";
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -417,20 +463,40 @@ table.pf_table {
 
 table.ps_table {
   border-collapse: collapse;
-  font-size: 0.9em;
+  font-size: 0.85em;
   max-width: 400px;
-  border: 1px solid #79a8ff;
+  border: 1px solid #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.02);
+  margin: 1em 0;
 
   tr th {
     text-align: center;
-    background: #c7fbff;
-    border: 1px solid #79a8ff;
+    background: #a7d1ff;
+    color: #4a4a4a;
+    border: none;
     font-weight: normal;
+    padding: 0.3em 0.5em;
+    font-family: "IBM Plex Mono";
+    border-bottom: 1px solid #000000;
   }
 
   tr td {
     text-align: left;
-    border: 1px solid #79a8ff;
+    border: none;
+    padding: 0.3em 0.5em;
+    color: #595959;
+    line-height: 1.4;
+  }
+
+  tr:not(:last-child) td {
+    border-bottom: 1px solid #000000;
+  }
+
+  tr:hover {
+    background-color: rgba(0, 102, 204, 0.05);
   }
 }
 
@@ -446,10 +512,10 @@ table {
 mark {
   background-color: #fff3cd;
   color: #856404;
-  padding: 0.2em 0.4em;
+  padding: 0.1em 0.2em;
   border-radius: 3px;
   mix-blend-mode: multiply;
-  display: inline-block;
+  display: inline;
   line-height: 1.5;
 }
 
@@ -460,7 +526,10 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  font-family: 'Gulim', '굴림', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
 }
 
 .link-favicon {
@@ -536,6 +605,56 @@ section {
         left: 0;
         color: #000000;
       }
+    }
+  }
+}
+
+.breadcrumb-container {
+  position: relative;
+  margin: 2em 0;
+  padding: 0.4rem 0.6rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.02);
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #0066cc;
+  width: fit-content;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Mono";
+  font-size: 0.9em;
+  
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    color: #595959;
+    
+    &:not(:last-child)::after {
+      content: "›";
+      margin: 0 0.5em;
+      color: #0066cc;
+    }
+    
+    a {
+      color: #595959;
+      text-decoration: none;
+      
+      &:hover {
+        color: #0066cc;
+      }
+    }
+    
+    &.active {
+      color: #0066cc;
     }
   }
 }

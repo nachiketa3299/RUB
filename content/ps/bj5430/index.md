@@ -4,8 +4,8 @@ date: 2025-03-07
 toc: true
 
 ps:
-  solved: 2025-03-07
-  link: https://www.acmicpc.net/problem/5430
+  site: 백준
+  id: 5430
 ---
 
 <!-- 80분, 시간 초과 -->

@@ -3,8 +3,8 @@ title: "[백준] 2143 G3 두 배열의 합"
 date: 2025-04-02
 toc: true
 ps:
-  link: https://www.acmicpc.net/problem/2143
-  solved: 2025-04-02
+  site: 백준
+  id: 2143
 ---
 
 # 해시 테이블을 사용하는 풀이

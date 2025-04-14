@@ -1,10 +1,10 @@
 ---
-title: "[프로그래머스] LV2 타겟 넘버"
+title: "[프로그래머스] 43165 LV2 타겟 넘버"
 toc: true
 date: 2025-02-28
 ps:
-  solved: 2025-02-28
-  link: https://school.programmers.co.kr/learn/courses/30/lessons/43165
+  site: 프로그래머스
+  id: 43165
 ---
 
 <!--  2025-02-28 풀이 실패 , 복습 후 Gpt -->

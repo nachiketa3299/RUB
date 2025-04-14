@@ -1,6 +1,7 @@
 ---
 title: "[디자인 패턴] MVC 패턴"
 toc: true
+draft: true
 date: 2025-04-08
 ---
 

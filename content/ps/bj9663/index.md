@@ -3,8 +3,8 @@ title: "[백준] 9663 G4 N-Queen"
 date: 2025-03-17
 toc: true
 ps:
-  solved: 2025-03-16
-  link: https://www.acmicpc.net/problem/9663
+  site: 백준
+  id: 9663
 ---
 
 # 접근

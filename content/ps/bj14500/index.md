@@ -3,8 +3,8 @@ title: "[백준] 14500 G4 테트로미노"
 date: 2025-03-14
 toc: true
 ps:
-  solved: 2025-03-14
-  link: https://www.acmicpc.net/problem/14500
+  site: 백준
+  id: 14500
 ---
 
 # 접근: 브루트 포스

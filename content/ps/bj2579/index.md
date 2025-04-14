@@ -3,8 +3,8 @@ title: "[백준] 2579 S3 계단 오르기"
 toc: true
 date: 2025-03-25
 ps:
-  link: https://www.acmicpc.net/problem/2579
-  solved: 2025-03-27
+  site: 백준
+  id: 2579
 ---
 
 # 접근

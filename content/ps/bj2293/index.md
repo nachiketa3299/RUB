@@ -3,7 +3,8 @@ title: "[백준] 2293 G4 동전 1"
 date: 2025-03-28
 toc: true
 ps:
-  link: https://www.acmicpc.net/problem/2293
+  site: 백준
+  id: 2293
 ---
 
 # 접근

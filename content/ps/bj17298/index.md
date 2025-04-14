@@ -2,10 +2,9 @@
 title: "[백준] 17298 G4 오큰수"
 date: 2025-03-05
 toc: true
-
 ps:
-  solved: 2025-03-05
-  link: https://www.acmicpc.net/problem/17298
+  site: 백준
+  id: 17298
 ---
 
 <!-- 

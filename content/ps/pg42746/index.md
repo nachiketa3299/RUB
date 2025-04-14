@@ -1,10 +1,10 @@
 ---
-title: "[프로그래머스] LV2 가장 큰 수"
+title: "[프로그래머스] 42746 LV2 가장 큰 수"
 date: 2025-02-25
 toc: true
 ps:
-  link: https://school.programmers.co.kr/learn/courses/30/lessons/42746
-  solved: 2025-02-25
+  site: 프로그래머스
+  id: 42746
 ---
 
 # 잘못된 접근

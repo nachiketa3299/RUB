@@ -1,29 +1,54 @@
-<figcaption>문제 정보</figcaption>
-<table class="ps_table">
-  <tr>
-    <th>링크</th>
-    <td>
-      {{ $link := .Params.ps.link }}
-
-      {{ if $link }}
-      <a href="{{ $link }}">{{ .Title }}</a>
-      {{ else }}
-      {{ .Title }}
+<div class="ps-info">
+  <table class="ps-info-table">
+    {{ $site := .Params.ps.site }}
+    {{ $id := .Params.ps.id }}
+    {{ $found := false }}
+    {{ range .Site.Data.ps_db.ps_db }}
+      {{ if and (eq .site $site) (eq .id $id) }}
+        {{ $found = true }}
+        <tr>
+          <th>링크</th>
+          <td>
+            {{ if .link }}
+              <a href="{{ .link }}" class="ps-info-link">[{{ .site }}] {{ .id }} {{ .rank }} {{ .title }}</a>
+            {{ else }}
+              <span class="ps-info-link">[{{ .site }}] {{ .id }} {{ .rank }} {{ .title }}</span>
+            {{ end }}
+          </td>
+        </tr>
+        {{ if .tags }}
+        <tr>
+          <th>태그</th>
+          <td>
+            <div class="ps-info-tags">
+              {{ range .tags }}
+                <span class="ps-info-tag">{{ . }}</span>
+              {{ end }}
+            </div>
+          </td>
+        </tr>
+        {{ end }}
+        <tr>
+          <th>풀이</th>
+          <td>
+            <div class="ps-info-solutions">
+              {{ range .solved }}
+                <div class="ps-info-solution">
+                  <time datetime="{{ .date }}">{{ .date }}</time>
+                  {{ if .note }}
+                    <div class="ps-info-note">{{ .note }}</div>
+                  {{ end }}
+                </div>
+              {{ end }}
+            </div>
+          </td>
+        </tr>
       {{ end }}
-    </td>
-  </tr>
-  <tr>
-    <th>풀이일</th>
-    <td>
-      {{ $sdate := .Params.ps.solved }}
-
-      {{ if $sdate }}
-<time datetime="{{ $sdate }}">
-      {{ $sdate | time.Format "2006-01-02" }}
-</time>
-      {{ else }}
-      풀이 실패
-      {{ end }}
-    </td>
-  </tr>
-</table>
+    {{ end }}
+    {{ if not $found }}
+      <tr>
+        <td colspan="2" class="ps-info-not-found">문제 정보 찾을 수 없음</td>
+      </tr>
+    {{ end }}
+  </table>
+</div>

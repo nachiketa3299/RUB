@@ -3,8 +3,8 @@ title: "[백준] 1351 G5 무한 수열"
 toc: true
 date: 2025-04-01
 ps:
-  solved: 2025-04-01
-  link: https://www.acmicpc.net/problem/1351
+  site: 백준
+  id: 1351
 ---
 
 # 완전탐색 재귀로 접근

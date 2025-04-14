@@ -1,0 +1,15 @@
+{{ if not .IsHome }}
+<div class="breadcrumb-container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{ .Site.BaseURL }}">Home</a></li>
+      {{ if .IsSection }}
+        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+      {{ else }}
+        <li class="breadcrumb-item"><a href="{{ .Section | relURL }}">{{ .Section | title }}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+      {{ end }}
+    </ol>
+  </nav>
+</div>
+{{ end }} 

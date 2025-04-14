@@ -3,8 +3,8 @@ title: "[백준] 1874 S2 스택 수열"
 toc: true
 date: 2025-03-03
 ps:
-  solved: 2025-03-03
-  link: https://www.acmicpc.net/problem/1874
+  site: 백준
+  id: 1874
 ---
 
 # 풀이 접근

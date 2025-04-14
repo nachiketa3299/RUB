@@ -26,6 +26,11 @@
   {{ $sass := resources.Get "css/main.scss" }}
   {{ $style := $sass | css.Sass $options | resources.Fingerprint "sha512" }}
   <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}" />
+  
+  <!-- PS Info Table CSS -->
+  {{ $psCSS := resources.Get "css/ps.css" | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $psCSS.Permalink | relURL }}" integrity="{{ $psCSS.Data.Integrity }}" />
+  
   {{ if .Params.mathjax }} {{ partial "mathjax.html" . }} {{ end }}
 
   <!-- MathJx 임포트 -->

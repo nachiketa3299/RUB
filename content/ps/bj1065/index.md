@@ -4,8 +4,8 @@ date: 2025-03-10
 toc: true
 lastmod: 2025-03-11
 ps:
-  solved: 2025-03-10
-  link: https://www.acmicpc.net/problem/1065
+  site: 백준
+  id: 1065
 ---
 
 <!-- 18분 -->

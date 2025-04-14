@@ -3,8 +3,8 @@ title: "[백준] 1406 S2 에디터"
 date: 2025-03-04
 toc: true
 ps:
-  link: https://www.acmicpc.net/problem/1406
-  solved: 2025-03-04
+  site: 백준
+  id: 1406
 ---
 
 <!-- 

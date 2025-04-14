@@ -1,9 +1,10 @@
 ---
+title: "[프로그래머스] 86491 LV1 최소 직사각형"
+toc: true
 date: 2025-02-20
-title: "[프로그래머스] LV1 최소 직사각형"
-layout: ps-single
-ps_link: https://school.programmers.co.kr/learn/courses/30/lessons/86491
-ps_solve_date: 2025-02-20
+ps:
+  site: 프로그래머스
+  id: 86491
 ---
 
 [\[프로그래머스\] LV1 최소 직사각형](https://school.programmers.co.kr/learn/courses/30/lessons/86491)

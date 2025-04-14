@@ -4,8 +4,8 @@ date: 2025-03-11
 toc: true
 
 ps:
-  link: https://www.acmicpc.net/problem/1759
-  solved: 2025-03-11
+  site: 백준
+  id: 1759
 ---
 
 # 풀이

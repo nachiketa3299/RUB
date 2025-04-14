@@ -3,8 +3,8 @@ title: "[백준] 18111 S2 마인크래프트"
 date: 2025-03-12
 toc: true
 ps:
-  link: https://www.acmicpc.net/problem/18111
-  solved: 2025-03-12
+  site: 백준
+  id: 18111
 ---
 
 # 접근

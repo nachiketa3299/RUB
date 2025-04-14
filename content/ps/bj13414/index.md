@@ -3,8 +3,8 @@ title: "[백준] 13414 S3 수강신청"
 toc: true
 date: 2025-03-31
 ps:
-  solved: 2025-03-31
-  link: https://www.acmicpc.net/problem/13414
+  site: 백준
+  id: 13414
 ---
 
 # 접근

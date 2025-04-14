@@ -4,8 +4,8 @@ date: 2025-03-22
 lastmod: 2025-03-24
 toc: true
 ps:
-  solved: 2025-03-22
-  link: https://www.acmicpc.net/problem/1715
+  site: 백준
+  id: 1715
 ---
 
 # 잘못된 접근과 올바른 접근
