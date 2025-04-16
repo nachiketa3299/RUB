@@ -349,10 +349,21 @@ ps_db:
     solved:
       - date: 2025-04-14
         sole_solved: False
-
-
-
-
-
-
-
+  - site: 백준
+    title: 캠프 가는 영식
+    tags: [탐색]
+    id: 1590
+    rank: S4
+    link: https://www.acmicpc.net/problem/1590
+    solved:
+      - date: 2025-04-15
+        sole_solved: True
+  - site: 백준
+    title: 체스
+    tags: [그래프]
+    id: 9204
+    rank: G5
+    link: https://www.acmicpc.net/problem/9204
+    solved:
+      - date: 2025-04-16
+        sole_solved: False

@@ -149,10 +149,10 @@ pre {
   border-radius: 4px;
   width: 100%;
   box-sizing: border-box;
-  white-space: pre !important;
-  word-wrap: normal !important;
+  // white-space: pre !important;
+  // word-wrap: normal !important;
   display: block;
-  max-width: 100%;
+  // max-width: 100%;
   
   code {
     display: block;
@@ -160,11 +160,12 @@ pre {
     margin: 0;
     line-height: 1.5;
     font-weight: 600;
-    white-space: pre !important;
-    word-wrap: normal !important;
-    min-width: 100%;
-    overflow-x: auto !important;
-    max-width: none;
+    text-wrap: wrap;
+    // white-space: pre !important;
+    // word-wrap: normal !important;
+    // min-width: 100%;
+    // overflow-x: auto !important;
+    // max-width: none;
   }
 }
 
