@@ -367,3 +367,12 @@ ps_db:
     solved:
       - date: 2025-04-16
         sole_solved: False
+  - site: 백준
+    title: 트리 노드 합의 최대값
+    tags: [동적 계획법, 트리 DP]
+    id: 25515
+    rank: G4
+    link: https://www.acmicpc.net/problem/25515
+    solved:
+      - date: 2025-04-17
+        sole_solved: False
