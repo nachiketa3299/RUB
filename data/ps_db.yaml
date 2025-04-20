@@ -369,10 +369,41 @@ ps_db:
         sole_solved: False
   - site: 백준
     title: 트리 노드 합의 최대값
-    tags: [동적 계획법, 트리 DP]
+    tags: [동적 계획법, 트리 누적합, 깊이 우선 탐색]
     id: 25515
     rank: G4
     link: https://www.acmicpc.net/problem/25515
     solved:
       - date: 2025-04-17
         sole_solved: False
+        note: "반드시 다시 풀어볼 것"
+  - site: 백준
+    title: 나무 위의 벌레
+    tags: [트리 누적합, 깊이 우선 탐색]
+    id: 2132
+    rank: G3
+    link: https://www.acmicpc.net/problem/2132
+    solved:
+      - date: 2025-04-18
+        sole_solved: False
+        note: "반드시 다시 풀어볼 것"
+  - site: 백준
+    title: 트리의 지름
+    tags: [트리 누적합, 깊이 우선 탐색]
+    id: 1967
+    rank: G4
+    link: https://www.acmicpc.net/problem/1967
+    solved: 
+      - date: 2025-04-18
+        sole_solved: False
+        note: "위 문제와 함꼐 반드시 다시 풀어볼 것"
+  - site: 백준
+    title: A → B
+    tags: [트리, 너비 우선 탐색, 깊이 우선 탐색]
+    id: 16953
+    rank: S2
+    link: https://www.acmicpc.net/problem/16953
+    solved: 
+      - date: 2025-04-21
+        sole_solved: True
+        note: "DFS가 아닌 BFS로 푸는 것이 정석"
