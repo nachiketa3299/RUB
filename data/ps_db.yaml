@@ -407,3 +407,63 @@ ps_db:
       - date: 2025-04-21
         sole_solved: True
         note: "DFS가 아닌 BFS로 푸는 것이 정석"
+  - site: 백준
+    title: LCS 2
+    tags: [LCS, 문자열]
+    id: 9252
+    rank: G4
+    link: https://www.acmicpc.net/problem/9252
+    solved: 
+      - date: 2025-04-21
+        sole_solved: True
+        note: "LCS 복원하는 것 주의"
+  - site: 백준
+    title: LCS 3
+    tags: [LCS, 문자열]
+    id: 1958
+    rank: G4
+    link: https://www.acmicpc.net/problem/1958
+    solved: 
+      - date: 2025-04-21
+        sole_solved: True
+        note: "솔직히 왜 그런지는 잘 모르겠다."
+  - site: 백준
+    title: 가장 긴 증가하는 부분 수열
+    tags: [LIS]
+    id: 11053
+    rank: S2
+    link: https://www.acmicpc.net/problem/11053
+    solved: 
+      - date: 2025-04-21
+        sole_solved: True
+        note: "LIS 에 대한 정리가 반드시 다시 필요함"
+  - site: 백준
+    title: 가장 긴 증가하는 부분 수열 2
+    tags: [LIS, 이진 탐색]
+    id: 12015
+    rank: G2
+    link: https://www.acmicpc.net/problem/12015
+    solved: 
+      - date: 2025-04-21
+        sole_solved: True
+        note: "이진 탐색 아니면 터짐"
+  - site: 백준
+    title: 가장 긴 증가하는 부분 수열 3
+    tags: [LIS, 이진 탐색]
+    id: 12738
+    rank: G2
+    link: https://www.acmicpc.net/problem/12738
+    solved: 
+      - date: 2025-04-21
+        sole_solved: True
+        note: "이진 탐색 아니면 터짐(의도를 모르겠음)"
+  - site: 백준
+    title: 사전 순 최대 공통 부분 수열
+    tags: [LCS, 그리디]
+    id: 30805
+    rank: G4
+    link: https://www.acmicpc.net/problem/30805
+    solved: 
+      - date: 2025-04-22
+        sole_solved: False
+        note: "(못품) 진짜 왜캐 어렵지"
