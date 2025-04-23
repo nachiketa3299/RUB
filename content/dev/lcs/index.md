@@ -1,7 +1,7 @@
 ---
 title: "[알고리즘] LCS: 가장 긴 공통 부분 수열"
 date: 2025-04-03
-lastmod: 2025-04-21
+lastmod: 2025-04-23
 toc: true
 ---
 
@@ -51,6 +51,94 @@ toc: true
 공통 부분 수열이 아닌 것이 변경된 데이터이다.
 
 `this`, `is`, `changed`는 두 파일의 LCS이며, 이를 제외한 나머지는 변경된 데이터로 감지할 수 있다.
+
+# 두 개의 수열에 대한 LCS의 해
+
+두 개 수열의 LCS를 구하는 문제는 최적 부분구조를 가지고 있다. 
+
+"최적 부분 구조"를 가지고 있다는 말은 다시 표현하면,
+
+* 두 수열의 LCS를 구하는 문제는 자명히 해결할 수 있는 더 작은 문제가 될 때까지 반복하여 쪼갤 수 있다.
+* 쪼갠 LCS의 부분 문제들은 서로 범위가 겹치므로, 더 높은 부분 문제에 대한 풀이는 몇몇 하위 부분 문제의 풀이를 재사용하는 것에 의존한다.
+
+LCS 문제의 "최적 부분 구조" 특성은, LCS 문제를 **메모이제이션을 활용한 동적 계획법**으로 풀이할 수 있게 한다.
+
+두 수열 $X_{1...m}$과 $Y_{1...n}$에 대해서 다음이 성립한다.
+
+## 접두사(Prefix)
+
+어떤 수열의 접두사(Prefix)는 그 수열에서 0개 이상의 말단을 잘라낸 수열이다.
+
+접두사는 수열의 이름과, 접두사가 포함하는 문자의 수로 정의한다. 
+
+예를 들어 수열 $S$가 $(AGCA)$라고 하자. 그러면 $S$의 접두사는 수열 $(AG)$이며, 이를 $S_2$라고 표현한다. $S$의 가능한 모든 접두사를 표현하면 아래와 같다.
+
+* $S_1 = (A)$
+* $S_2 = (AG)$
+* $S_3 = (AGC)$
+* $S_4 = (AGCA)$
+
+## LCS의 첫 번째 속성
+
+> [**LCS의 첫 번째 속성**]
+>
+> 모든 문자열 $X$, $Y$, 그리고 모든 문자 $A$에 대해서, $\text{^}$를 문자열 접합이라 정의하였을 때, 다음이 성립한다.
+> 
+> $$
+> LCS(X \text{^} A, Y \text{^} A) = LCS(X, Y) \text{^} A
+> $$
+
+이 성질은 동일한 수열로 끝나는 두 문자열에 대한 LCS 계산을 간단하게 만들 수 있다.
+
+예를 들어, 다음이 성립한다.
+
+$$
+\begin{align}
+LCS(\verb|BANANA|, \verb|ATANA|) &= LCS(\verb|BANAN|, \verb|ATAN|)\text{^}\verb|A| \\\
+&= LCS(\verb|BANA|, \verb|ATA|)\text{^}\verb|NA| \\\
+&= LCS(\verb|BAN|, \verb|AT|)\text{^}\verb|ANA|
+\end{align}
+$$
+
+$\verb|BANANA|$와 $\verb|ATANA|$의 LCS는, $\verb|BAN|$과 $\verb|AT|$의 LCS를 구한 후, 그 뒤에 $\verb|ANA|$를 붙인 것과 동일하다.
+
+## LCS의 두 번째 속성
+
+> [**LCS의 두 번째 속성**]
+>
+> 만일 $A$와 $B$가 서로 다른 기호라면, 모든 문자열 $X$와 $Y$에 대해, $LCS(X\text{^}A, Y\text{^}B)$는 집합 $\\{ LCS(X\text{^}A, Y), LCS(X, Y\text{^}B) \\}$에 속하는 가장 길이가 긴 문자열 중 하나이다.
+
+좀더 쉽게 말하면, 두 문자열이 다른 문자로 끝난다면, 각각 한쪽을 지우고 LCS를 구했을 때, 두 LCS중 더 긴 쪽이 LCS라는 것이다.
+
+예를 들어, $LCS(\verb|ABCDEFG|, \verb|BCDGK|)$를 구한다고 해보자.
+
+위 속성에 따라, $LCS(\verb|ABCDEFG|, \verb|BCDGK|) = LCS(\verb|ABCDEF|\text{^}\verb|G|, \verb|BCDG|\text{^}\verb|K|)$는,  
+$LCS(\verb|ABCDEF|\text{^}\verb|G|, \verb|BCDG|)$ 와 $LCS(\verb|ABCDEF|, \verb|BCDG|\text{^}\verb|K|)$ 중 더 긴 쪽의 문자열이며, 두 문자열의 길이가 같다면 그 중 아무거나 선택해도 괜찮다.
+
+이 성질을 이해하려면 다음 두 가지 경우를 구분해 생각해 보자.
+* 만약 $LCS(\verb|ABCDEFG|, \verb|BCDGK|)$가 $\verb|G|$<sup>(첫 번째 문자열의 마지막 문자)</sup>로 끝난다면:
+  * $\verb|K|$<sup>(두 번째 문자열의 마지막 문자)</sup>는 절대 LCS에 포함될 수 없기 때문에, 결국 LCS는 $LCS(\verb|ABCDEFG|, \verb|BCDG|)$가 된다.
+* 만약 $LCS(\verb|ABCDEFG|, \verb|BCDGK|)$가 $\verb|G|$<sup>(첫 번째 문자열의 마지막 문자)</sup>로 끝나지 않는다면,
+  * $\verb|G|$<sup>(첫 번째 문자열의 마지막 문자)</sup>는 절대 LCS에 포함될 수 없기 때문에, 결국 LCS는 $LCS(\verb|ABCDEF|, \verb|BCDGK|)$가 된다.
+
+# 함수 $LCS$의 정의
+
+언급한 LCS의 두 속성을 통해 함수 $LCS$의 정의를 도출할 수 있다.
+
+두 수열 $X=(x_1x_2...x_m)$과 $Y=(y_1y_2...y_n)$이 정의되어 있다.
+$X$의 접두사를 각각 $X_0, X_1, ... X_m$라고 하고, $Y$의 접두사를 각각 $Y_0, Y_1, ... Y_n$라고 하자.
+
+표현 $LCS(X_i, Y_j)$를 접두사 $X_i$와 $Y_j$의 LCS의 집합을 나타내는 데에 사용하자.
+
+이 수열의 집합은 다음처럼 구할 수 있다.
+
+$$
+LCS(X_i, Y_i) \begin{cases}
+\text{속성 1\) }LCS(X_{i-1}, Y_{j-1})\text{^}x_i &\text{if } i, j > \text{ and } x_i = y_j \\\
+\text{속성 2\) }max\\{LCS(X_i, Y_{j-1}), LCS(X_{i-1}, Y_j)\\} &\text{if } i,j > 0 \text{ and } X_i \neq Y_j \\\
+\epsilon &\text{if } i = 0 \text{ or } j = 0 \\\
+\end{cases}
+$$
 
 # LCS **길이** 구하기 알고리즘
 
