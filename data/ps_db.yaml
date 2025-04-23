@@ -467,3 +467,13 @@ ps_db:
       - date: 2025-04-22
         sole_solved: False
         note: "(못품) 진짜 왜캐 어렵지"
+  - site: 백준
+    title: 스티커
+    tags: [동적 계획법]
+    id: 9465
+    rank: S1
+    link: https://www.acmicpc.net/problem/9465
+    solved: 
+      - date: 2025-04-23
+        sole_solved: False
+        note: "으레 그렇듯 DP를 생각해 내는게 왜 어려울까"
