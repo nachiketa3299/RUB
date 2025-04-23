@@ -1,4 +1,4 @@
-<figure class="ytb-player">
+<figure class="rub-figure">
     <iframe src="{{ .Get 0  }}" 
         title="YouTube video player" 
         frameborder="0" 
@@ -6,8 +6,8 @@
         referrerpolicy="strict-origin-when-cross-origin" 
         allowfullscreen>
     </iframe>
-    
+
     {{ with .Get 1  }}
-    <figcaption class="rub_caption">{{ . }}</figcaption>
+    <figcaption class="rub-figure">{{ . }}</figcaption>
     {{ end }}
 </figure>

@@ -1,10 +1,10 @@
 {{ if .Title }}
-<figure class="rub_img">
+<figure class="rub-figure">
   <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}"/>
   <figcaption class="rub_caption">{{ .Title }}</figcaption>
 </figure>
 {{ else }}
-<figure class="rub_img">
+<figure class="rub-figure">
   <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}"/>
 </figure>
 {{ end }}

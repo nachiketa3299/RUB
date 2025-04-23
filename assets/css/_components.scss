@@ -69,9 +69,10 @@ h6:hover .rub-header-anchor {
 // 페이지 우측에 고정되는 목차
 #TableOfContents {
   background: $background-color;
-  box-shadow: $shadow-md rgba(0, 0, 0, 0.1);
-  border: 1px solid $accent-color;
+  box-shadow: $shadow-md;
+  border: thin solid $accent-color;
   border-radius: $border-radius-md;
+  border: 1px solid $accent-color;
 }
 
 // 푸터 스타일
@@ -84,17 +85,13 @@ h6:hover .rub-header-anchor {
 details {
   border: thin solid $accent-color;
   border-radius: $border-radius-sm;
-  box-shadow: $shadow-md $accent-color;
+  box-shadow: $shadow-md;
   padding: $spacing-md;
 
   // summary 버튼 스타일
   summary {
     display: flex;
     align-items: center;
-    gap: $spacing-md;
-    margin: -$spacing-md;
-    margin-bottom: 0;
-    padding: $spacing-md;
 
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
@@ -122,20 +119,57 @@ details {
   }
 }
 
-// 목차 컨테이너 스타일
-.toc {
-  border: thin solid $text-color;
-  padding: $spacing-lg;
+pre.mermaid {
+  border-radius: $border-radius-sm;
+  padding: $spacing-md;
+  box-shadow: $shadow-md;
+  border: thin solid $accent-color;
 }
 
-// 이미지 캡션 스타일
-figcaption {
-  color: $text-secondary-color;
+figure.rub-figure {
+  width: 100%;
+  max-width: 800px;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+
+  border-radius: $border-radius-sm;
+  padding: $spacing-md;
+  box-shadow: $shadow-md;
+  background-color: rgba(0, 0, 0, 0.03);
+  border: thin solid $accent-color;
+
+  figcaption {
+    color: $text-secondary-color;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    margin: 0%;
+    margin-bottom: 0.5rem;
+  }
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
 }
 
 // 인용구 스타일
 blockquote {
-  border: thin solid $text-color;
+  border: thin solid $accent-color;
+  padding: $spacing-sm $spacing-md;
+  box-shadow: $shadow-md;
+  border-radius: $border-radius-sm;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-left: 4px solid #0066cc;
+  margin: 1.5rem 0;
+
+  p { 
+    margin: 0;
+    color: #595959;
+  }
 }
 
 // SVG 아이콘과 기술 뱃지 스타일

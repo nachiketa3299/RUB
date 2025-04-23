@@ -8,10 +8,10 @@ $background-color: #ffffff;    // 배경 색상
 $border-color: rgb(164, 177, 252);  // 테두리 색상
 
 // Typography
-$font-primary: "Noto Sans KR", Arial, Helvetica, sans-serif;  // 기본 본문 폰트
+$font-primary: "Goorm Sans", Arial, Helvetica, sans-serif;  // 기본 본문 폰트
 $font-mono: "IBM Plex Mono";  // 코드, 기술 스택용 모노스페이스 폰트
-$font-heading: "IBM Plex Sans KR", sans-serif;  // 제목용 폰트
-$font-title: "Anton";  // 사이트 타이틀용 특수 폰트
+$font-heading: "Goorm Sans", sans-serif;  // 제목용 폰트
+$font-title: "Goorm Sans";  // 사이트 타이틀용 특수 폰트
 
 // Spacing
 $spacing-xs: 0.2em;   // 매우 작은 여백
@@ -35,5 +35,5 @@ $font-size-xxl: 2em;     // 초대형 텍스트
 
 // Shadows
 $shadow-sm: 0.5px 0.5px 0.5px 0.5px;  // 작은 그림자
-$shadow-md: 1px 1px 1px 0px;          // 중간 그림자
+$shadow-md: 0px 2px 4px rgba(0, 0, 0, 0.1);
 $shadow-lg: 1px 1px 2px;              // 큰 그림자 

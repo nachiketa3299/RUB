@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+@import url("https://statics.goorm.io/fonts/GoormSans/v1.0.0/GoormSans.min.css");
 
 @import 'variables';
 @import 'mixins';
@@ -140,19 +141,13 @@ hr {
 }
 
 pre {
-  overflow-x: auto !important;
-  font-size: 1.1em;
-  font-family: "IBM Plex Mono";
-  padding: 0.5em;
-  margin: 0.5em 0;
-  background-color: rgba(0, 0, 0, 0.02);
+  font-size: 1.2em;
+  font-family: $font-mono;
+  overflow-x: auto;
   border-radius: 4px;
   width: 100%;
   box-sizing: border-box;
-  // white-space: pre !important;
-  // word-wrap: normal !important;
   display: block;
-  // max-width: 100%;
   
   code {
     display: block;
@@ -161,78 +156,24 @@ pre {
     line-height: 1.5;
     font-weight: 600;
     text-wrap: wrap;
-    // white-space: pre !important;
-    // word-wrap: normal !important;
-    // min-width: 100%;
-    // overflow-x: auto !important;
-    // max-width: none;
   }
 }
 
 code:not(pre > code) {
   font-family: "IBM Plex Mono";
-  background-color: transparent;
   color: #0066cc;
   padding: 0.05em 0.1em;
-  border-radius: 3px;
+  border-radius: $border-radius-sm;
   font-weight: 600;
-  font-size: 0.9em;
-  border: 1px solid #000000;
-}
-
-code.has-jax {
-  -webkit-font-smoothing: antialiased;
-  background: inherit !important;
-  border: none !important;
-  font-size: 100%;
-  color: inherit !important;
-}
-
-figure.rub_img {
-  text-align: center;
-  margin: 0;
-  width: 100%;
-  max-width: 800px;
-  box-sizing: border-box;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.02);
-  
-  img {
-    width: 100%;
-    display: block;
-    margin: auto;
-    border-radius: 2px;
-    margin-bottom: 0.5rem;
-    cursor: zoom-in;
-  }
-}
-
-.image-hover-container {
-  position: fixed;
-  z-index: 1000;
-  pointer-events: auto;
-  display: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  overflow: hidden;
-  background-color: white;
-  cursor: pointer;
-  
-  img {
-    display: block;
-    max-width: none;
-    max-height: 90vh;
-    margin: 0;
-  }
+  box-shadow: $shadow-md;
+  border: thin dashed $accent-color;
 }
 
 .plantuml-diagram {
-  text-align: center;
-  margin: 2em auto;
   width: 100%;
   max-width: 800px;
+  text-align: center;
+  margin: 0;
   box-sizing: border-box;
   
   .plantuml-image {
@@ -243,19 +184,6 @@ figure.rub_img {
   }
 }
 
-figure.ytb-player {
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-
-  iframe {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 10px
-  }
-}
 
 iframe.game-player {
   display: flex;
@@ -431,19 +359,6 @@ nav#TableOfContents {
   }
 }
 
-blockquote {
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.02);
-  border-left: 4px solid #0066cc;
-  margin: 1.5rem 0;
-
-  p { 
-    margin: 0;
-    color: #595959;
-  }
-}
 
 table.pf_table {
   width: 100%;
@@ -527,7 +442,7 @@ html {
 }
 
 body {
-  font-family: 'Gulim', '굴림', sans-serif;
+  // font-family: 'Gulim', '굴림', sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #f8f9fa;
