@@ -477,3 +477,12 @@ ps_db:
       - date: 2025-04-23
         sole_solved: False
         note: "으레 그렇듯 DP를 생각해 내는게 왜 어려울까"
+  - site: 백준
+    title: 내려가기
+    tags: [동적 계획법]
+    id: 2096
+    rank: G5
+    link: https://www.acmicpc.net/problem/2096
+    solved: 
+      - date: 2025-04-24
+        sole_solved: null

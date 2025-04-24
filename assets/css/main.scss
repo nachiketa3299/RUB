@@ -154,36 +154,21 @@ pre {
     padding: 0;
     margin: 0;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: normal;
     text-wrap: wrap;
   }
 }
+
 
 code:not(pre > code) {
   font-family: "IBM Plex Mono";
   color: #0066cc;
   padding: 0.05em 0.1em;
   border-radius: $border-radius-sm;
-  font-weight: 600;
+  font-weight: normal;
   box-shadow: $shadow-md;
-  border: thin dashed $accent-color;
+  border: thin dotted $accent-color;
 }
-
-.plantuml-diagram {
-  width: 100%;
-  max-width: 800px;
-  text-align: center;
-  margin: 0;
-  box-sizing: border-box;
-  
-  .plantuml-image {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-  }
-}
-
 
 iframe.game-player {
   display: flex;
@@ -425,15 +410,6 @@ table {
   }
 }
 
-mark {
-  background-color: #fff3cd;
-  color: #856404;
-  padding: 0.1em 0.2em;
-  border-radius: 3px;
-  mix-blend-mode: multiply;
-  display: inline;
-  line-height: 1.5;
-}
 
 html {
   scroll-behavior: smooth;

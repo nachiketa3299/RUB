@@ -19,7 +19,7 @@ theme = 'hugo-theme-nostyleplease'
     lineNos = true
     lineNumbersInTable = true
     noClasses = true
-    style = "vs"
+    style = "emacs"
     tabWidth = 2
   [markup.tableOfContents]
     startLevel = 1

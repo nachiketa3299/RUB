@@ -1,8 +1,8 @@
 ---
-title: "[디자인 패턴] 싱글턴(Singleton)"
+title: "[디자인 패턴] 싱글턴"
 date: 2024-08-27
 toc: true
-lastmod: 2025-03-07
+lastmod: 2025-04-24
 ---
 
 # 의도와 동기
@@ -49,10 +49,10 @@ classDiagram
 
 class Singleton {
 public:
-    static Singleton &Instance();
+    static Singleton& Instance();
 
-    Singleton(Singleton const &) = delete;
-    Singleton &operator=(Singleton const &) = delete;
+    Singleton(Singleton const&) = delete;
+    Singleton &operator=(Singleton const&) = delete;
 
 private:
     Singleton() = default;
@@ -65,7 +65,7 @@ private:
 ```cpp{lineNos=false, hl_lines=4}
 #include "Singleton.h"
 
-Singleton &Singleton::Instance() {
+Singleton& Singleton::Instance() {
     static Singleton instance;
     return instance;
 }
@@ -105,17 +105,17 @@ Singleton s2; s2 = Singleton::Instance();
 
 class Singleton {
 public:
-    static Singleton &Instance();
+    static Singleton& Instance();
     static void Destroy();
 
-    Singleton(Singleton const &) = delete;
-    Singleton &operator=(Singleton const &) = delete;
+    Singleton(Singleton const&) = delete;
+    Singleton &operator=(Singleton const&) = delete;
 
 private:
     Singleton() = default;
     Singleton() = default;
 
-    static Singleton *instance_;
+    static Singleton* instance_;
 };
 ```
 
@@ -124,13 +124,13 @@ private:
 ```cpp{lineNos=false}
 #include "Singleton.h"
 
-Singleton *Singleton::instance_ = nullptr;
+Singleton* Singleton::instance_ = nullptr;
 
-Singleton &Singleton::Instance() {
+Singleton& Singleton::Instance() {
     if (!instance_) {
         instance_ = new Singleton();
     }
-    return *instance;
+    return* instance;
 }
 
 void Singleton::Destroy() {
@@ -155,12 +155,12 @@ void Singleton::Destroy() {
 template <typename T>
 class Singleton {
 public:
-    static T &Instance() {
+    static T& Instance() {
         static T instance; // T의 기본 생성자 호출
         return instance;
     }
-    Singleton(Singleton const &) = delete;
-    Singleton &operator=(Singleton const &) = delete;
+    Singleton(Singleton const&) = delete;
+    Singleton &operator=(Singleton const&) = delete;
 protected:
     Singleton() = default;
     virtual ~Singleton() = default;
@@ -176,7 +176,7 @@ protected:
 class Logger: public Singleton<Logger> {
     friend class Singleton<Logger>;
 public:
-    void Log(std::string const &msg) {
+    void Log(std::string const& msg) {
         std::cout << "[LOG]" << msg << std::endl;
     }
 private:
