@@ -1,12 +1,4 @@
-@import url('https://iosevka-webfonts.github.io/iosevka/Iosevka.css');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
-@import url("https://statics.goorm.io/fonts/GoormSans/v1.0.0/GoormSans.min.css");
-
+@import 'fonts';
 @import 'variables';
 @import 'mixins';
 @import 'typography';
@@ -24,27 +16,10 @@
   color: #595959;
 }
 
-.footnotes {
-  font-size: small;
-}
-
-.site-date {
-  font-size: small;
-}
-
-.rub_page_list_date {
-  color: #666;
-  font-size: 0.9em;
-  margin-left: 0.5em;
-  .modified-date {
-    color: #ff69b4;
-    margin-left: 0.5em;
-  }
-}
 
 .rub_page_list_section {
   color: #6d6d6d;
-  font-family: "IBM Plex Mono";
+  font-family: $font-mono;
   font-size: medium;
   font-weight: 320;
 }
@@ -71,59 +46,7 @@
   color: #4a4a4a !important;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.site-title {
-  color: transparent;
-  background-image: linear-gradient(
-    -45deg,
-    #0066cc,
-    #e5a0e5,
-    #00a1ff,
-    #dda0dd
-  );
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  text-align: center;
-  font-family: "IBM Plex Sans KR";
-  animation: gradient 24s ease infinite;
-  width: 100%;
-  margin: 0 auto;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
-  font-size: 2.5em;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-header {
-  margin-bottom: 3rem;
-}
-
-.single-title {
-  text-align: center;
-  font-size: xx-large;
-  font-style: bold
-}
-
-.site-footer {
-  font-size:small;
-  text-align: right;
-}
-
-// Additional styles that don't fit into components
+// 구분선
 hr {
   text-align: center;
   border: 0;
@@ -140,6 +63,7 @@ hr {
   font-family: $font-mono;
 }
 
+// 코드 펜스
 pre {
   font-size: 1.2em;
   font-family: $font-mono;
@@ -159,10 +83,10 @@ pre {
   }
 }
 
-
+// 인라인 코드 블럭
 code:not(pre > code) {
-  font-family: "IBM Plex Mono";
-  color: #0066cc;
+  font-family: $font-mono;
+  color: $primary-color;
   padding: 0.05em 0.1em;
   border-radius: $border-radius-sm;
   font-weight: normal;
@@ -192,41 +116,16 @@ iframe.game-player {
   background-color: #ffffff;
 }
 
-.markdown-heading {
-  position: relative;
-  padding-left: 0;
-}
-
-.heading-marker {
-  position: absolute;
-  left: -2rem;
-  width: 1.5rem;
-  text-align: right;
-  color: #0066cc;
-  font-family: "IBM Plex Mono";
+.rub-header-anchor {
+  color: $primary-color;
+  font-family: $font-mono;
   font-weight: normal;
-  opacity: 0.7;
-  transition: opacity 0.2s;
 
   a {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
   }
-}
-
-.heading-separator {
-  margin-right: 0.5rem;
-  opacity: 0.5;
-}
-
-.markdown-heading:hover .heading-marker {
-  opacity: 1;
-}
-
-.markdown-heading a {
-  color: inherit;
-  text-decoration: none;
 }
 
 nav#TableOfContents {

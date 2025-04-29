@@ -1,4 +1,4 @@
 {{ $level := .Level }}
-<h{{ $level }} id="{{ .Anchor | safeURL }}" data-level="{{ $level }}" class="markdown-heading">
-  <span class="heading-marker"><a href="#{{ .Anchor | safeURL }}">#</a></span>{{ .Text | safeHTML }}
+<h{{ $level }} id="{{ .Anchor | safeURL }}" data-level="{{ $level }}">
+  <span class="rub-header-anchor"><a href="#{{ .Anchor | safeURL }}">#</a><sub>{{.Level}}</sub></span> {{ .Text | safeHTML }}
 </h{{ $level }}>

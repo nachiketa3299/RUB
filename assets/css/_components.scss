@@ -38,31 +38,25 @@
   }
 }
 
-// 헤더 앵커 링크 스타일
-// 헤딩 옆에 표시되는 링크 아이콘
-.rub-header-anchor {
-  display: inline-block;
-  font-size: $font-size-xs;
-  padding: $spacing-xs $spacing-md;
-  color: $accent-color;
-  border: 1px solid $accent-color;
-  border-radius: $border-radius-lg;
-  vertical-align: middle;
+// 사이트 타이틀과 헤더 사이
+
+// 푸터
+
+.rub-footer {
   font-family: $font-mono;
-  line-height: 1.2;
-  margin-left: $spacing-sm;
-  opacity: 0.6;
-  transition: opacity 0.2s ease;
+  font-size: $font-size-sm;
+  text-align: right;
 }
 
-// 헤더 앵커 호버 효과
-h1:hover .rub-header-anchor,
-h2:hover .rub-header-anchor,
-h3:hover .rub-header-anchor,
-h4:hover .rub-header-anchor,
-h5:hover .rub-header-anchor,
-h6:hover .rub-header-anchor {
-  opacity: 1;
+// 헤더 앵커 링크 스타일
+// 헤딩 옆에 표시되는 링크 아이콘
+span.rub-header-anchor {
+  color: $primary-color;
+  font-family: $font-mono;
+  font-weight: bold;
+  sub {
+    font-weight: 200;
+  }
 }
 
 // 목차 스타일
@@ -73,12 +67,6 @@ h6:hover .rub-header-anchor {
   border: thin solid $accent-color;
   border-radius: $border-radius-md;
   border: 1px solid $accent-color;
-}
-
-// 푸터 스타일
-.site-footer {
-  font-size: $font-size-sm;
-  text-align: right;
 }
 
 // 접을 수 있는 details 컴포넌트 스타일
@@ -156,6 +144,24 @@ figure.rub-figure {
   }
 }
 
+.main-logo {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  min-width: 200px; 
+  max-width: 600px; 
+  margin: 0 auto;
+
+  img {
+    max-width: 100%; 
+    height: auto;
+    border: 1px solid;
+    border-radius: 7px;
+    box-shadow: $shadow-md;
+  }
+}
+
+// 마크다운 마커
 mark {
   background-color: rgba(255, 255, 0, 0.7);
   color: #0f4b00;

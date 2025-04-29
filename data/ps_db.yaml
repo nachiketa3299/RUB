@@ -485,4 +485,40 @@ ps_db:
     link: https://www.acmicpc.net/problem/2096
     solved: 
       - date: 2025-04-24
-        sole_solved: null
+        sole_solved: True
+  - site: 백준
+    title: 블로그
+    tags: [누적 합, 슬라이딩 윈도우]
+    id: 21921
+    rank: S3
+    link: https://www.acmicpc.net/problem/21921
+    solved: 
+      - date: 2025-04-28
+        sole_solved: True
+  - site: 백준
+    title: 연구소
+    tags: [완전 탐색, 너비 우선 탐색, 백 트래킹, 조합]
+    id: 14502
+    rank: G4
+    link: https://www.acmicpc.net/problem/14502
+    solved: 
+      - date: 2025-04-28
+        sole_solved: True
+  - site: 백준
+    title: 구간 합 구하기 5
+    tags: [누적 합, 2차원 누적 합]
+    id: 11660
+    rank: S1
+    link: https://www.acmicpc.net/problem/11660
+    solved: 
+      - date: 2025-04-29
+        sole_solved: False
+  - site: 백준
+    title: 부분 합
+    tags: [누적 합, 투 포인터]
+    id: 1806
+    rank: G4
+    link: https://www.acmicpc.net/problem/1806
+    solved: 
+      - date: 2025-04-30
+        sole_solved: False

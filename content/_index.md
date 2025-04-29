@@ -2,26 +2,17 @@
 layout: 'home'
 ---
 
-<div style="
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  min-width: 200px; 
-  max-width: 600px; 
-  margin: 0 auto;
-">
-    <img src="logo.jpg" style="
-      max-width: 100%; 
-      height: auto;
-      border: 1px solid;
-      border-radius: 7px;
-    "/>
+<div class="main-logo">
+  <img src="logo.jpg"/>
 </div>
+  
 
-<figcaption class="rub_caption">rznbrn의 블로그</figcaption>
+<br/>
 
-* \# LINKS
-  * nachiketa3299@gmail.com
-  * [github/nachiketa3299](https://github.com/nachiketa3299)
+> [**RZNBRN의 블로그**]  
+>
+>
+> * nachiketa3299@gmail.com
+> * [github/nachiketa3299](https://github.com/nachiketa3299)
 
 ---

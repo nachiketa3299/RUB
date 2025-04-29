@@ -4,7 +4,7 @@ $secondary-color: #8f0075;    // 보조 강조 색상
 $accent-color: rgb(164, 177, 252);  // 액센트 색상
 $text-color: #000000;         // 기본 텍스트 색상
 $text-secondary-color: #595959;  // 보조 텍스트 색상
-$background-color: #ffffff;    // 배경 색상
+$background-color: #3f3f3f;    // 배경 색상
 $border-color: rgb(164, 177, 252);  // 테두리 색상
 
 // Typography
@@ -36,4 +36,4 @@ $font-size-xxl: 2em;     // 초대형 텍스트
 // Shadows
 $shadow-sm: 0.5px 0.5px 0.5px 0.5px;  // 작은 그림자
 $shadow-md: 0px 2px 4px rgba(0, 0, 0, 0.1);
-$shadow-lg: 1px 1px 2px;              // 큰 그림자 
+$shadow-lg: 0px 3px 5px rgba(0, 0, 0, 0.2);

@@ -52,11 +52,49 @@ a {
 }
 
 // 사이트 타이틀 스타일
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .site-title {
   @include gradient-text;    // 그라데이션 효과
   text-align: center;        // 중앙 정렬
   font-style: bold;          // 굵은 글씨
   font-family: $font-title;  // 특수 타이틀 폰트
+
+  color: transparent;
+  background-image: linear-gradient(
+    -45deg,
+    $primary-color,
+    $accent-color,
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px $text-color;
+  background-clip: text;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  animation: gradient 2s ease infinite;
+  width: 100%;
+  margin: 0 auto;
+  text-shadow: $shadow-lg;
+  font-size: 3.5em;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+header {
+  margin-bottom: 1.5rem;
 }
 
 // 단일 페이지 타이틀 스타일
@@ -66,22 +104,39 @@ a {
   font-style: bold;
 }
 
-// 작은 텍스트 요소 스타일
-.site-date, .footnotes {
+// 싱글 페이지 생성일 
+.site-date {
   font-size: $font-size-sm;  // 작은 글씨 크기
+}
+
+// 각주
+
+.footnotes {
+  font-size: $font-size-base;
 }
 
 // 페이지 리스트 날짜 스타일
 .rub_page_list_date {
   color: $text-secondary-color;  // 보조 색상
   font-family: $font-mono;       // 모노스페이스 폰트
-  font-size: $font-size-base;
+  font-size: $font-size-sm;
   font-weight: 320;
+  .modified-date {
+    color: #ff69b4;
+  }
 } 
 
-strong {
-  color: rgb(167, 1, 1);
+// 리스트의 line height 설정
+
+ul {
+  li {line-height: 100%}
 }
+
+
+
+// strong {
+//   color: rgb(167, 1, 1);
+// }
 
 em {
   color: rgb(96, 147, 167);
