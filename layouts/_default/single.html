@@ -1,18 +1,18 @@
 {{ define "main" }}
-{{ partial "back_link.html" . }}
+{{ partial "breadcrumb.html" . }}
 
 <article>
-    <p class="post-meta">
-        {{ partial "date.html" . }}
-    </p>
+  <p class="post-meta">
+    {{ partial "date.html" . }}
+  </p>
 
-    <h1 class="single-title">{{ .Title }}</h1>
+  <h1 class="single-title">{{ .Title }}</h1>
 
-    {{ if .Params.toc }}
-    {{ .TableOfContents }}
-    {{ end }}
+  {{ if .Params.toc }}
+  {{ .TableOfContents }}
+  {{ end }}
 
-    {{ .Content }}
+  {{ .Content }}
 </article>
 
 {{ partial "disqus.html" . }}

@@ -2,11 +2,12 @@
 <div class="breadcrumb-container">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ .Site.BaseURL }}">Home</a></li>
+      <li class="breadcrumb-item breadcrumb-home-text"><a href="{{ .Site.BaseURL }}">Even Idiots Can Make Game</a></li>
+
       {{ if .IsSection }}
-        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="rub-section-text">{{ upper .Section  }}</span></li>
       {{ else }}
-        <li class="breadcrumb-item"><a href="{{ .Section | relURL }}">{{ .Section | title }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ .Section | relURL }}"><span class="rub-section-text">{{ upper .Section }}</span></a></li>
         <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
       {{ end }}
     </ol>

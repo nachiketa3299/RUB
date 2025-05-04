@@ -31,14 +31,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $rub-heading-font;  // 제목용 폰트
 }
 
-// 홈 섹션 리스트에서 소속 섹션
-.rub_page_list_section {
-  color: #82A282;
-  font-family: $rub-mono-font;
-  // font-size: medium;
-  font-weight: 320;
-}
-
 // 구분선
 hr {
   text-align: center;
@@ -191,10 +183,35 @@ table.ps-info-table {
   display: inline-block;
 }
 
-// Sections 섹션 스타일
-.sections-list > ul {
-  list-style-type: "❀ ";
-  font-weight: bold;
+// home
+
+ul.rub-post-list {
+  list-style: none;
+  padding-left: 1.5em;
+
+  li::before{
+    content: "❁";
+    margin-right: .3em;
+  }
+}
+
+ul.rub-section-list {
+  list-style: none;
+  padding-left: 1.5em;
+
+  li::before{
+    content: "❀";
+    margin-right: .3em;
+  }
+}
+
+.rub-section-text {
+  color: #82A282;
+  font-family: $rub-mono-font;
+  background-color: $rub-ternary-background-color;
+  font-size: 1.2em;
+  padding: .1em.2em;
+  border-radius: .2em;
 }
 
 // 브레드컴
@@ -223,8 +240,15 @@ table.ps-info-table {
     
     &:not(:last-child)::after {
       content: $rub-breadcumb-delimeter;
+      font-family: $rub-mono-font;
+      font-weight: bold;
+      padding: 0 .3rem;
     }
   }    
+
+  .breadcrumb-home-text {
+    font-family: $rub-font-title;
+  }
 }
 
 // TOC
@@ -295,7 +319,7 @@ pre.mermaid {
 figure.rub-figure {
   @include rub-asset-box();
 
-  img {
+  img.rub-img-with-caption {
     width: 100%;
     display: block;
     margin: 0%;
@@ -303,6 +327,15 @@ figure.rub-figure {
 
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
+  }
+
+  img.rub-img-without-caption {
+    width: 100%;
+    display: block;
+    margin: 0%;
+    margin-bottom: 0.5rem;
+
+    border-radius: .5rem;
   }
 
   iframe {
@@ -314,18 +347,15 @@ figure.rub-figure {
   }
 }
 
-.main-logo {
+img.main-logo {
   display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  margin: 3em auto;
+
+  border-radius: 2em;
+  box-shadow: 0 0 2rem 2rem $rub-breadcumb-background-color;
+
   min-width: 200px; 
   max-width: 600px; 
-  margin: 0 auto;
-
-  img {
-    max-width: 100%; 
-    height: auto;
-  }
 }
 
 // 마크다운 마커
@@ -397,6 +427,12 @@ blockquote {
 
 .highlight td:first-child pre {
   padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+}
+.highlight td:not(first-child) pre {
+  padding-left: 0;
+  // border: thin #FFFFFF solid;
 }
 
 .highlight pre {
@@ -445,15 +481,26 @@ code:not(pre > code) {
   font-size: $rub-footnote-font-size;
 }
 
-// 페이지 리스트 날짜 스타일
-.rub_page_list_date {
-  color: $rub-date-color;  // 보조 색상
-  font-family: $rub-mono-font;       // 모노스페이스 폰트
+// home lists
+.rub-list-post-count {
+  font-family: $rub-mono-font;
   font-size: $rub-date-size;
-  .modified-date {
-    color: $rub-lastmod-color;
-  }
+
+  color: $rub-date-color;
+}
+
+.rub-list-date {
+  font-family: $rub-mono-font;
+  font-size: $rub-date-size;
+
+  color: $rub-date-color;
 } 
+.rub-list-lastmod {
+  font-family: $rub-mono-font;
+  font-size: $rub-date-size;
+
+  color: $rub-lastmod-color;
+}
 
 .rub-single-page-date {
   color: $rub-date-color;  // 보조 색상

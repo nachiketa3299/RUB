@@ -1,19 +1,31 @@
 {{ define "main" }}
-{{ partial "back_link.html" . }}
+{{ partial "breadcrumb.html" . }}
 
-<h1 class="single-title"> {{ .Title }} </h1>
+<article>
+  <h1 class="single-title"><span class="rub-section-text">{{ upper .Section }}</span> {{ .Title }}</h1>
 
-{{ .Content }}
+  {{ if .Params.toc }}
+  {{ .TableOfContents }}
+  {{ end }}
 
-<h2>게시글이 존재하는 문제 풀이 리스트</h2>
+  {{ .Content }}
 
-{{ partial "post_list.html" (dict "context" . "section" .Section)}}
+  <hr>
 
----
+  <p><span class="rub-section-text">{{ upper .Section }}</span> 섹션에 속하는 모든 게시물:</p>
 
-<h2>전체 데이터베이스</h2>
+  {{ partial "post_list.html" (dict "context" . "section" .Section)}}
 
-{{ partial "ps_db.html" . }}
+  {{"# 전체 데이터베이스" | markdownify}}
 
-{{ end }}
+  <hr>
+
+  {{ partial "ps_db.html" . }}
+
+</article>
+
+<hr>
+
+  {{ end }}
+
 

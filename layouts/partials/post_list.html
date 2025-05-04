@@ -1,56 +1,58 @@
 {{- $posts := "" -}}
 
-
 {{- if .section -}}
-    {{- $posts = (where 
-        site.RegularPages "Section" .section) 
-    -}}
+  {{- $posts = (where 
+    site.RegularPages "Section" .section) 
+  -}}
 {{- else -}}
-    {{- if (eq .context.Kind "taxonomy") -}}
-        {{- $posts = .context.Pages -}}
+  {{- if (eq .context.Kind "taxonomy") -}}
+    {{- $posts = .context.Pages -}}
+  {{- else -}}
+    {{- if (eq .context.Kind "term") -}}
+      {{- $posts = .context.Data.Pages -}}
     {{- else -}}
-        {{- if (eq .context.Kind "term") -}}
-            {{- $posts = .context.Data.Pages -}}
-        {{- else -}}
-            {{- $posts = site.RegularPages }}
-        {{- end -}}
+      {{- $posts = site.RegularPages }}
     {{- end -}}
+  {{- end -}}
 {{ end }}
 
 {{ $posts := sort (sort $posts "Date" "desc") "Lastmod" "desc" }}
 
 {{- $limit_exceeded:= "" -}}
 {{- if (and .limit (gt (len $posts) .limit)) -}}
-    {{- $limit_exceeded = true -}}
+  {{- $limit_exceeded = true -}}
 {{- else -}}
-    {{- $limit_exceeded = false -}}
+  {{- $limit_exceeded = false -}}
 {{ end }}
 
 {{- if (gt (len $posts) 0) }}
-    {{- if .limit }}
-        {{ $posts = (first .limit $posts ) }}
-    {{ else }}
+  {{- if .limit }}
+    {{ $posts = (first .limit $posts ) }}
+  {{ else }}
+  {{ end }}
+
+  <ul class="rub-post-list">
+    {{- range $post := $posts -}}
+      <li>
+        <span class="rub-section-text">{{- upper $post.Section -}}</span>
+        <a href="{{ $post.Permalink | relURL }}">{{ $post.Title }}</a>
+        <span class="rub-list-date">
+          {{ if $post.Date }}
+            [{{- ($post.Date | time.Format site.Params.theme_config.date_format) }}]
+          {{ end }}
+        </span>
+        <span class="rub-list-lastmod">
+          {{ if and $post.Lastmod (ne $post.Lastmod $post.Date) }}
+            [{{- ($post.Lastmod | time.Format site.Params.theme_config.date_format) }}]
+          {{ end }}
+        </span>
+      </li>
     {{ end }}
 
-    <ul>
-        {{- range $post := $posts -}}
-            <li>
-                <a href="{{ $post.Permalink | relURL }}">{{ $post.Title }}</a>
-                <span class="rub_page_list_date">
-                    {{ if $post.Date }}
-                        {{- ($post.Date | time.Format site.Params.theme_config.date_format) }}
-                    {{ end }}
-                    {{ if and $post.Lastmod (ne $post.Lastmod $post.Date) }}
-                        <span class="modified-date">{{- ($post.Lastmod | time.Format site.Params.theme_config.date_format) }}</span>
-                    {{ end }}
-                </span>
-            </li>
-        {{ end }}
-
-        {{- if and .show_more $limit_exceeded }}
-            <li>
-                <a href="{{ .show_more_url | relURL }}">{{ .show_more_text | default "Show more..." }}</a>
-            </li>
-        {{ end }}
-    </ul>
+    {{- if and .show_more $limit_exceeded }}
+      <li>
+        <a href="{{ .show_more_url | relURL }}">{{ .show_more_text | default "Show more..." }}</a>
+      </li>
+    {{ end }}
+  </ul>
 {{ end }}

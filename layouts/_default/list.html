@@ -1,12 +1,23 @@
 {{ define "main" }}
-{{ partial "back_link.html" . }}
+{{ partial "breadcrumb.html" . }}
 
-<h1>{{ .Title }}</h1>
+<article>
 
-{{ .Content }}
+  <h1 class="single-title"><span class="rub-section-text">{{ upper .Section }}</span> {{ .Title }}</h1>
 
-<p><code>[{{ .Section }}]</code> 섹션에 속하는 게시물 입니다:</p>
+  {{ if .Params.toc }}
+  {{ .TableOfContents }}
+  {{ end }}
 
-{{ partial "post_list.html" (dict "context" . "section" .Section)}}
+  {{ .Content }}
+
+  <hr>
+
+  <p><span class="rub-section-text">{{ upper .Section }}</span> 섹션에 속하는 모든 게시물:</p>
+
+  {{ partial "post_list.html" (dict "context" . "section" .Section)}}
+
+</article>
+
 
 {{ end }}

@@ -2,7 +2,7 @@
 title: 코테 리뷰 아카이브
 section: ps
 date: 2025-02-20
-lastmod: 2025-03-21
+lastmod: 2025-05-04
 toc: true
 ---
 

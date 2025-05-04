@@ -1,6 +1,17 @@
 {{ define "main" }}
-<h1 class="single-title"> {{ .Title }} </h1>
+{{ partial "breadcrumb.html" . }}
 
-{{ .Content }}
+<article>
+
+  <h1 class="single-title"><span class="rub-section-text">{{ upper .Section }}</span> {{ .Title }}</h1>
+
+  {{ if .Params.toc }}
+  {{ .TableOfContents }}
+  {{ end }}
+
+  {{ .Content }}
+
+</article>
+
 
 {{ end }}

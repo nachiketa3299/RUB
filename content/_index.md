@@ -1,18 +1,9 @@
----
-layout: 'home'
----
+<img src="logo.jpg" class="main-logo"/>
 
-<div class="main-logo">
-  <img src="logo.jpg"/>
-</div>
-  
+{{<admo title="RZNBRN의 블로그">}}
 
-<br/>
+게임 개발과 이런 저런 것들에 대해 다룹니다.
 
-> [**RZNBRN의 블로그**]  
->
->
-> * nachiketa3299@gmail.com
-> * [github/nachiketa3299](https://github.com/nachiketa3299)
-
----
+* nachiketa3299@gmail.com
+* [github/nachiketa3299](https://github.com/nachiketa3299)
+{{</admo>}}

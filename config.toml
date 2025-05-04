@@ -29,11 +29,13 @@ theme = 'hugo-theme-nostyleplease'
     enable = true
 
 [params]
+  description = "디스크립션 테스트"
   [params.theme_config]
     appearance = 'light'
     back_home_text = "<< 뒤로"
     isShowFooter = true
     isListGroupByDate = false
+    show_description = false
 
 [taxonomies]
   tag = "tags"

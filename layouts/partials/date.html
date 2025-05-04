@@ -1,10 +1,12 @@
 <time datetime="{{ .Date }}" class="site-date">
 	<span class="rub-single-page-date">
 		{{ if .Date }}
+			생성일:
 			[{{- (.Date | time.Format site.Params.theme_config.date_format) }}]
 		{{ end }}
 		{{ if and .Lastmod (ne .Lastmod .Date) }}
-			<span class="modified-date">[{{- (.Lastmod | time.Format site.Params.theme_config.date_format) }}]</span>
+			<span class="modified-date">
+				최종 수정일: [{{- (.Lastmod | time.Format site.Params.theme_config.date_format) }}]</span>
 		{{ end }}
 	</span>
 </time>
