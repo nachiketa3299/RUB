@@ -1,4 +1,3 @@
-<div class="ps-info">
   <table class="ps-info-table">
     {{ $site := .Params.ps.site }}
     {{ $id := .Params.ps.id }}
@@ -29,15 +28,12 @@
         </tr>
         {{ end }}
         <tr>
-          <th>풀이</th>
+          <th>풀이일</th>
           <td>
             <div class="ps-info-solutions">
               {{ range .solved }}
                 <div class="ps-info-solution">
                   <time datetime="{{ .date }}">{{ .date }}</time>
-                  {{ if .note }}
-                    <div class="ps-info-note">{{ .note }}</div>
-                  {{ end }}
                 </div>
               {{ end }}
             </div>
@@ -51,4 +47,3 @@
       </tr>
     {{ end }}
   </table>
-</div>

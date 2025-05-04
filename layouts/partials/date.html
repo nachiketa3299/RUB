@@ -1,10 +1,10 @@
 <time datetime="{{ .Date }}" class="site-date">
-	<span class="rub_page_list_date">
+	<span class="rub-single-page-date">
 		{{ if .Date }}
-			{{- (.Date | time.Format site.Params.theme_config.date_format) }}
+			[{{- (.Date | time.Format site.Params.theme_config.date_format) }}]
 		{{ end }}
 		{{ if and .Lastmod (ne .Lastmod .Date) }}
-			<span class="modified-date">{{- (.Lastmod | time.Format site.Params.theme_config.date_format) }}</span>
+			<span class="modified-date">[{{- (.Lastmod | time.Format site.Params.theme_config.date_format) }}]</span>
 		{{ end }}
 	</span>
 </time>

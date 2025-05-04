@@ -1,5 +1,25 @@
 @import 'variables';
 
+@mixin rub-content-box() {
+  background-color: $rub-content-box-background-color;
+  margin: 1em 1em;
+  padding: .5em 1em;
+  border-radius: .5rem;
+}
+
+@mixin rub-asset-box() {
+  background-color: $rub-asset-box-background-color;
+  text-align: center;
+  margin: 1em 1em;
+  padding: 0;
+  border-radius: .5rem;
+
+  figcaption {
+    color: $rub-asset-box-font-color;
+    padding: .3em 0;
+  }
+}
+
 // 중앙 정렬 플렉스 박스
 // 자식 요소를 수평, 수직 중앙에 배치
 @mixin flex-center {

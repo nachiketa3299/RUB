@@ -1,0 +1,52 @@
+- name: Abdominal
+  type: machine
+- name: Barbell Curl
+  type: barbell
+- name: Barbell Row
+  type: barbell
+- name: Bench Press
+  type: barbell
+- name: Cable Arm Push Down
+  type: machine
+- name: Chin Up Assist
+  type: machine
+- name: Deadlift
+  type: barbell
+- name: Dumbell Curl
+  type: dumbell
+- name: Glute Driver
+  type: barbell-machine
+- name: Hammer Wide Pull Down
+  type: machine
+- name: High Bar Back Squat
+  type: barbell
+- name: Hip Abduction
+  type: machine
+- name: Hip Adduction
+  type: machine
+- name: Iso Lateral Decline Press
+  type: barbell-machine
+- name: Iso Lateral Incline Press
+  type: barbell-machine
+- name: Lat Pull Down
+  type: machine
+- name: Leg Extension
+  type: machine
+- name: Lying Leg Curl
+  type: machine
+- name: Overhead Press
+  type: machine
+- name: Plank
+  type: cali
+- name: Ply
+  type: machine
+- name: Seated Arm Curl
+  type: machine
+- name: Seated Row
+  type: machine
+- name: Standing Out Tie
+  type: barbell-machine
+- name: Treadmill
+  type: cali
+- name: Triceps Press 
+  type: machine

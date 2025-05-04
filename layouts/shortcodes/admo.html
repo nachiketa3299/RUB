@@ -1,0 +1,24 @@
+{{ $title := .Get "title" }}
+{{ $type := .Get "type" }}
+
+<blockquote class='rub-admonition {{ $type }}'>
+
+{{ if (and $title (not $type)) }}
+  <p class="rub-admonition-title-container">
+    [<span class="rub-admonition-title">{{ $title | markdownify }}</span>]
+  </p>
+{{ else if (and $title $type) }}
+  <p class="rub-admonition-title-container">
+    [<span class="rub-admonition-type">{{ $type | markdownify }}/</span><span class="rub-admonition-title">{{ $title | markdownify}}</span>]
+  </p>
+{{ else if (and (not $title) (not $type)) }}
+{{ else if (and (not $title) ($type)) }}
+  <p class="rub-admonition-title-container">
+    [<span class="rub-admonition-type">{{ $type | markdownify }}</span>]
+  </p>
+{{ end }}
+
+  <p>
+    {{.Inner | markdownify}}
+  </p>
+</blockquote>

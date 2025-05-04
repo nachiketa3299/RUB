@@ -1,0 +1,120 @@
+- date: 2025-04-17
+  note: 운동 하고 나니 어깨 아픈 것이 조금 사라짐
+  workouts:
+    - name: Lat Pull Down
+      sets: 15(20) 45(20) 75(16) 65(15 12)
+    - name: Seated Row
+      sets: 15(30) 20(18 13 17 12)
+    - name: Seated Arm Curl
+      sets: 10(15) 20(6) 15(10 9 5)
+      note: 20은 너무 무겁다
+    - name: Deadlift
+      sets: 10(10) 20(10) 30(5) 20(5 5 5)
+      note: 허리가 좀 아프다
+- date: 2025-04-18
+  workouts:
+    - name: Iso Lateral Decline Press
+      sets: 0(10) 10(15 20 7 10 8 12)
+      note: |
+        어깨를 계속 눌러줘야 하고, 흔들리면 안 된다. 팔꿈치만 왔다갔다 하는 느낌이어야 한다.
+        7세트 정도 해주면 좋음
+    - name: Ply
+      sets: 10(10 17) 30(7)
+      note: 어깨 결린 곳이 너무 아픔
+    - name: Triceps Press
+      sets: 50(26) 70(20 14 10)
+    - name: Bench Press
+      sets: 0(10) 5(10 9)
+      bar: 15
+      note: 어깨 아파서 못 함
+- date: 2025-04-21
+  workouts:
+    - name: Leg Extension
+      sets: 20(25 20 20)
+    - name: Abdominal
+      sets: 50(30) 70(30) 90(12 5)
+    - name: Hip Abduction
+      sets: 75(40) 100(12 10)
+    - name: Hip Adduction
+      sets: 75(40) 100(25 20)
+    - name: High Bar Back Squat
+      sets: 0(5) 10(12) 20(10) 25(8)
+      bar: 15
+- date: 2025-04-22
+  workouts:
+    - name: Seated Arm Curl
+      sets: 15(24 15 11 10)
+    - name: Lat Pull Down
+      sets: 13.75(20) 25(6) 17.5(10 10 11)
+      note: 25는 너무 무거움
+    - name: Seated Row
+      sets: 15(20) 20(15 13 13 10)
+    - name: Deadlift
+      sets: 20(5 5 6 4 4)
+    - name: Hammer Wide Pull Down
+      set: 0(10) 10(21)
+- date: 2025-04-24
+  workouts:
+    - name: Overhead Press
+      sets: 20(20) 30(15 19 10 9 8)
+    - name: Bench Press
+      sets: 0(15) 10(8 10)
+    - name: Triceps Press
+      sets: 5(36) 90(20 15 11) 110(6)
+    - name: Abdominal
+      sets: 30(10) 50(21) 90(15 11) 110(10)
+      note: 명치와 배꼽이 가까워 지는 느낌으로
+    - name: Iso Lateral Decline Press
+      sets: 0(15) 10(11) 20(5 6)
+- date: 2024-04-25
+  workouts:
+    - name: Leg Extension
+      sets: 20(20 20 20)
+    - name: High Bar Back Squat
+      sets: 10(15) 20(12) 30(10 5) 40(5 3)
+    - name: Seated Arm Curl
+      sets: 10(20) 20(10 15 10)
+    - name: Lying Leg Curl
+      sets: 25(30) 35(25) 45(13)
+- date: 2024-04-29  
+  workouts:
+    - name: Treadmill
+    - name: Iso Lateral Incline Press
+      sets: 0(20) 10(7 7 7 4)
+      note: 어깨가 좀 아픔. 가슴을 모아주라는데, 뭔 말인지 잘 모르겠음
+    - name: Iso Lateral Decline Press
+      sets: 10(15 10 10 9)
+    - name: Triceps Press
+      sets: 90(3)
+    - name: Chin Up Assist
+      sets: 54(10) 6(7 6)
+      note: 몸이 안으로 들어가면 안 되고, 팔꿈치만 접어서 올라가기. 그리고 하늘 보기.
+    - name: Hammer Wide Pull Down
+      sets: 10(12) 20(12) 25(10)
+    - name: Lat Pull Down
+      sets: 17.5(10) 13.75(15 15)
+    - name: Seated Arm Curl
+      sets: 15(12) 10(15 14)
+      note: 10은 너무 가볍다
+    - name: Barbell Curl
+      sets: 15(5 8 5)
+    - name: Dumbell Curl
+      sets: 7(5 10 7)
+    - name: Cable Arm Push Down
+      sets: 12.5(15 15 15)
+    - name: Barbell Row
+      sets: 10(12 12 12 12)
+      bar: 15
+    - name: Plank
+- date: 2024-04-29 
+  workouts:
+    - name: Hip Abduction
+      sets: 14(15) 42(20) 63(15 15 15 10)
+    - name: Glute Driver
+      sets: 0(17) 20(15 12 12 12 10)
+    - name: Hip Abduction
+      sets: 14(15) 42(20) 63(15 15 15 10)
+    - name: Standing Out Tie 
+      sets: 0(15) 10(15) 15(15 11 12 15)
+    - name: Abdominal
+      sets: 30(15) 90(15 15 10 13)

@@ -10,17 +10,17 @@ theme = 'hugo-theme-nostyleplease'
 
 [markup]
   [markup.highlight]
-    anchorLineNos = true
+    anchorLineNos = false
     codeFences = true
     guessSyntax = false
     hl_Lines = ''
+    lineNumbersInTable = true
     lineAnchors = ''
     lineNoStart = 1
     lineNos = true
-    lineNumbersInTable = true
     noClasses = true
-    style = "emacs"
     tabWidth = 2
+    style = 'monokai'
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 3

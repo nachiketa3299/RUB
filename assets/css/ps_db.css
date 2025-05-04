@@ -1,4 +1,4 @@
-.ps_db_table {
+/* .ps_db_table {
   width: 100% !important;
   border-collapse: separate !important;
   border-spacing: 0 !important;
@@ -93,8 +93,4 @@
 .ps_db_table .rank {
   font-weight: 600 !important;
   display: inline-block !important;
-}
-
-.ps_db_table .rank[data-rank^="S"] { color: #1a73e8 !important; }
-.ps_db_table .rank[data-rank^="G"] { color: #f1c40f !important; }
-.ps_db_table .rank[data-rank^="B"] { color: #8b4513 !important; } 
+} */

@@ -522,3 +522,22 @@ ps_db:
     solved: 
       - date: 2025-04-30
         sole_solved: False
+  - site: 백준
+    title: 거듭 제곱
+    tags: [수학, 비트마스킹]
+    id: 1740
+    rank: S3
+    link: https://www.acmicpc.net/problem/1740
+    solved: 
+      - date: 2025-05-01
+        sole_solved: False
+        note: 진심 개 디러운 문제
+  - site: 백준
+    title: 중복 제거
+    tags: []
+    id: 13701
+    rank: G4
+    link: https://www.acmicpc.net/problem/13701
+    solved: 
+      - date: 2025-05-02
+        sole_solved: False

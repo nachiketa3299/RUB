@@ -1,0 +1,111 @@
+// 폰트
+$rub-mono-font: monospace;
+$rub-plain-font: "Goorm Sans";
+$rub-heading-font: "Goorm Sans";
+$rub-font-title: "Permanent Marker", curisve;
+
+// 너비
+$rub-content-width: 800px;
+
+// 색상
+$rub-primary-background-color: #3f3f3f;
+$rub-secondary-background-color: #262626;
+$rub-ternary-background-color: #2f2f2f;
+$rub-fourth-background-color: #313C36;
+$rub-fifth-background-color: #333333;
+
+$rub-plain-text-color: #dcdccc;
+$rub-primary-accent-text-color: #F0DFAF;
+$rub-secondary-accent-text-color: #CC9393;
+$rub-ternary-accent-text-color: #9FAFAF;
+$rub-quatery-accent-text-color: #ecbcbc;
+$rub-fifth-accent-text-color: #C0BED1;
+
+$rub-content-box-background-color: $rub-ternary-background-color;
+
+// 피규어
+$rub-asset-box-background-color: $rub-ternary-background-color;
+$rub-asset-box-font-color: $rub-ternary-accent-text-color;
+
+// 브레드컴
+$rub-breadcumb-background-color: $rub-ternary-background-color;
+$rub-breadcumb-font: $rub-plain-font;
+$rub-breadcumb-delimeter: ">>";
+
+// 수식 색
+$rub-math-color: $rub-fifth-accent-text-color;
+
+// 날짜 색
+$rub-date-color: $rub-ternary-accent-text-color;
+$rub-lastmod-color: $rub-quatery-accent-text-color;
+
+// 타이틀 색
+$rub-site-title-color: $rub-primary-accent-text-color;
+
+// 링크 색
+$rub-link-text-color: $rub-primary-accent-text-color;
+
+// 헤더 앵커
+$rub-header-anchor-color: $rub-link-text-color;
+$rub-header-anchor-font: $rub-mono-font;
+
+// 배경 색
+$rub-content-background-color: $rub-primary-background-color;
+$rub-none-content-background-color: $rub-secondary-background-color;
+$rub-toc-background-color: $rub-content-background-color;
+
+// 마킹 색
+$rub-mark-background-color: #f8f893b6;
+$rub-mark-foreground-color: #234223;
+
+// 코드 하이라이팅 설정
+$rub-inline-code-text-foreground-color: $rub-secondary-accent-text-color;
+$rub-inline-code-text-background-color: $rub-secondary-background-color;
+
+// 크기
+$rub-site-title-size: 3.5em;
+$rub-single-page-title-size: 2.5em;
+$rub-single-page-created-date-size: 1.0em;
+$rub-date-size: 1.0em;
+$rub-footnote-font-size: 1.0em;
+$rub-footer-size: 1.0em;
+
+// Colors
+$primary-color: #3548cf;      // 주요 강조 색상
+$secondary-color: #8f0075;    // 보조 강조 색상
+$accent-color: rgb(164, 177, 252);  // 액센트 색상
+$text-color: #000000;         // 기본 텍스트 색상
+$text-secondary-color: #595959;  // 보조 텍스트 색상
+$background-color: #3f3f3f;    // 배경 색상
+$border-color: rgb(164, 177, 252);  // 테두리 색상
+
+// Typography
+$font-primary: "Goorm Sans", Arial, Helvetica, sans-serif;  // 기본 본문 폰트
+$font-mono: "IBM Plex Mono";  // 코드, 기술 스택용 모노스페이스 폰트
+$font-heading: "Goorm Sans", sans-serif;  // 제목용 폰트
+$font-title: "Goorm Sans";  // 사이트 타이틀용 특수 폰트
+
+// Spacing
+$spacing-xs: 0.2em;   // 매우 작은 여백
+$spacing-sm: 0.4em;   // 작은 여백
+$spacing-md: 0.6em;   // 중간 여백
+$spacing-lg: 1rem;    // 큰 여백
+$spacing-xl: 1.5rem;  // 매우 큰 여백
+
+// Border radius
+$border-radius-sm: 0.25em;  // 작은 반경
+$border-radius-md: 0.5em;   // 중간 반경
+$border-radius-lg: 3px;     // 큰 반경
+
+// Font sizes
+$font-size-xs: 0.67em;   // 매우 작은 텍스트
+$font-size-sm: 0.83em;   // 작은 텍스트
+$font-size-base: 1em;    // 기본 텍스트 크기
+$font-size-lg: 1.17em;   // 큰 텍스트
+$font-size-xl: 1.5em;    // 매우 큰 텍스트
+$font-size-xxl: 2em;     // 초대형 텍스트
+
+// Shadows
+$shadow-sm: 0px 1px 2px rgba(0, 0, 0, 0.1);
+$shadow-md: 0px 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0px 3px 5px rgba(0, 0, 0, 0.2);

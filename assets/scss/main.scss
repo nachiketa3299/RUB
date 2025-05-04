@@ -1,0 +1,487 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+html {
+  scroll-behavior: smooth;
+  background-color: $rub-none-content-background-color;
+  font-family: $rub-plain-font;  // 기본 폰트 설정
+}
+
+body {
+  color: $rub-plain-text-color;
+}
+
+// 링크 스타일
+a {
+  color: $rub-link-text-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;  // 호버시 밑줄 표시
+  }
+}
+
+p {
+  padding: 0 1em;
+}
+
+// 제목 스타일
+h1, h2, h3, h4, h5, h6 {
+  font-family: $rub-heading-font;  // 제목용 폰트
+}
+
+// 홈 섹션 리스트에서 소속 섹션
+.rub_page_list_section {
+  color: #82A282;
+  font-family: $rub-mono-font;
+  // font-size: medium;
+  font-weight: 320;
+}
+
+// 구분선
+hr {
+  text-align: center;
+  border: none;
+
+  &:before { content: '/////' }
+  &:after { content: attr(data-content) '/////' }
+
+  color: $rub-plain-text-color;
+  font-family: $rub-mono-font;
+}
+
+iframe.game-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: auto;
+}
+
+// 메인 컨텐츠 영역
+.w {
+  position: relative;
+  justify-content: center;
+  margin: 0 auto;
+
+  article {
+    padding: 0 1em; 
+    line-height: 1.5;
+  }
+
+  max-width: $rub-content-width;
+  background-color: $rub-content-background-color;
+  color: $rub-plain-text-color;
+}
+
+.rub-header-anchor {
+  color: $rub-header-anchor-color;
+  font-family: $rub-header-anchor-font;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+// table.pf_table {
+//   width: 100%;
+//   border-collapse: collapse;
+
+//   th, td, tr {
+//     text-align: center;
+//   }
+
+//   td {
+//     border-bottom: 1px solid #c5c5c5
+//   }
+
+//   th {
+//     background: #c7c7c7;
+//   }
+// }
+
+// table.ps_table {
+//   border-collapse: collapse;
+//   font-size: 0.85em;
+//   max-width: 400px;
+//   border: 1px solid #000000;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   border-radius: 4px;
+//   overflow: hidden;
+//   background-color: rgba(0, 0, 0, 0.02);
+//   margin: 1em 0;
+
+//   tr th {
+//     text-align: center;
+//     background: #a7d1ff;
+//     color: #4a4a4a;
+//     border: none;
+//     font-weight: normal;
+//     padding: 0.3em 0.5em;
+//     font-family: "IBM Plex Mono";
+//     border-bottom: 1px solid #000000;
+//   }
+
+//   tr td {
+//     text-align: left;
+//     border: none;
+//     padding: 0.3em 0.5em;
+//     color: #595959;
+//     line-height: 1.4;
+//   }
+
+//   tr:not(:last-child) td {
+//     border-bottom: 1px solid #000000;
+//   }
+
+//   tr:hover {
+//     background-color: rgba(0, 102, 204, 0.05);
+//   }
+// }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+
+  display: block;
+  width: fit-content;
+
+  // min-width: 45%;
+  // max-width: 100%;
+
+  margin: 1em 1em;
+  padding: 0;
+
+  border: thin $rub-plain-text-color solid; 
+  border-radius: .5rem;;
+
+  th, td {
+    padding: .5em .5em;
+    border-bottom: thin $rub-plain-text-color solid;
+    border-right: thin $rub-plain-text-color solid;
+  }
+
+  th:last-child, td:last-child {
+    border-right: none;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+table.ps-info-table {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.ps-info-tag {
+  font-family: $rub-mono-font;
+  background-color: $rub-fourth-background-color;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: .5em .5em;
+}
+
+.rub-link-favicon {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+// Sections 섹션 스타일
+.sections-list > ul {
+  list-style-type: "❀ ";
+  font-weight: bold;
+}
+
+// 브레드컴
+
+.breadcrumb-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: $rub-breadcumb-background-color;
+  padding: .5em 1em;
+}
+
+.breadcrumb {
+  display: flex;
+  margin: 0;
+  padding: .2em .2em;
+  font-family: $rub-breadcumb-font;
+  
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    
+    &:not(:last-child)::after {
+      content: $rub-breadcumb-delimeter;
+    }
+  }    
+}
+
+// TOC
+
+nav#TableOfContents {
+  // background: $rub-toc-background-color;
+  @include rub-content-box();
+
+  position: relative;
+
+  &::before {
+    content: "[Table Of Contents]";
+    font-weight: bold;
+    font-family: $rub-mono-font;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav#TableOfContents {
+    position: fixed;
+    top: .5em;
+    left: calc(800px + (100vw - 800px) / 2);
+    width: calc((100vw - 800px) / 2);
+  }
+}
+
+// 푸터
+
+.rub-footer {
+  font-family: $rub-mono-font;
+  font-size: $rub-footer-size;
+  text-align: right;
+}
+
+// 접을 수 있는 details 컴포넌트 스타일
+details {
+  // border: thin solid $accent-color;
+  // border-radius: $border-radius-sm;
+  background-color: $rub-secondary-background-color;
+
+  summary {
+    display: flex;
+    align-items: center;
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
+  }
+
+  // 화살표 아이콘 스타일
+  summary::before {
+    content: ">>";
+    font-style: bold;
+    transition: transform 0.1s ease;
+  }
+
+  // 펼쳐진 상태 스타일
+  &[open] {
+    summary::before {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+pre.mermaid {
+  @include rub-asset-box();
+}
+
+figure.rub-figure {
+  @include rub-asset-box();
+
+  img {
+    width: 100%;
+    display: block;
+    margin: 0%;
+    margin-bottom: 0.5rem;
+
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+  }
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+  }
+}
+
+.main-logo {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  min-width: 200px; 
+  max-width: 600px; 
+  margin: 0 auto;
+
+  img {
+    max-width: 100%; 
+    height: auto;
+  }
+}
+
+// 마크다운 마커
+mark {
+  padding: .1em .1em;
+  background-color: $rub-mark-background-color;
+  color: $rub-mark-foreground-color;
+  border-radius: .2em;
+
+  .math {
+  color: $rub-mark-foreground-color;
+  }
+}
+
+// 인용구 스타일
+blockquote {
+  @include rub-content-box();
+}
+
+// blockquote.rub-admonition {
+// }
+
+.plantuml-diagram {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin: 0;
+  box-sizing: border-box;
+
+  background-color: $rub-secondary-background-color;
+  
+  .plantuml-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// MathJax
+.math {
+  color: $rub-fifth-accent-text-color;
+}
+
+// 줄번호 없는 코드 블럭
+.highlight {
+  font-family: $rub-mono-font;
+  font-size: 1rem;
+
+  pre {
+    border-radius: 8px;
+    padding: .5em 1em;
+
+  }
+}
+
+// 줄번호 있는 코드 블럭
+
+.highlight > div {
+  border-radius: .5rem;
+  margin: 1em 1em;
+}
+
+.highlight table {
+  border-spacing: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.highlight td:first-child pre {
+  padding-right: 0;
+}
+
+.highlight pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin: 1em 1em;
+}
+
+// 인라인 코드 블럭
+code:not(pre > code) {
+  font-family: $rub-mono-font;
+  font-size: 1rem;
+
+  padding: .1em .1em;
+  border-radius: .2rem;
+
+  color: $rub-inline-code-text-foreground-color;
+  background-color: $rub-inline-code-text-background-color;
+}
+
+.site-title {
+  text-align: center;        // 중앙 정렬
+  font-family: $rub-font-title;  // 특수 타이틀 폰트
+  color: $rub-site-title-color;
+  margin: 0 auto;
+  font-size: $rub-site-title-size;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 단일 페이지 타이틀 스타일
+.single-title {
+  text-align: center;
+  font-size: $rub-single-page-title-size;
+}
+
+// 싱글 페이지 생성일 
+.site-date {
+  font-size: $rub-single-page-created-date-size;
+}
+
+// 각주
+.footnotes {
+  font-size: $rub-footnote-font-size;
+}
+
+// 페이지 리스트 날짜 스타일
+.rub_page_list_date {
+  color: $rub-date-color;  // 보조 색상
+  font-family: $rub-mono-font;       // 모노스페이스 폰트
+  font-size: $rub-date-size;
+  .modified-date {
+    color: $rub-lastmod-color;
+  }
+} 
+
+.rub-single-page-date {
+  color: $rub-date-color;  // 보조 색상
+  font-family: $rub-mono-font;       // 모노스페이스 폰트
+  font-size: 1rem;
+  .modified-date {
+    color: $rub-lastmod-color;
+  }
+}
+
+// blockquote.rub-admonition.NOTE {
+//   // border: thin dashed #f7dda5;
+//   // border-left: 4px solid #ffae00;
+// }
+
+.rub-admonition-title-container {
+  margin-bottom: .5em;
+}
+
+.rub-admonition-title {
+  font-weight: bold;
+}
+
+.rub-admonition-type {
+  font-weight: bolder;
+  font-family: $rub-mono-font;
+}
+
+.ps_db_table .rank[data-rank^="S"] { color: #1a73e8 !important; }
+.ps_db_table .rank[data-rank^="G"] { color: #f1c40f !important; }
+.ps_db_table .rank[data-rank^="B"] { color: #8b4513 !important; } 
