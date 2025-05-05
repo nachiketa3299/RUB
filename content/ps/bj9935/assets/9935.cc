@@ -4,7 +4,12 @@
 using namespace std;
 
 int main() {
-  string str, boom_str; cin >> str >> boom_str;
+  // [1, 10^6]
+  string str; cin >> str;
+
+  // [1, 36]
+  string boom_str; cin >> boom_str;
+
   string result;
 
   for (char ch: str) {
@@ -18,9 +23,18 @@ int main() {
       continue;
     }
 
+    bool match = true;
     size_t pos = result.length() - boom_str.length();
 
-    if (result.substr(pos) != boom_str) {
+    // 이건 사실 result.substr(pos) 
+    for (size_t i = 0; i < boom_str.length(); ++i) {
+      if (result[i + pos] != boom_str[i]) {
+        match = false;
+        break;
+      }
+    }
+
+    if (!match) {
       continue;
     }
 
