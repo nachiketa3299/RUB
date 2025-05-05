@@ -548,5 +548,14 @@ ps_db:
     rank: G4
     link: https://www.acmicpc.net/problem/9935
     solved: 
-      - date: 2025-05-02
+      - date: 2025-05-05
+        sole_solved: False
+  - site: 백준
+    title: 후위 표기식
+    tags: []
+    id: 1918
+    rank: G2
+    link: https://www.acmicpc.net/problem/1918
+    solved: 
+      - date: 2025-05-06
         sole_solved: False
