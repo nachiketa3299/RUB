@@ -534,10 +534,19 @@ ps_db:
         note: 진심 개 디러운 문제
   - site: 백준
     title: 중복 제거
-    tags: []
+    tags: [비트 마스크]
     id: 13701
     rank: G4
     link: https://www.acmicpc.net/problem/13701
+    solved: 
+      - date: 2025-05-02
+        sole_solved: False
+  - site: 백준
+    title: 문자열 폭발
+    tags: [자료 구조, 스택, 문자열, KMP]
+    id: 9935
+    rank: G4
+    link: https://www.acmicpc.net/problem/9935
     solved: 
       - date: 2025-05-02
         sole_solved: False
