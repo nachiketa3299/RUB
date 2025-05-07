@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-  string infix; cin >> infix;
+  string postfix; cin >> postfix;
   auto precedence = [](char ch) {
     switch (ch) {
       case '+': case '-': return 0; 
@@ -17,25 +17,20 @@ int main() {
     return ch == '+' || ch == '-' || ch == '*' || ch == '/';
   };
 
-  stack<char> op_stack;
+  stack<string> op_stack;
 
-  for (char ch: infix) {
+  for (char ch: postfix) {
     if (isalpha(ch)) {
-      cout << ch;
+      op_stack.push(string{ch});
     } else if (is_operator(ch)) {
-      while (!op_stack.empty() && op_stack.top() != '(' && precedence(op_stack.top()) >= precedence(ch)) {
-        cout << op_stack.top();
-        op_stack.pop();
-      }
-      op_stack.push(ch);
-    } else if (ch == '(') {
-      op_stack.push(ch);
-    } else if (ch == ')') {
-      while (op_stack.top() != '(') {
-        cout << op_stack.top();
-        op_stack.pop();
-      }
+      string r_op = op_stack.top(); 
       op_stack.pop();
+
+      string l_op = op_stack.top(); 
+      op_stack.pop();
+
+      string exp = "(" + l_op + ch + r_op + ")";
+      op_stack.push(exp);
     }
   }
 
@@ -43,4 +38,5 @@ int main() {
     cout << op_stack.top();
     op_stack.pop();
   }
+
 }
