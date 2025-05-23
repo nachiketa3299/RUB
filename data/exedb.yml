@@ -118,3 +118,66 @@
       sets: 0(15) 10(15) 15(15 11 12 15)
     - name: Abdominal
       sets: 30(15) 90(15 15 10 13)
+- date: 2025-05-13
+  workouts:
+    - name: Hip Abduction
+      sets: 14(15) 42(20) 63(15 15 15 10)
+    - name: Glute Driver
+      sets: 0(17) 20(15 12 12 12 10)
+    - name: Standing Out Tie
+      sets: 0(15) 10(15) 15(15 11 12 15)
+    - name: Abdominal
+      sets: 30(15) 90(15 15 10 13)
+- date: 2025-05-12
+  workouts:
+    - name: Leg Press(Machine)
+      sets: 95(12) 105(12) 95(12 12)
+      notes: 105 너무 무거워서 똥쌀거같음
+    - name: Lat Pull Down
+      sets: 17.5(12) 25(10 8) 17.5(12)
+    - name: Iso Lateral Decline Press
+      sets: 5(12) 10(12 12 12)
+    - name: Overhead Press
+      sets: 30(12) 50(12 12)
+    - name: Abdominal
+      sets: 50(12) 90(12 12 12)
+    - name: Lying Leg Curl
+      sets: 20(12) 35(12) 50(12 12)
+- date: 2025-05-14
+  workouts:
+    - name: Seated Arm Curl
+      sets: 15(20) 25(15 12 10)
+    - name: Knee Push Up
+      sets: 15 15 15 15
+    - name: Overhead Press
+      sets: 30(15 11 13 12)
+    - name: Assist Dips
+      sets: 61(11 7 6 7)
+    - name: Incline Chest
+      set: 30(15) 50(10 8 8)
+    - name: Iso Lateral Incline Press
+      sets: 0(12) 10(12 12 12 10)
+    - name: Leg Extension
+      sets: 20(20 20 20)
+- date: 2025-05-15 
+  workouts:
+    - name: Deadlift
+      sets: 0(10) 15(8) 20(5 3 5) 25(4)
+    - name: Seated Arm Curl
+      sets: 15(15) 25(13, 8, 7)
+    - name: Hammer Wide Pull Down
+      sets: 0(15) 15(20) 20(15) 25(11)
+    - name: Lying Leg Curl
+      sets: 15(15) 30(10) 40(12, 10, 6)
+- date: 2025-05-16
+  workouts:
+    - name: Leg Extension
+      sets: 25(15) 40(18) 60(12 15 8)
+    - name: V-Squat
+      sets: 0(15) 20(15 20 17)
+    - name: Hip Abduction
+      sets: 42(26) 63(11 12 14)
+    - name: Glute Driver
+      sets: 10(16 19 20 20)
+    - name: Stepper
+      sets: 113cal 11m49s 0.16km

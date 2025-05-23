@@ -552,10 +552,67 @@ ps_db:
         sole_solved: False
   - site: 백준
     title: 후위 표기식
-    tags: []
+    tags: [자료 구조, 스택]
     id: 1918
     rank: G2
     link: https://www.acmicpc.net/problem/1918
     solved: 
       - date: 2025-05-06
         sole_solved: False
+  - site: 백준
+    title: 후위 표기식
+    tags: [자료 구조, 스택]
+    id: 1935
+    rank: S3
+    link: https://www.acmicpc.net/problem/1935
+    solved: 
+      - date: 2025-05-06
+        sole_solved: False
+  - site: 백준
+    title: 잃어버린 괄호
+    tags: [그리디, 문자열, 파싱]
+    id: 1935
+    rank: S3
+    link: https://www.acmicpc.net/problem/1935
+    solved: 
+      - date: 2025-05-07
+        sole_solved: False
+  - site: 백준
+    title: 개미굴
+    tags: [트라이]
+    id: 14725
+    rank: G3
+    link: https://www.acmicpc.net/problem/14725
+    solved: 
+      - date: 2025-05-09
+        sole_solved: False
+      - date: 2025-05-20
+        sole_solved: True
+  - site: 백준
+    title: 다각형의 면적
+    tags: ["다각형의 넓이", "수학"]
+    id: 2166
+    rank: G1
+    link: https://www.acmicpc.net/problem/2166
+    solved:
+      - date: 2025-05-12
+        sole_solved: False
+  - site: 백준
+    title: 최소 스패닝 트리
+    tags: ["최소 스패닝 트리", "크루스칼", "유니온-파인드"]
+    id: 1197
+    rank: G4
+    link: https://www.acmicpc.net/problem/1197
+    solved:
+      - date: 2025-05-20
+        sole_solved: False
+  - site: 백준
+    title: 도시 분할 계획
+    tags: ["최소 스패닝 트리", "크루스칼", "유니온-파인드"]
+    id: 1647
+    rank: G4
+    link: https://www.acmicpc.net/problem/1647
+    solved:
+      - date: 2025-05-21
+        sole_solved: False
+        

@@ -2,7 +2,7 @@
 <div class="breadcrumb-container">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item breadcrumb-home-text"><a href="{{ .Site.BaseURL }}">Even Idiots Can Make Game</a></li>
+      <li class="breadcrumb-item breadcrumb-home-text"><a href="{{ .Site.BaseURL }}">{{- .Site.Title -}}</a></li>
 
       {{ if .IsSection }}
         <li class="breadcrumb-item active" aria-current="page"><span class="rub-section-text">{{ upper .Section  }}</span></li>
