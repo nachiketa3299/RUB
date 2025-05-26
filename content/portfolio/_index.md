@@ -110,9 +110,13 @@ toc: true
   * 기획안에서 새로운 상호작용 대상이 확정될 때마다 새로운 오브젝트의 추가가 간결해 지는 등, 확장성과 유지보수성이 모두 개선되었습니다.
 * **구현 코드**
   * [*InteractableBase.cs*](https://github.com/WHALE59/Project_BM/blob/main/Assets/Scripts/Interactables/InteractableBase.cs)
+    * 상호작용 오브젝트들의 공통 함수성을 정의한 기초 클래스입니다.
   * [*DarackKeyFar.cs*](https://github.com/WHALE59/Project_BM/blob/main/Assets/Scripts/Interactables/Interactables/DarackKeyFar.cs)
+    * 상호작용 예시 오브젝트 (1) - 열쇠
   * [*GirlsChest.cs*](https://github.com/WHALE59/Project_BM/blob/main/Assets/Scripts/Interactables/Interactables/GirlsChest.cs)
   * [*DarackCurtain.cs*](https://github.com/WHALE59/Project_BM/blob/main/Assets/Scripts/Interactables/Interactables/DarackCurtain.cs)
+    * 상호작용 예시 오브젝트 (2) - 상자
+    * 상호작용 예시 오브젝트 (3) - 커튼
 
 ## 👽에일리언 프로젝트 <sup class="rub-inline-date">[2024-06 ~ 2024-09]</sup>
 
@@ -121,7 +125,8 @@ toc: true
 * **작업 방식** 비대면
 * **직책** 팀장, 기획자, 메인 프로그래머
 * **목표** 게임 데모 출시 및 BIC 공모전 제출
-* **게임 개요** 미소녀가 등장하고, 액션 콤보를 직접 짜맞출 수 있는 탑 다운 3D 로그라이크
+* **게임 개요** 미소녀를 주인공으로 하고, 플레이어가 액션 콤보를 직접 설계할 수 수 있는 탑 다운 3D 로그라이트
+* **Github** [nachiketa3299/Alien_Project](https://github.com/nachiketa3299/Alien_Project)
 * **주요 기여 내역**
   * [**기획자**]
     * "액션 토큰"이라는 개성적인 시스템을 활용하는 게임 전체 기획
@@ -155,10 +160,27 @@ toc: true
 **캐릭터/에너미 공통 프레임워크 및 AI 설계**
 
 * **문제 인식**
-  * 
+  * 액션 로그라이트 장르의 게임을 개발하고 있었고, 플레이어가 적의 행동을 예측하고, 그에 맞춰 전략을 수립하는 플레이 경험이 중요하다고 생각하였습니다.
+  * 이를 위해서 플레이어와 적이 동일한 규칙 하에 움직이고, 유사한 행동 체계를 공유하면 좋겠다고 생각했습니다.
 * **해결 방향**
+  * Unreal Engine의 게임플레이 프레임워크를 참고하여, 컨트롤러-폰(Pawn)구조를 Unity 방식으로 구현하였습니다.
+  * 컨트롤러는 폰의 행동을 제어하는 책임이 있고, `PlayerController`와 `AIController`로 파생합니다. `Pawn`은 컨트롤러에 의헤 제어되는 개체로, `Character`와 `Enemy`로 파생됩니다. `Pawn`의 행동은 "행동 모듈"로 구현되며, 각 모듈이 존재하는 경우 수행하고, 없을 경우 무시됩니다.
 * **성과**
+  * 플레이어 캐릭터와 AI Enemy가 동일한 인터페이스를 통해 제어 가능해졌고, 다양한 상황에 따라 Pawn을 동적으로 교체하거나 재활용할 수 있는 구조를 만들었습니다.
+  * 새 행동을 추가할 때에는 행동 모듈을 제작하여 `Pawn`에 부착하면 되어 확장성과 유지보수성이 개선되었습니다.
+  * 플레이어 캐릭터와 AI Enemy가 필요한 경우 동일한 행동 모듈을 공유할 수 있어, 개발의 용이성이 증가하고, 초기에 고민했던 예측 가능한 플레이 경험을 구현할 수 있었습니다.
 * **구현 코드**
+* [*PawnControllerBase.cs*](https://github.com/nachiketa3299/Alien_Project/blob/master/Assets/01_Scripts/Pawns/Controllers/PawnControllerBase.cs)
+  * 컨트롤러들의 기초 클래스입니다.
+  * [*CAIController.cs*](https://github.com/nachiketa3299/Alien_Project/blob/master/Assets/01_Scripts/Pawns/Controllers/CAIController.cs)
+  * [*CCharacterController.cs*](https://github.com/nachiketa3299/Alien_Project/blob/master/Assets/01_Scripts/Pawns/Controllers/CCharacterController.cs)
+* [*PawnBase.cs*](https://github.com/nachiketa3299/Alien_Project/blob/master/Assets/01_Scripts/Pawns/PawnBase.cs)
+  * Pawn들의 기초 클래스입니다.
+  * [*CCharacter.cs*](https://github.com/nachiketa3299/Alien_Project/blob/master/Assets/01_Scripts/Pawns/CCharacter.cs)
+  * [*CEnemy.cs*](https://github.com/nachiketa3299/Alien_Project/blob/master/Assets/01_Scripts/Pawns/CEnemy.cs)
+* [*MovementActionBase.cs*](https://github.com/nachiketa3299/Alien_Project/blob/master/Assets/01_Scripts/Pawns/Actions/MovementActions/MovementActionBase.cs)
+  * 행동 모듈 중 이동 행동의 기초 클래스입니다.
+  * [*CAccelerationMovement.cs*](https://github.com/nachiketa3299/Alien_Project/blob/master/Assets/01_Scripts/Pawns/Actions/MovementActions/CAccelerationMovement.cs)
 
 ## 🐔먼치킨 프로젝트 <sup class="rub-inline-date">[2024-09 ~ 2024-12]</sup>
 
@@ -168,6 +190,7 @@ toc: true
 * **직책** 팀장, 기획자, 메인 프로그래머
 * **목표** 게임 데모 출시 및 공모전 제출
 * **게임 개요** 독특한 생애주기를 갖는 사망전대 캐릭터 "닭"을 주인공으로 내세운 고난이도 2.5D 플랫포머
+* **Github** [nachiketa3299/Munchkin](https://github.com/nachiketa3299/Munchkin)
 * **주요 기여 내역**
   * [**기획자**]
     * 독특한 생애주기를 가진 캐릭터를 내세운 게임 전체 기획
@@ -182,10 +205,20 @@ toc: true
 
 **동적 씬 로딩 시스템 구현**
 
-* **문제 상황**
-
-
-쉽게 수정 가능하며, 분할 가능한 씬 시스템
+* **문제 인식**
+  * <항아리 게임>처럼 하나의 커다란 월드를 배경으로 캐릭터가 끊임없이 점프와 이동을 반복하여 상승하는 대규모 플랫포머 게임을 목표로 개발중이었습니다. 플레이어가 로딩 없이 자연스럽게 큰 세계에서 플레이하고 있다는 감각을 느끼게 하고 싶었기에, 끊기 없는 넓은 맵을 구현하는 것이 핵심 과제였습니다.
+* **해결 방향**
+  * 전체 월드를 스테이지 단위로 씬을 분할한 후, 해당 씬들의 인접 관계를 Scriptable Object에 기록하였습니다. 그리고, 플레이어의 월드 위치를 기준으로 인접한 씬들을 동적으로 로드하거나 언로드하는 시스템을 구현하였습니다.
+  * 추가적으로, 특정 중요 오브젝트(알)가 존재하는 경우에도 씬을 로드하거나, 언로드를 지연하는 요소도 도입하였습니다.
+* **성과**
+  * 메모리에는 최소한의 씬만 로드하면서, 플레이어가 넓은 공간에서 플레이하고 있다는 감각을 전달하는 시스템을 구현하는데 성공하였습니다.
+* **구현 코드**
+  * [*SceneLoadTrigger.cs*](https://github.com/nachiketa3299/Munchkin/blob/master/Assets/Scripts/Cores/SceneLoading/SceneLoadTrigger.cs)
+    * 월드 위치에 따라 씬 로드 요청을 송신하고, 언로드를 지연시킬 오브젝트에 부착합니다.
+  * [*SceneLoadManager.cs*](https://github.com/nachiketa3299/Munchkin/blob/master/Assets/Scripts/Cores/SceneLoading/SceneLoadManager.cs)
+    * `SceneLoadTrigger`의 요청을 수신하여 실제로 씬 로드와 언로드를 처리합니다.
+  * [*SceneDependencyData.cs*](https://github.com/nachiketa3299/Munchkin/blob/master/Assets/Scripts/Cores/Data/SceneDependencyData.cs)
+    * 씬들의 인접 관계를 그래프로 저장하는 ScriptableObject 입니다.
 
 ---
 
@@ -197,7 +230,7 @@ toc: true
 > 
 > * **목표** 핵심 게임 로직 구현
 > * **GitHub** [nachiketa3299/Jusul](https://github.com/nachiketa3299/Jusul)
-> * **프로젝트 상세 페이지** {{% mdlink "/portfolio/jusul" "🧙특급 주술 대전 상세 페이지" %}}
+> * **프로젝트 상세 페이지** [README.md](https://github.com/nachiketa3299/Jusul/blob/master/README.md)
 
 ### 본 프로젝트를 진행하면서 마주한 고민과 해결책
 
@@ -214,13 +247,14 @@ toc: true
   * [*GameBootstrabManager.cs*](https://github.com/nachiketa3299/Jusul/blob/master/Assets/Scripts/Manager/GameBootstrabManager.cs)
 
 **ScriptableObject 기반 스킬 시스템 설계**
+
 * **문제 인식**
   * 약 30종 이상의 상이한 스킬들을 구현해야 하는 게임에서 각 스킬은 고유한 동작과 이펙트를 가지고 있어 하드코딩으로 처리할 경우 유지보수가 어려웠습니다.
 * **해결 방향**
   * 각 스킬을 `ScriptableObject`로 정의하고, 공통 추상 클래스 `SkillBase`의 `Fire()` 가상 메서드를 오버라이드 하는 방식으로 로직을 캡슐화 했습니다.
   * 실제 스킬의 실행은 `MonoBehaviour` 기반의 `SkillModule`이 담당하며, 런타임 시점에 스킬 오브젝트를 주입받아 `Fire()`를 호출하는 구조로 구현하였습니다.
 * **성과**
-  * 새로운 스킬을 추가할 때 `Fire`만 구현하면 되므로 확장성과 유지보수성이 크게 향상
+  * 새로운 스킬을 추가할 때 `Fire`만 구현하면 되므로 확장성과 유지보수성이 크게 향상되었습니다.
 * **구현 코드**
   * [*SkillBase.cs*](https://github.com/nachiketa3299/Jusul/blob/master/Assets/Scripts/Skill/SkillBase.cs)
   * [*SkillModule.cs*](https://github.com/nachiketa3299/Jusul/blob/master/Assets/Scripts/Module/SkillModule.cs)
@@ -253,9 +287,11 @@ toc: true
 ## 기타 진행 중인 토이 프로젝트
 
 * [nachiketa3299/Soda](https://github.com/nachiketa3299/Soda)
-  * D3D를 이용한 자체 제작 게임 엔진
-* [CAlgo](https://github.com/nachiketa3299/CAlgo) 
-  * C를 이용해 직접 구현해보는 자료구조 & 알고리즘
+  * CMake, D3D를 이용한 자체 제작 게임 엔진 
+  * 추후 멀티플랫폼 + 멀티 그래픽스 API로 확장 예정
+* [DSAG](https://github.com/nachiketa3299/DSAG) 
+  * C++ STL를 이용해 직접 유명 알고리즘과 자료구조를 구현
+  * Google Test를 이용해 검증
 
 ---
 
