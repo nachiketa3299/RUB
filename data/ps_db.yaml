@@ -16,13 +16,16 @@ ps_db:
     id: 1715
     rank: G4
     link: https://www.acmicpc.net/problem/1715
-    tags: [동적 계획법]
+    tags: [그리디, 우선순위 큐]
     review_required: True
     solved: 
       - date: 2025-03-24
         time: 30
         note: 어려움
         sole_solved: False
+      - date: 2025-05-28
+        time: 16
+        sole_solved: True
   - site: 백준
     title: 수열
     id: 2491
@@ -41,31 +44,41 @@ ps_db:
     id: 2252
     rank: G3
     link: https://www.acmicpc.net/problem/2252
-    tags: [위상 정렬]
+    tags: ["위상 정렬"]
     solved: 
       - date: 2025-03-15
+        sole_solved: False;
+      - date: 2025-05-29
+        sole_solved: True
+        time: 6
+        note: 가장 기본적인 형태의 위상 정렬 문제
   - site: 백준
     title: 문제집
     id: 1766
     rank: G2
     link: https://www.acmicpc.net/problem/1766
-    tags: [위상 정렬]
+    tags: ["위상 정렬", "우선 순위 큐"]
     solved: 
       - date: 2025-03-15
+        sole_solved: False
         note: 우선 순위 큐 정의법 한 번 정리할 것
+      - date: 2025-05-29
+        sole_solved: False
+        time: 20
+        note: 우선 순위 큐를 사용하는 특이한 형태의 위상 정렬 문제이므로 주의할 것
   - site: 백준
     title: N-Queen
     id: 9663
     rank: G4
     link: https://www.acmicpc.net/problem/9663
-    tags: [백 트래킹]
+    tags: ["backtracking"]
     solved: 
       - date: 2025-03-16
   - site: 백준
     title: N과 M (1)
     id: 15649
     rank: S3
-    tags: [백 트래킹]
+    tags: ["backtracking"]
     solved: 
       - date: 2025-03-16
     link: https://www.acmicpc.net/problem/15649
@@ -73,7 +86,7 @@ ps_db:
     title: N과 M (2)
     id: 15650
     rank: S3
-    tags: [백 트래킹]
+    tags: ["backtracking"]
     link: https://www.acmicpc.net/problem/15650
     solved: 
       - date: 2025-03-16
@@ -81,7 +94,7 @@ ps_db:
     title: N과 M (3)
     id: 15651
     rank: S3
-    tags: [백 트래킹]
+    tags: ["backtracking"]
     link: https://www.acmicpc.net/problem/15651
     solved: 
       - date: 2025-03-16
@@ -89,7 +102,7 @@ ps_db:
     title: N과 M (4)
     id: 15652
     rank: S3
-    tags: [백 트래킹]
+    tags: ["backtracking"]
     link: https://www.acmicpc.net/problem/15652
     solved: 
       - date: 2025-03-16
@@ -97,7 +110,7 @@ ps_db:
     title: N과 M (5)
     id: 15654
     rank: S3
-    tags: [백 트래킹]
+    tags: ["backtracking"]
     link: https://www.acmicpc.net/problem/15654
     solved: 
       - date: 2025-04-02
@@ -105,7 +118,7 @@ ps_db:
     title: 연산자 끼워넣기
     id: 14888
     rank: S1
-    tags: [백 트래킹]
+    tags: ["backtracking"]
     link: https://www.acmicpc.net/problem/14888
     solved: 
       - date: 2025-03-16
@@ -113,7 +126,7 @@ ps_db:
     title: 순열 사이클
     id: 10451
     rank: S3
-    tags: [백 트래킹]
+    tags: ["backtracking"]
     link: https://www.acmicpc.net/problem/10451
     solved: 
       - date: 2025-03-16
@@ -122,7 +135,7 @@ ps_db:
     title: 적록색약
     id: 10026
     rank: G5
-    tags: [백 트래킹]
+    tags: ["backtracking"]
     link: https://www.acmicpc.net/problem/10026
     solved: 
       - date: 2025-03-16
@@ -497,7 +510,7 @@ ps_db:
         sole_solved: True
   - site: 백준
     title: 연구소
-    tags: [완전 탐색, 너비 우선 탐색, 백 트래킹, 조합]
+    tags: [완전 탐색, 너비 우선 탐색, "backtracking", 조합]
     id: 14502
     rank: G4
     link: https://www.acmicpc.net/problem/14502
@@ -615,4 +628,32 @@ ps_db:
     solved:
       - date: 2025-05-21
         sole_solved: False
-        
+  - site: 백준
+    title: 사이클 게임
+    tags: ["유니온-파인드"]
+    id : 20040
+    rank: G4
+    link: https://www.acmicpc.net/problem/20040
+    solved:
+      - date: 2025-05-28
+        sole_solved: True
+  - site: 백준
+    title: 음악 프로그램
+    tags: ["위상 정렬"]
+    id: 2623
+    rank: G3
+    link: https://www.acmicpc.net/problem/2623
+    solved:
+      - date: 2025-05-29
+        sole_solved: False
+        time: 23
+  - site: 백준
+    title: 스도쿠
+    tags: ["backtracking"]
+    id: 2239
+    rank: G4
+    link: https://www.acmicpc.net/problem/2239
+    solved:
+      - date: 2025-06-02
+        sole_solved: False
+        time: 60
