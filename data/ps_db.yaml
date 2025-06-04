@@ -71,14 +71,19 @@ ps_db:
     id: 9663
     rank: G4
     link: https://www.acmicpc.net/problem/9663
-    tags: ["backtracking"]
+    tags: ["backtracking", "csp"]
     solved: 
       - date: 2025-03-16
+        sole_solved: False
+      - date: 2025-06-03
+        sole_solved: False
+      - date: 2025-06-04
+        sole_solved: False
   - site: 백준
     title: N과 M (1)
     id: 15649
     rank: S3
-    tags: ["backtracking"]
+    tags: ["backtrㅏcking"]
     solved: 
       - date: 2025-03-16
     link: https://www.acmicpc.net/problem/15649
@@ -135,11 +140,15 @@ ps_db:
     title: 적록색약
     id: 10026
     rank: G5
-    tags: ["backtracking"]
+    tags: ["graph_traversal", "bfs", "dfs", "grid_graph"]
     link: https://www.acmicpc.net/problem/10026
     solved: 
       - date: 2025-03-16
+        sole_solved: True
         note: 인접을 재정의하여 그래프 덩어리 세기
+      - date: 2025-06-02
+        sole_solved: True
+        time: 60
   - site: 백준
     title: 테트로미노
     id: 14500
@@ -649,7 +658,7 @@ ps_db:
         time: 23
   - site: 백준
     title: 스도쿠
-    tags: ["backtracking"]
+    tags: ["backtracking", "csp"]
     id: 2239
     rank: G4
     link: https://www.acmicpc.net/problem/2239

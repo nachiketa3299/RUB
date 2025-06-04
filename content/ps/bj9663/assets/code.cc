@@ -7,39 +7,45 @@ using namespace std;
 
 int N;
 
-// queen[i] = j 면,  i행 j 열에 퀸이 배치되어 있다는 것
+// queen[i] = j 면,  i열 j행에 배치되어 있다는 뜻
 vector<int> queen; 
 
 int cnt = 0;
 
-bool is_safe(int i, int j) {
+bool is_safe(int v, int h) {
+  for (int pv = 0; pv < v; ++pv) {
+    int ph = queen[pv];
 
-  for (int pi = 0; pi < i; ++pi) {
-    int pj = queen[pi];
+    // 이전 열에 배치된 퀸퀸 중 하나의 위치가 pv열 ph행이다.
+    // 현재 v열 h행에 새 퀸을 배치할 수 있는지 확인한다.
 
-    // pi, pj 에 이전에 놨고, 지금 i, j
-
-    // 같은 열에 놨는지 검사
-    if (pj == j) return false;
+    // 같은 행에 놨는지 검사
+    if (ph == h) {
+      return false;
+    }    
 
     // 대각선이 겹치는지?
-    if (abs(pj - j) == abs(pi - i)) return false;
+    if (abs(pv - v) == abs(ph - h)) {
+      return false;
+    }
+
   }
   return true;
 }
 
-void bt(int i) {
-  if (i == N) {
+void bt(int v) {
+  // 마지막 열인가?
+  if (v == N) {
     ++cnt;
     return;
   }
 
-  for (int j = 0; j < N; ++j) {
-    if (!is_safe(i, j)) {
+  for (int h = 0; h < N; ++h) {
+    if (!is_safe(v, h)) {
       continue;
     }
-    queen[i] = j;
-    bt(i + 1);
+    queen[v] = h;
+    bt(v + 1);
   }
 }
 
