@@ -1,5 +1,7 @@
 ---
-title: "[유니티] 2D 픽셀 게임을 만들 때 필요한 개념들"
+title: "2D 픽셀 게임을 만들 때 필요한 개념들"
+categories: ["Unity"]
+
 toc: true
 date: 2025-03-03
 ---

@@ -1,12 +1,10 @@
 ---
-title: "[백준] 9663 G4 N-Queen"
+title: "백준 9663 G4 N-Queen"
 date: 2025-03-17
 lastmod: 2025-06-04
 toc: true
 
-ps:
-  site: 백준
-  id: 9663
+mathjax: true
 ---
 
 # 접근
@@ -106,7 +104,7 @@ bool is_safe(int v, int h) {
 
 전체 코드는 아래와 같다.
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}
 
 # 제약 만족 문제(CSP, Constraint Satisfaction Problem)
 

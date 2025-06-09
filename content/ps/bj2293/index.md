@@ -1,10 +1,9 @@
 ---
-title: "[백준] 2293 G4 동전 1"
+title: "백준 2293 G4 동전 1"
 date: 2025-03-28
+tags: ["dp"]
 toc: true
-ps:
-  site: 백준
-  id: 2293
+mathjax: true
 ---
 
 # 접근
@@ -46,4 +45,4 @@ ps:
 
 # 코드
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}

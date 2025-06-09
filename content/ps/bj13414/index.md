@@ -1,5 +1,5 @@
 ---
-title: "[백준] 13414 S3 수강신청"
+title: "백준 13414 S3 수강신청"
 toc: true
 date: 2025-03-31
 ps:
@@ -50,7 +50,7 @@ for (const string& num: seqs) {
 
 코드는 아래와 같다.
 
-{{< hlc "assets/code_01.cc" "cpp" >}}
+{{< hls source="assets/code_01.cc" syntax="cpp" >}}
 
 ## 한번의 순회로 순서를 다 결정하기 (2)
 
@@ -72,5 +72,5 @@ for (const string& num: seqs) {
 
 코드는 아래와 같다.
 
-{{< hlc "assets/code_02.cc" "cpp" >}}
+{{< hls source="assets/code_02.cc" syntax="cpp" >}}
 

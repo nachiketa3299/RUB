@@ -1,11 +1,8 @@
 ---
-title: "[백준] 1213 S3 팰린드롬 만들기"
+title: "백준 1213 S3 팰린드롬 만들기"
 date: 2025-03-06
 toc: true
-
-ps:
-  site: 백준
-  id: 1213
+mathjax: true
 ---
 
 # 접근
@@ -43,7 +40,7 @@ ps:
 
 # 코드
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}
 
 # 기타
 

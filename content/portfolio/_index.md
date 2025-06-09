@@ -1,6 +1,9 @@
 ---
-title : "송재민"
+title : "송재민: 포트폴리오"
 toc: true
+
+mathjax: true
+plantuml: true
 ---
 
 # 소개
@@ -38,11 +41,9 @@ toc: true
 
 {{</admo>}}
 
----
-
 # 팀 프로젝트
 
-{{<admo>}}
+{{<admo title="팀 프로젝트 소개">}}
 
 저는 실제로 사람들이 즐겁게 플레이 하는 게임을 다양한 직군의 사람들과 함께 만들어 보고 싶었습니다.
 
@@ -220,8 +221,6 @@ toc: true
   * [*SceneDependencyData.cs*](https://github.com/nachiketa3299/Munchkin/blob/master/Assets/Scripts/Cores/Data/SceneDependencyData.cs)
     * 씬들의 인접 관계를 그래프로 저장하는 ScriptableObject 입니다.
 
----
-
 # 개인 프로젝트
 
 ## 🧙특급 주술 대전 모작 프로젝트
@@ -272,7 +271,7 @@ toc: true
   * [*SkillPurchaseButton.cs*](https://github.com/nachiketa3299/Jusul/blob/master/Assets/Scripts/UI/MainUI/4_MainButtons/SkillPurchaseButton.cs)
   * [*BountySpawnButton.cs*](https://github.com/nachiketa3299/Jusul/blob/master/Assets/Scripts/UI/MainUI/3_PopupMenus/Bounty/BountySpawnButton.cs)
 
-## AI 활용 개인 블로그 제작 및 운영
+## ✍️AI 활용 개인 블로그 제작 및 운영
 
 > [**개인 블로그 제작 및 운영**]
 >
@@ -292,8 +291,6 @@ toc: true
 * [DSAG](https://github.com/nachiketa3299/DSAG) 
   * C++ STL를 이용해 직접 유명 알고리즘과 자료구조를 구현
   * Google Test를 이용해 검증
-
----
 
 # 기타 활동
 

@@ -1,10 +1,9 @@
 ---
 title: "백준 2239 G4 스도쿠"
 toc: true
+
+tags: ["backtracking", "csp"]
 date: 2025-06-02
-ps:
-  id: 2239
-  site: 백준
 ---
 
 # 풀이

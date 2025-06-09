@@ -2,19 +2,8 @@
 title: "먼치킨"
 date: 2025-01-23
 toc: true
-
-project:
-  type: team
-  order: 1
-  start_date: "2024-06"
-  end_date: "2024-09"
-  position: 
-    - "메인 프로그래머"
-    - "메인 기획자"
-    - "팀장"
-  size: 4
-  genres: 
-    - 2.5D 플랫포머
+mathjax: true
+plantuml: true
 ---
 
 # 프로젝트 개괄
@@ -108,39 +97,38 @@ Munchkin은 기본적으로 어려운 게임입니다. 플레이어가 조작하
 
 알은 다양한 이유로 깨질 수 있고, 체력도 존재해야 하며, 고유의 생애주기를 관리해야 했습니다. 
 
-```mermaid
-classDiagram
-	direction BT 
+{{<puml>}}
+top to bottom direction
 
-	class EggLifecycleHandler {
-		+ LifecycleStarted
-		+ LifecycleEnded
-		+ Initialize()
-		+ Deinitialize()
-	}
+class EggLifecycleHandler {
+  + LifecycleStarted
+  + LifecycleEnded
+  + Initialize()
+  + Deinitialize()
+}
 
-	class EggHealthManager {
-		- _eggLifecycleHandler : EggLifecycleHandler
-		+ Damaged;
-		+ HealthChanged;
-		+ InflictDamage()
-	}
+class EggHealthManager {
+  - _eggLifecycleHandler : EggLifecycleHandler
+  + Damaged
+  + HealthChanged
+  + InflictDamage()
+}
 
-	EggDamageSourceBase <-- EggHealthManager
-	EggHealthManager <-- EggLifecycleHandler
+class EggDamageSourceBase {
+  # _eggHealthManager : EggHealthManager
+  + CauseDamage()
+}
 
-	class EggDamageSourceBase {
-		# _eggHealthManager : EggHealthManager
-		+ CauseDamage()*
-	}
+class EggImpactDamageSource {
+  + Impacted
+  + CauseDamage()
+}
 
-	class EggImpactDamageSource {
-		+ Impacted
-		+ CauseDamage()
-	}
+EggDamageSourceBase <|-- EggImpactDamageSource
+EggDamageSourceBase <-- EggHealthManager
+EggHealthManager <-- EggLifecycleHandler
 
-	EggDamageSourceBase <|-- EggImpactDamageSource
-```
+{{</puml>}}
 
 ![](images/ActionIntroduction.gif)
 

@@ -1,6 +1,10 @@
 ---
-title: "[알고리즘] 완전 순열"
+title: "완전 순열"
+
+categories: ["알고리즘"]
 date: 2025-04-25
+mathjax: true
+
 toc: true
 ---
 

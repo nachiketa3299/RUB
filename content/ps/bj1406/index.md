@@ -1,10 +1,7 @@
 ---
-title: "[백준] 1406 S2 에디터"
+title: "백준 1406 S2 에디터"
 date: 2025-03-04
 toc: true
-ps:
-  site: 백준
-  id: 1406
 ---
 
 <!-- 
@@ -21,7 +18,7 @@ ps:
 
 # 코드
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}
 
 # 기타 문법적 사항
 

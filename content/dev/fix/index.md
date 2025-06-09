@@ -1,8 +1,12 @@
 ---
-title: "[알고리즘] 수식 표기법"
+title: "수식 표기법"
+
+categories: ["알고리즘"]
+
 date: 2025-05-06
 lastmod: 2025-05-07
 toc: true
+mathjax: true
 ---
 
 # 정의
@@ -235,6 +239,8 @@ while (!op_stack.empty()) {
   * `ch`가 연산자라면, 스택에서 우 피연산자와 좌 피연산자 두개를 꺼내 연산자와 결합한 후, 다시 스택에 넣는다.
 2. 만일 후위 표기법으로 주어진 문자열을 모두 순회했다면, 스택을 검사하여 빌 때까지 탑을 출력하고 팝 한다.
 {{</admo>}}
+
+<br>  
 
 ```cpp
 string postfix; cin >> postfix;

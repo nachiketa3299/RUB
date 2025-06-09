@@ -1,11 +1,10 @@
 ---
-title: "[백준] 1065 S4 한수"
+title: "백준 1065 S4 한수"
 date: 2025-03-10
 toc: true
 lastmod: 2025-03-11
-ps:
-  site: 백준
-  id: 1065
+
+mathjax: true
 ---
 
 <!-- 18분 -->
@@ -34,7 +33,7 @@ $[1, N]$에 속하는 모든 정수 $n$에 대해서:
 
 # 코드
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}
 
 # 자연수를 각 자릿수별로 쪼개는 법
 

@@ -1,8 +1,11 @@
 ---
-title: "[디자인 패턴] 명령 패턴"
+title: "명령 패턴"
 toc: true
+categories: ["디자인 패턴"]
+
 date: 2025-04-24
 lastmod: 2025-04-24
+plantuml: true
 ---
 
 # 유니티에서의 커맨드 패턴
@@ -17,7 +20,7 @@ lastmod: 2025-04-24
 
 커맨드 패턴을 구현하려면 행동을 포함한 일반 오브젝트, 즉 커맨드 오브젝트가 필요하다. 이 커맨드 오브젝트에는 로직을 수행할 작업과, 해당 작업을 실행 취소하는 방법이 포함된다.
 
-```csharp
+```csharp{lineNos=false}
 public interface ICommand
 {
   void Execute();
@@ -32,7 +35,7 @@ public interface ICommand
 
 커맨드를 실행 및 취소하려면 다른 클래스가 필요한데, `CommandInvoker` 클래스이다.
 
-```csharp
+```csharp{lineNos=false}
 public class CommandInvoker
 {
   static Stack<ICommand> _undoStack = new();
@@ -60,7 +63,7 @@ public class CommandInvoker
 
 플레이어의 위치 이동을 처리하는 `PlayerMover`를 작성한다.
 
-```csharp
+```csharp{lineNos=false}
 public class PlayerMover : MonoBehaviour
 {
   [SerializeField] LayerMask _obstacleLayer;
@@ -85,7 +88,7 @@ public class PlayerMover : MonoBehaviour
 
 여기에 커맨드 패턴을 적용해 보자. `PlayerMover`의 `Move` 메서드를 오브젝트로 캡처한다. `Move`를 직접 호출하는 대신, `ICommand` 인터페이스를 구현하는 새 클래스 `MoveCommand`를 만든다.
 
-```csharp
+```csharp{lineNos=false}
 public class MoveCommand : ICommand
 {
   PlayerMover _playerMover;
@@ -160,7 +163,7 @@ MoveCommand -d-> PlayerMover
 
 입력을 받는 부분의 `RunPlayerCommand`에서는 다음과 같은 일이 발생한다.
 
-```csharp
+```csharp{lineNos=false}
 private void RunPlayerCommand(PlayerMover playerMover, Vector3 movement)
 {
   if (playerMover == null)

@@ -1,11 +1,8 @@
 ---
-title: "[백준] 5430 G5 AC"
+title: "백준 5430 G5 AC"
 date: 2025-03-07
 toc: true
-
-ps:
-  site: 백준
-  id: 5430
+mathjax: true
 ---
 
 <!-- 80분, 시간 초과 -->
@@ -78,7 +75,7 @@ ps:
 
 # 코드
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}
 
 # 기타
 

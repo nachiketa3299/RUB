@@ -1,7 +1,12 @@
 ---
-title: "[알고리즘] 순열과 조합"
+title: "순열과 조합"
+
 draft: false
+categories: ["알고리즘", "수학"]
+
 toc: true
+mathjax: true
+
 date: 2025-03-27
 lastmod: 2025-04-25
 ---
@@ -14,21 +19,31 @@ lastmod: 2025-04-25
 
 ## 순열의 정의
 
-> **순열(Permutation)** 은 서로 다른 $n$개의 원소 중에서 $r$개를 **선택하여 나열하는** 경우의 수이다. 원소를 선택하는 순서가 다른 경우, 다른 경우의 수로 취급한다.
+{{<admo title="순열(Permutation)">}}
+
+**순열(Permutation)** 은 서로 다른 $n$개의 원소 중에서 $r$개를 **선택하여 나열하는** 경우의 수이다. 원소를 선택하는 순서가 다른 경우, 다른 경우의 수로 취급한다.
 
 $$
 _nP_r = \frac{n!}{(n-r)!}
 $$
 
+{{</admo>}}
+
+
 예를 들어, `A`, `B`, `C` 총 3개에서  2개를 뽑아 나열하는 순열의 수는 `AB`, `AC`, `BA`, `BC`, `CA`, `CB`의 6가지이며, 이를 $_3P_2 = 6$이라고 표현한다.
 
 ## 조합의 정의
 
-> **조합(Combination)** 은 서로 다른 $n$개의 원소 중에서 $r$개를 **선택하는** 경우의 수를 의미한다. 단, 원소를 선택하는 순서는 고려하지 않는다.
+{{<admo title="조합(Combinmation)">}}
+
+**조합(Combination)** 은 서로 다른 $n$개의 원소 중에서 $r$개를 **선택하는** 경우의 수를 의미한다. 단, 원소를 선택하는 순서는 고려하지 않는다.
 
 $$
 C(n, r) = _nC_r = \frac{n!}{r!(n-r)!}
 $$
+
+{{</admo>}}
+
 
 예를 들어, `A`, `B`, `C` 총 3개에서  2개를 뽑는 조합의 수는 `AB`, `AC`, `BC`의 3가지이며, 이를 $_3C_2 = 3$이라고 표현한다.
 
@@ -49,7 +64,7 @@ C++은 편리하게도 순열 관련하여 기본적인 함수를 제공하며, 
 
 ## $_nP_n$구하기
 
-```cpp
+```cpp{lineNos=false}
 string str = "abc"
 
 do {
@@ -65,9 +80,11 @@ do {
 
 어떤 수열 `{2, 1, 3}`의 사전순(오름차순) 순열은 다음과 같다.
 
-![](./assets/00.png "{2, 1, 3}의 사전순 순열")
+{{<caption text="{2, 1, 3}의 사전순 순열">}}
+![](./assets/00.png)
+{{</caption>}}
 
-```cpp
+```cpp{lineNos=false}
 vector<int> seq {2, 1, 3};
 
 do {
@@ -81,7 +98,7 @@ do {
 위 순열은 `{2, 1, 3}` 순열을 끝까지 출력하지 않는다.
 출력은 다음과 같다.
 
-```
+```{lineNos=false}
 2 1 3
 2 3 1
 3 1 2
@@ -96,7 +113,7 @@ do {
 
 때문에 모든 순열을 구하려면 아래처럼 정렬 후 사용해야 한다.
 
-```cpp
+```cpp{lineNos=false}
 vector<int> seq{2, 1, 3};
 sort(seq.begin(), seq.end());
 
@@ -114,7 +131,7 @@ do {
 
 다음처럼, 정렬 후에 앞 2개만 출력하는 방식으로 구현하면 된다.
 
-```cpp
+```cpp{lineNos=false}
 vector<int> seq{2, 1, 3};
 sort(seq.begin(), seq.end());
 
@@ -130,7 +147,7 @@ do {
 
 인덱스를 기억하는 수열을 새로 만든 후, 해당 수열에 대해 순열을 적용한다.
 
-```cpp
+```cpp{lineNos=false}
 vector<int> seq{2, 1, 3};
 vector<int> indices{0, 1, 2};
 
@@ -152,7 +169,7 @@ do {
 
 이를 통해 `{2, 1, 3}`에서 2개를 뽑아 조합하는 예제는 다음과 같다.
 
-```cpp
+```cpp{lineNos=false}
 vector<int> seq{2, 1, 3};
 vector<bool> mask(seq.size(), false);
 
@@ -173,7 +190,11 @@ do {
 
 도식으로 표현하면 아래와 같다.
 
-![](./assets/02.png "붉은 색이 마스킹 되어 출력되는 부분")
+{{<caption text="붉은 색이 마스킹 되어 출력되는 부분">}}
+
+![](./assets/02.png)
+
+{{</caption>}}
 
 # 직접 구현해보기
 
@@ -282,7 +303,10 @@ void comb(const vector<int>& seq, int size) {
 
 # 참고 문헌
 
-* [std::next_permutation/cppreference.com](https://en.cppreference.com/w/cpp/algorithm/next_permutation)
-* [std::prev_permutation/cppreference.com](https://en.cppreference.com/w/cpp/algorithm/is_permutation)
-* [std::is_permutation/cppreference.com](https://en.cppreference.com/w/cpp/algorithm/is_permutation)
+* [`std::next_permutation`/cppreference.com](https://en.cppreference.com/w/cpp/algorithm/next_permutation)
+* [`std::prev_permutation`/cppreference.com](https://en.cppreference.com/w/cpp/algorithm/is_permutation)
+* [`std::is_permutation`/cppreference.com](https://en.cppreference.com/w/cpp/algorithm/is_permutation)
+
+# 연관 문제
+
 * {{% mdlink "ps/bj1759" %}}

@@ -1,8 +1,13 @@
 ---
-title: "[알고리즘] 너비 우선 탐색(BFS)"
+title: "너비 우선 탐색(BFS)"
+
+categories: ["알고리즘"]
+
 date: 2025-02-28
 lastmod: 2025-04-16
+
 toc: true
+mathjax: true
 ---
 
 # 개요
@@ -36,21 +41,19 @@ toc: true
 
 크게 그래프를 **인접 리스트** 로 표현하냐, **인접 행렬** 로 표현하냐에 따라서 구현이 달라진다.
 
-{{< ch "<h3>구현 - 인접 리스트 방식 그래프</h3>">}}
-{{< hlc "assets/n_alist.cc" "cpp" >}}
-{{</ ch >}}
+### 구현 - 인접 리스트 방식 그래프
+
+{{< hls source="assets/n_alist.cc" syntax="cpp" >}}
 
 <br>  
 
-{{< ch "<h3>구현 - 인접 행렬 방식 그래프</h3>">}}
-{{< hlc "assets/n_amat.cc" "cpp" >}}
+### 구현 - 인접 행렬  방식 그래프
+
+{{< hls source="assets/n_amat.cc" syntax="cpp" >}}
 
 조금 복잡해 보이지만, 여러 문제에서 비슷한 패턴으로 출제되니 숙지해 두는 것이 좋다.
 
 > [**팁**] `dx` 와 `dy`의 값을 잘 조절하여, 인접 정점을 탐색할 때, 항상 *오른쪽 아래*의 정점이 먼저 큐에 들어오도록 조절하면 조금 더 빠른 속도를 기대할 수 있다.
-
-{{</ ch >}}
-
 
 ## [팁] 조건이 만족되면, 빠른 종료를 하라
 
@@ -129,15 +132,15 @@ BFS는 가까운 곳부터 탐색을 시작하기 때문에, 목표 지점에 �
 
 [^1]: "인접한" 정점이므로 거리가 1 떨어져 있다는 가정이다.
 
-{{< ch "<h3>구현 - 인접 리스트 방식 그래프</h3>">}}
-{{< hlc "assets/d_alist.cc" "cpp" >}}
-{{</ ch >}}
+### 구현 - 인접 리스트 방식 그래프
+
+{{< hls source="assets/d_alist.cc" syntax="cpp" >}}
 
 <br>
 
-{{< ch "<h3>구현 - 인접 행렬 방식 그래프</h3>">}}
-{{< hlc "assets/d_amat.cc" "cpp" >}}
-{{</ ch >}}
+### 구현 - 인접 행렬 방식 그래프
+
+{{< hls source="assets/d_amat.cc" syntax="cpp" >}}
 
 # `응용` 최단 **경로(Path)** 자체를 알고 싶은 경우
 
@@ -183,15 +186,15 @@ BFS는 가까운 곳부터 탐색을 시작하기 때문에, 목표 지점에 �
 >           * 인접 정점의 경로 부모 노드를 *현재 처리 중인 정점* 으로 갱신한다.
 >           * 해당 인접한 정점을 큐에 넣는다.
 
-{{< ch "<h3>구현 - 인접 리스트 방식 그래프</h3>">}}
-{{< hlc "assets/p_alist.cc" "cpp" >}}
-{{</ ch >}}
+### 구현 - 인접 리스트 방식 그래프
+
+{{< hls source="assets/p_alist.cc" syntax="cpp" >}}
 
 <br>
 
-{{< ch "<h3>구현 - 인접 행렬 방식 그래프</h3>">}}
-{{< hlc "assets/p_amat.cc" "cpp" >}}
-{{</ ch >}}
+### 구현 - 인접 행렬 방식 그래프 
+
+{{< hls source="assets/p_amat.cc" syntax="cpp" >}}
 
 # BFS 시간 복잡도 분석
 

@@ -1,0 +1,58 @@
+theme: soda-note-theme
+title: "Even Idiots Can Make Game"
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "PS"
+      url: "/ps/"
+      weight: 2
+    - name: "Categories"
+      url: "/categories/"
+      weight: 3
+    - name: "Tags"
+      url: "/tags/"
+      weight: 4
+    - name: "All Posts"
+      url: "/all-posts/"
+      weight: 5
+
+languageCode: ko-kr
+timezone: Asia/Seoul
+
+taxonomies:
+  category: "categories"
+  tag: "tags"
+
+capitalizeListTitles: false
+
+services:
+  disqus:
+    shortname: 'even-idiots-can-make-games'
+  googleAnalytics:
+    id: G-TF4NJ6XV1W
+
+markup:
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: true
+    lineNumbersInTable: true
+    lineAnchors: ''
+    lineNos: true
+    lineNoStart: 1
+    tabWidth: 2
+    style: monokai
+  tableOfContents:
+    startLevel: 1
+    endLevel: 3
+    ordered: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      extras:
+        mark:
+          enable: true

@@ -1,10 +1,9 @@
 ---
-title: "[백준] 1351 G5 무한 수열"
+title: "백준 1351 G5 무한 수열"
 toc: true
 date: 2025-04-01
-ps:
-  site: 백준
-  id: 1351
+
+mathjax: true
 ---
 
 # 완전탐색 재귀로 접근
@@ -48,7 +47,7 @@ ps:
 
 # 코드
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}
 
 
 

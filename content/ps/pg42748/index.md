@@ -1,10 +1,8 @@
 ---
-title: "[프로그래머스] 42748 LV1 K번째 수"
+title: "프로그래머스 42748 LV1 K번째 수"
 date: 2025-02-25
 
-ps:
-  site: 프로그래머스
-  id: 42748
+mathjax: true
 ---
 
 아주 쉬운 문제이지만 반복자 관련 복습을 위하여 리뷰 노트를 작성한다.
@@ -17,7 +15,7 @@ ps:
 
 위와 같은 순서로 진행하였다.
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}
 
 아래 함수들의 사용법을 잠깐 정리하려고 썼다.
 

@@ -1,10 +1,8 @@
 ---
-title: "[백준] 9935 G4 문자열 폭발"
+title: "백준 9935 G4 문자열 폭발"
 date: 2025-05-05
 toc: true
-ps:
-  site: 백준
-  id: 9935
+mathjax: true
 ---
 
 정답률이 26%인 문제이니 나만 어려웠던 문제가 아니다.
@@ -99,7 +97,7 @@ for (char ch: str) {
 
 # 코드
 
-{{<hlc "assets/9935_s.cc" "cpp">}}
+{{<hls source="assets/9935_s.cc" syntax="cpp">}}
 
 # 참고 문헌
 

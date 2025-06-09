@@ -1,10 +1,8 @@
 ---
-title: "[백준] 2143 G3 두 배열의 합"
+title: "백준 2143 G3 두 배열의 합"
 date: 2025-04-02
 toc: true
-ps:
-  site: 백준
-  id: 2143
+mathjax: true
 ---
 
 # 해시 테이블을 사용하는 풀이
@@ -38,7 +36,7 @@ $n$과 $m$은 모두 $10^3$보다 작으므로, $O(n^3)$과 $O(m^3)$은 대략 1
 
 코드는 아래와 같다.
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}
 
 ## ⚠️ 주의 사항
 
@@ -113,4 +111,4 @@ for (int i = 0; i < n; ++i) {
 
 ## 코드
 
-{{< hlc "assets/code1.cc" "cpp" >}}
+{{< hls source="assets/code1.cc" syntax="cpp" >}}

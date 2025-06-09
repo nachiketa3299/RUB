@@ -1,5 +1,5 @@
 ---
-title: "[백준] 1874 S2 스택 수열"
+title: "백준 1874 S2 스택 수열"
 toc: true
 date: 2025-03-03
 ps:
@@ -49,4 +49,4 @@ ps:
 
 # 코드
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}

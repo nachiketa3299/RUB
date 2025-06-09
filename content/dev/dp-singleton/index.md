@@ -1,8 +1,10 @@
 ---
-title: "[디자인 패턴] 싱글턴"
+title: "싱글턴"
+categories: ["디자인 패턴"]
 date: 2024-08-27
 toc: true
 lastmod: 2025-04-24
+plantuml: true
 ---
 
 # 의도와 동기
@@ -20,19 +22,17 @@ lastmod: 2025-04-24
 
 # 구조
 
-```mermaid
-classDiagram
-    class Singleton {
-        + Instance()$
+{{<puml>}}
+left to right direction
 
-        + DoSomething()
-        + GetSomeData()
-
-        - uniqueInstance$
-
-        - someData
-    }
-```
+class Singleton {
+    + Instance() <<static>>
+    + DoSomething()
+    + GetSomeData()
+    - uniqueInstance <<static>>
+    - someData
+}
+{{</puml>}}
 
 # 언제 쓰는가?
 

@@ -1,10 +1,8 @@
 ---
-title: "[프로그래머스] 43165 LV2 타겟 넘버"
+title: "프로그래머스 43165 LV2 타겟 넘버"
 toc: true
 date: 2025-02-28
-ps:
-  site: 프로그래머스
-  id: 43165
+mathjax: true
 ---
 
 <!--  2025-02-28 풀이 실패 , 복습 후 Gpt -->
@@ -17,7 +15,9 @@ ps:
 
 목표하는 값인 `target`을 `5` 라고 하고, 각 노드를 현재 단계 까지의 합으로 정의하면, 다음처럼 그래프를 그려볼 수 있다.
 
-![](./assets/00.png "numbers가 4, 1, 2이고, target이 5인 상황")
+{{<caption text="numbers가 4, 1, 2이고, target이 5인 상황">}}
+![](./assets/00.png)
+{{</caption>}}
 
 각 단계마다 경우의 수가 두 개로 제한되고, 마지막 레벨까지 모든 노드가 가득 차 있으므로 완전 포화 이진 트리이다.
 
@@ -41,7 +41,7 @@ ps:
 
 DFS를 이용하여 구현한 코드는 아래와 같다.
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}
 
 
 

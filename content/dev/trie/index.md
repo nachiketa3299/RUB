@@ -1,8 +1,13 @@
 ---
-title: "[자료구조] 트라이(Trie)"
+title: "트라이(Trie)"
 toc: true
+
+categories: ["자료구조"]
+
 date: 2025-05-16
 lastmod: 2025-05-20
+
+mathjax: true
 ---
 
 # 트라이 자료구조란?

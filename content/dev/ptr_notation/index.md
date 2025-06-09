@@ -1,5 +1,8 @@
 ---
 title: 포인터를 어떻게 선언해야 할까
+
+categories: ["C++"]
+
 date: 2025-02-14
 draft: false
 toc: true
@@ -107,7 +110,7 @@ C#과 Java와 같은 고수준 언어들은 자료형을 보다 **추상적인 �
 
 추가적인 예를 보자.
 
-```cpp
+```cpp{lineNos=false}
 const int **p, a; // (1)
 float fa[10]; // (2)
 bool bar(int, int); // (3)

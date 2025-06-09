@@ -1,10 +1,8 @@
 ---
-title: "[백준] 18111 S2 마인크래프트"
+title: "백준 18111 S2 마인크래프트"
 date: 2025-03-12
 toc: true
-ps:
-  site: 백준
-  id: 18111
+mathjax: true
 ---
 
 # 접근
@@ -35,7 +33,7 @@ ps:
 
 # 코드
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}
 
 # 기타
 

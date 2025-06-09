@@ -1,10 +1,8 @@
 ---
-title: "[백준] 2579 S3 계단 오르기"
+title: "백준 2579 S3 계단 오르기"
 toc: true
 date: 2025-03-25
-ps:
-  site: 백준
-  id: 2579
+tags: ["dp"]
 ---
 
 # 접근
@@ -64,7 +62,7 @@ ps:
 
 # 코드
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}
 
 
 

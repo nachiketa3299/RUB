@@ -64,7 +64,7 @@ PE 파일, 즉 바이너리를 제작하는 시점이 **컴파일 시점**이며
 
 다음과 같은 간단한 프로그램이 있다고 하자.
 
-{{< hlc "assets/example.c" c >}}
+{{< hls source="assets/example.c" syntax=c >}}
 
 PE 파일을 뜯어보기 위해 여러 솔루션이 있지만, 나는 [horsicq/XPEViewer](https://github.com/horsicq/XPEViewer)를 사용하였다.
 
@@ -78,7 +78,7 @@ PE 파일을 뜯어보기 위해 여러 솔루션이 있지만, 나는 [horsicq/
 
 CPU가 실행할 실제 명령어들이 이 섹션에 저장된다.
 
-{{< hlc "assets/example.c" c >}}
+{{< hls source="assets/example.c" syntax=c >}}
 
 전체 코드가 컴파일된 출력물인 실행 가능한 기계어들이 적재되는 곳이라고 보면 된다.
 
@@ -89,7 +89,7 @@ CPU가 실행할 실제 명령어들이 이 섹션에 저장된다.
 
 *초기화된* 전역 변수들이 저장된다.
 
-{{< hlc "assets/example.c" c "hl_lines=3">}}
+{{< hls source="assets/example.c" syntax=c options="hl_lines=3">}}
 
 `g_init`은 초기화된 전역 변수로, `.data` 섹션에 저장된다.
 
@@ -97,13 +97,13 @@ CPU가 실행할 실제 명령어들이 이 섹션에 저장된다.
 
 *초기화되지 않은* 전역 변수들이 저장된다.
 
-{{< hlc "assets/example.c" c "hl_lines=4">}}
+{{< hls source="assets/example.c" syntax=c options="hl_lines=4">}}
 
 `g_non_init`은 초기화되지 않은 전역 변수로, `.bss` 섹션에 저장된다.
 
 ### `.rdata` 섹션
 
-{{< hlc "assets/example.c" c "hl_lines=13 14 16">}}
+{{< hls source="assets/example.c" syntax=c options="hl_lines=13 14 16">}}
 
 읽기 전용 데이터로, 주로 문자열 리터럴이나 상수 값들이 저장된다.
 

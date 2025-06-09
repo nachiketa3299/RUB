@@ -1,668 +1,677 @@
-ps_db:
-  - site: 백준
-    title: ATM
-    id: 11399
-    rank: S4
-    link: https://www.acmicpc.net/problem/11399
-    tags: [동적 계획법]
-    review_required: False
-    solved: 
-      - date: 2025-03-22
-        time: 20
-        note: 너무 쉬워서 오히려 당황
-        sole_solved: True
-  - site: 백준
-    title: 카드 정렬하기
-    id: 1715
-    rank: G4
-    link: https://www.acmicpc.net/problem/1715
-    tags: [그리디, 우선순위 큐]
-    review_required: True
-    solved: 
-      - date: 2025-03-24
-        time: 30
-        note: 어려움
-        sole_solved: False
-      - date: 2025-05-28
-        time: 16
-        sole_solved: True
-  - site: 백준
-    title: 수열
-    id: 2491
-    rank: S4
-    link: https://www.acmicpc.net/problem/2491
-    tags: [동적 계획법]
-    review_required: False
-    solved:
-      - date: 2025-03-26
-        time: 20
-        note: |
-          DP 문제인 줄 알았는데, 아닌가봄
-        sole_solved: False
-  - site: 백준
-    title: 줄 세우기
-    id: 2252
-    rank: G3
-    link: https://www.acmicpc.net/problem/2252
-    tags: ["위상 정렬"]
-    solved: 
-      - date: 2025-03-15
-        sole_solved: False;
-      - date: 2025-05-29
-        sole_solved: True
-        time: 6
-        note: 가장 기본적인 형태의 위상 정렬 문제
-  - site: 백준
-    title: 문제집
-    id: 1766
-    rank: G2
-    link: https://www.acmicpc.net/problem/1766
-    tags: ["위상 정렬", "우선 순위 큐"]
-    solved: 
-      - date: 2025-03-15
-        sole_solved: False
-        note: 우선 순위 큐 정의법 한 번 정리할 것
-      - date: 2025-05-29
-        sole_solved: False
-        time: 20
-        note: 우선 순위 큐를 사용하는 특이한 형태의 위상 정렬 문제이므로 주의할 것
-  - site: 백준
-    title: N-Queen
-    id: 9663
-    rank: G4
-    link: https://www.acmicpc.net/problem/9663
-    tags: ["backtracking", "csp"]
-    solved: 
-      - date: 2025-03-16
-        sole_solved: False
-      - date: 2025-06-03
-        sole_solved: False
-      - date: 2025-06-04
-        sole_solved: False
-  - site: 백준
-    title: N과 M (1)
-    id: 15649
-    rank: S3
-    tags: ["backtrㅏcking"]
-    solved: 
-      - date: 2025-03-16
-    link: https://www.acmicpc.net/problem/15649
-  - site: 백준
-    title: N과 M (2)
-    id: 15650
-    rank: S3
-    tags: ["backtracking"]
-    link: https://www.acmicpc.net/problem/15650
-    solved: 
-      - date: 2025-03-16
-  - site: 백준
-    title: N과 M (3)
-    id: 15651
-    rank: S3
-    tags: ["backtracking"]
-    link: https://www.acmicpc.net/problem/15651
-    solved: 
-      - date: 2025-03-16
-  - site: 백준
-    title: N과 M (4)
-    id: 15652
-    rank: S3
-    tags: ["backtracking"]
-    link: https://www.acmicpc.net/problem/15652
-    solved: 
-      - date: 2025-03-16
-  - site: 백준
-    title: N과 M (5)
-    id: 15654
-    rank: S3
-    tags: ["backtracking"]
-    link: https://www.acmicpc.net/problem/15654
-    solved: 
-      - date: 2025-04-02
-  - site: 백준
-    title: 연산자 끼워넣기
-    id: 14888
-    rank: S1
-    tags: ["backtracking"]
-    link: https://www.acmicpc.net/problem/14888
-    solved: 
-      - date: 2025-03-16
-  - site: 백준
-    title: 순열 사이클
-    id: 10451
-    rank: S3
-    tags: ["backtracking"]
-    link: https://www.acmicpc.net/problem/10451
-    solved: 
-      - date: 2025-03-16
-        note: 사이클 탐색 (이지만 사실 그냥 그래프 덩어리 세기)
-  - site: 백준
-    title: 적록색약
-    id: 10026
-    rank: G5
-    tags: ["graph_traversal", "bfs", "dfs", "grid_graph"]
-    link: https://www.acmicpc.net/problem/10026
-    solved: 
-      - date: 2025-03-16
-        sole_solved: True
-        note: 인접을 재정의하여 그래프 덩어리 세기
-      - date: 2025-06-02
-        sole_solved: True
-        time: 60
-  - site: 백준
-    title: 테트로미노
-    id: 14500
-    rank: G4
-    link: https://www.acmicpc.net/problem/14500
-    solved:
-      - date: 2025-03-14
-  - site: 백준
-    title: 마인크래프트
-    id: 18111
-    rank: S2
-    link: https://www.acmicpc.net/problem/18111
-    solved:
-      - date: 2025-03-11
-  - site: 백준
-    title: 암호 만들기
-    id: 1759
-    rank: G5
-    link: https://www.acmicpc.net/problem/1759
-    solved:
-      - date: 2025-03-11
-  - site: 백준
-    title: 한수
-    id: 1065
-    rank: S4
-    link: https://www.acmicpc.net/problem/1065
-    solved:
-      - date: 2025-03-09
-  - site: 백준
-    title: AC
-    id: 5430
-    rank: G4
-    link: https://www.acmicpc.net/problem/5430
-    solved:
-      - date: 2025-03-07
-  - site: 백준
-    title: 팰린드롬 만들기
-    id: 1213
-    rank: S3
-    link: https://www.acmicpc.net/problem/1213
-    solved:
-      - date: 2025-03-06
-  - site: 백준
-    title: 오큰수
-    id: 17298
-    rank: G4
-    link: https://www.acmicpc.net/problem/17298
-    solved:
-      - date: 2025-03-05
-  - site: 백준
-    title: 에디터
-    id: 1406
-    rank: S3
-    link: https://www.acmicpc.net/problem/1406
-    solved:
-      - date: 2025-03-04
-  - site: 백준
-    title: 스택 수열
-    id: 1874
-    rank: S2
-    link: https://www.acmicpc.net/problem/1874
-    solved:
-      - date: 2025-03-03
-  - site: 백준
-    title: 계단 오르기
-    tags: [동적 계획법]
-    id: 2579
-    rank: S3
-    link: https://www.acmicpc.net/problem/2579
-    solved:
-      - date: 2025-03-26
-      - date: 2025-03-27
-  - site: 백준
-    title: 동전 1
-    tags: [동적 계획법]
-    id: 2293
-    rank: G4
-    link: https://www.acmicpc.net/problem/2293
-    solved:
-      - date: 2025-03-31
-        sole_solved: False
-        note: |
-          ++c인 이유에 대해서 다시 생각해보기
-      - date: 2025-03-27
-        sole_solved: False
-        note: |
-          dp를 생각하는 것 자체가 어렵고, 왜 금액 기준 순회는 안되는지?
-  - site: 백준
-    title: 수강신청
-    tags: [해시 테이블]
-    id: 13414
-    rank: S3
-    link: https://www.acmicpc.net/problem/13414
-    solved:
-      - date: 2025-03-31
-        sole_solved: False
-        note: |
-          왜 내 방식이 실제로 더 빠르다고 나오는지?
-      - date: 2025-04-01
-        sole_solved: False
-        note: "rbegin.base()는 end()임. std::list도 범위 기반 순회 가능"
-  - site: 백준
-    title: 무한 수열
-    tags: [해시 테이블, 메모이제이션]
-    id: 1351
-    rank: G5
-    link: https://www.acmicpc.net/problem/1351
-    solved:
-      - date: 2025-03-31
-        sole_solved: False
-        note: |
-          왜 메모이제이션을 꼭 해야하는지에 대한 내용을 기술할 것
-      - date: 2025-04-01
-        sole_solved: True
-        note: "단일 재귀시 복잡도"
-  - site: 백준
-    title: 두 배열의 합
-    tags: [해시 테이블, 메모이제이션, 이진 탐색]
-    id: 2143
-    rank: G3
-    link: https://www.acmicpc.net/problem/2143
-    solved:
-      - date: 2025-04-01
-        sole_solved: False
-        note: |
-          풀려던게 맞았음, 복잡도 구하는 연습 아무리 해봐야 실전에서 못 써먹으면 소용 없음
-      - date: 2025-04-02
-        sole_solved: False
-        note: |
-          마지막에 왜 long long을 써야 하는지에 대해서 고찰할 것
-      - date: 2025-04-02
-        sole_solved: True
-        note: "이진 탐색을 이용한 풀이"
-  - site: 백준
-    title: 비슷한 단어
-    tags: [문자열]
-    id: 2607
-    rank: S2
-    link: https://www.acmicpc.net/problem/2607
-    solved:
-      - date: 2025-04-02
-        sole_solved: True
-        note: 근데 조금 지저분함
-  - site: 백준
-    title: 최소비용 구하기
-    tags: [최단 경로, 다익스트라]
-    id: 1916
-    rank: G5
-    link: https://www.acmicpc.net/problem/1916
-    solved:
-      - date: 2025-04-02
-        sole_solved: False
-  - site: 백준
-    title: LCS
-    tags: [문자열, 동적 계획법]
-    id: 9251
-    rank: G5
-    link: https://www.acmicpc.net/problem/9251
-    solved:
-      - date: 2025-04-02
-        sole_solved: False
-        note: 이거 반드시 복습 해야함, 그리고 시리즈가 있음
-      - date: 2025-04-02
-  - site: 백준
-    title: 어린 왕자
-    tags: [수학]
-    id: 1004
-    rank: S3
-    link: https://www.acmicpc.net/problem/1004
-    solved:
-      - date: 2025-04-07
-        sole_solved: True
-      - date: 2024-05-20
-        sole_solved: True
-  - site: 백준
-    title: 행렬 곱셈
-    tags: [분할 정복, 행렬]
-    id: 10830
-    rank: G4
-    link: https://www.acmicpc.net/problem/10830
-    solved:
-      - date: 2025-04-08
-        sole_solved: False
-        note: 잘 와닿지 않음
-  - site: 백준
-    title: 단어 뒤집기 2
-    tags: [문자열, 회문]
-    rank: S3
-    id: 17413
-    link: https://www.acmicpc.net/problem/17413
-    solved:
-      - date: 2025-04-09
-        sole_solved: True
-  - site: 백준
-    title: 괄호의 값
-    tags: [스택]
-    rank: G5
-    id: 2504
-    link: https://www.acmicpc.net/problem/2504
-    solved:
-      - date: 2025-04-10
-        sole_solved: False
-      - date: 2025-04-11
-        sole_solved: False
-  - site: 백준
-    title: 숫자 정사각형
-    tags: [완전 탐색]
-    id: 1051
-    rank: S3
-    link: https://www.acmicpc.net/problem/1051
-    solved:
-      - date: 2025-04-11
-        sole_solved: False
-  - site: 백준
-    title: 선분 위의 점
-    tags: [이진 탐색]
-    id: 11663
-    rank: S3
-    link: https://www.acmicpc.net/problem/11663
-    solved:
-      - date: 2025-04-14
-        sole_solved: False
-  - site: 백준
-    title: 캠프 가는 영식
-    tags: [탐색]
-    id: 1590
-    rank: S4
-    link: https://www.acmicpc.net/problem/1590
-    solved:
-      - date: 2025-04-15
-        sole_solved: True
-  - site: 백준
-    title: 체스
-    tags: [그래프]
-    id: 9204
-    rank: G5
-    link: https://www.acmicpc.net/problem/9204
-    solved:
-      - date: 2025-04-16
-        sole_solved: False
-  - site: 백준
-    title: 트리 노드 합의 최대값
-    tags: [동적 계획법, 트리 누적합, 깊이 우선 탐색]
-    id: 25515
-    rank: G4
-    link: https://www.acmicpc.net/problem/25515
-    solved:
-      - date: 2025-04-17
-        sole_solved: False
-        note: "반드시 다시 풀어볼 것"
-  - site: 백준
-    title: 나무 위의 벌레
-    tags: [트리 누적합, 깊이 우선 탐색]
-    id: 2132
-    rank: G3
-    link: https://www.acmicpc.net/problem/2132
-    solved:
-      - date: 2025-04-18
-        sole_solved: False
-        note: "반드시 다시 풀어볼 것"
-  - site: 백준
-    title: 트리의 지름
-    tags: [트리 누적합, 깊이 우선 탐색]
-    id: 1967
-    rank: G4
-    link: https://www.acmicpc.net/problem/1967
-    solved: 
-      - date: 2025-04-18
-        sole_solved: False
-        note: "위 문제와 함꼐 반드시 다시 풀어볼 것"
-  - site: 백준
-    title: A → B
-    tags: [트리, 너비 우선 탐색, 깊이 우선 탐색]
-    id: 16953
-    rank: S2
-    link: https://www.acmicpc.net/problem/16953
-    solved: 
-      - date: 2025-04-21
-        sole_solved: True
-        note: "DFS가 아닌 BFS로 푸는 것이 정석"
-  - site: 백준
-    title: LCS 2
-    tags: [LCS, 문자열]
-    id: 9252
-    rank: G4
-    link: https://www.acmicpc.net/problem/9252
-    solved: 
-      - date: 2025-04-21
-        sole_solved: True
-        note: "LCS 복원하는 것 주의"
-  - site: 백준
-    title: LCS 3
-    tags: [LCS, 문자열]
-    id: 1958
-    rank: G4
-    link: https://www.acmicpc.net/problem/1958
-    solved: 
-      - date: 2025-04-21
-        sole_solved: True
-        note: "솔직히 왜 그런지는 잘 모르겠다."
-  - site: 백준
-    title: 가장 긴 증가하는 부분 수열
-    tags: [LIS]
-    id: 11053
-    rank: S2
-    link: https://www.acmicpc.net/problem/11053
-    solved: 
-      - date: 2025-04-21
-        sole_solved: True
-        note: "LIS 에 대한 정리가 반드시 다시 필요함"
-  - site: 백준
-    title: 가장 긴 증가하는 부분 수열 2
-    tags: [LIS, 이진 탐색]
-    id: 12015
-    rank: G2
-    link: https://www.acmicpc.net/problem/12015
-    solved: 
-      - date: 2025-04-21
-        sole_solved: True
-        note: "이진 탐색 아니면 터짐"
-  - site: 백준
-    title: 가장 긴 증가하는 부분 수열 3
-    tags: [LIS, 이진 탐색]
-    id: 12738
-    rank: G2
-    link: https://www.acmicpc.net/problem/12738
-    solved: 
-      - date: 2025-04-21
-        sole_solved: True
-        note: "이진 탐색 아니면 터짐(의도를 모르겠음)"
-  - site: 백준
-    title: 사전 순 최대 공통 부분 수열
-    tags: [LCS, 그리디]
-    id: 30805
-    rank: G4
-    link: https://www.acmicpc.net/problem/30805
-    solved: 
-      - date: 2025-04-22
-        sole_solved: False
-        note: "(못품) 진짜 왜캐 어렵지"
-  - site: 백준
-    title: 스티커
-    tags: [동적 계획법]
-    id: 9465
-    rank: S1
-    link: https://www.acmicpc.net/problem/9465
-    solved: 
-      - date: 2025-04-23
-        sole_solved: False
-        note: "으레 그렇듯 DP를 생각해 내는게 왜 어려울까"
-  - site: 백준
-    title: 내려가기
-    tags: [동적 계획법]
-    id: 2096
-    rank: G5
-    link: https://www.acmicpc.net/problem/2096
-    solved: 
-      - date: 2025-04-24
-        sole_solved: True
-  - site: 백준
-    title: 블로그
-    tags: [누적 합, 슬라이딩 윈도우]
-    id: 21921
-    rank: S3
-    link: https://www.acmicpc.net/problem/21921
-    solved: 
-      - date: 2025-04-28
-        sole_solved: True
-  - site: 백준
-    title: 연구소
-    tags: [완전 탐색, 너비 우선 탐색, "backtracking", 조합]
-    id: 14502
-    rank: G4
-    link: https://www.acmicpc.net/problem/14502
-    solved: 
-      - date: 2025-04-28
-        sole_solved: True
-  - site: 백준
-    title: 구간 합 구하기 5
-    tags: [누적 합, 2차원 누적 합]
-    id: 11660
-    rank: S1
-    link: https://www.acmicpc.net/problem/11660
-    solved: 
-      - date: 2025-04-29
-        sole_solved: False
-  - site: 백준
-    title: 부분 합
-    tags: [누적 합, 투 포인터]
-    id: 1806
-    rank: G4
-    link: https://www.acmicpc.net/problem/1806
-    solved: 
-      - date: 2025-04-30
-        sole_solved: False
-  - site: 백준
-    title: 거듭 제곱
-    tags: [수학, 비트마스킹]
-    id: 1740
-    rank: S3
-    link: https://www.acmicpc.net/problem/1740
-    solved: 
-      - date: 2025-05-01
-        sole_solved: False
-        note: 진심 개 디러운 문제
-  - site: 백준
-    title: 중복 제거
-    tags: [비트 마스크]
-    id: 13701
-    rank: G4
-    link: https://www.acmicpc.net/problem/13701
-    solved: 
-      - date: 2025-05-02
-        sole_solved: False
-  - site: 백준
-    title: 문자열 폭발
-    tags: [자료 구조, 스택, 문자열, KMP]
-    id: 9935
-    rank: G4
-    link: https://www.acmicpc.net/problem/9935
-    solved: 
-      - date: 2025-05-05
-        sole_solved: False
-  - site: 백준
-    title: 후위 표기식
-    tags: [자료 구조, 스택]
-    id: 1918
-    rank: G2
-    link: https://www.acmicpc.net/problem/1918
-    solved: 
-      - date: 2025-05-06
-        sole_solved: False
-  - site: 백준
-    title: 후위 표기식
-    tags: [자료 구조, 스택]
-    id: 1935
-    rank: S3
-    link: https://www.acmicpc.net/problem/1935
-    solved: 
-      - date: 2025-05-06
-        sole_solved: False
-  - site: 백준
-    title: 잃어버린 괄호
-    tags: [그리디, 문자열, 파싱]
-    id: 1935
-    rank: S3
-    link: https://www.acmicpc.net/problem/1935
-    solved: 
-      - date: 2025-05-07
-        sole_solved: False
-  - site: 백준
-    title: 개미굴
-    tags: [트라이]
-    id: 14725
-    rank: G3
-    link: https://www.acmicpc.net/problem/14725
-    solved: 
-      - date: 2025-05-09
-        sole_solved: False
-      - date: 2025-05-20
-        sole_solved: True
-  - site: 백준
-    title: 다각형의 면적
-    tags: ["다각형의 넓이", "수학"]
-    id: 2166
-    rank: G1
-    link: https://www.acmicpc.net/problem/2166
-    solved:
-      - date: 2025-05-12
-        sole_solved: False
-  - site: 백준
-    title: 최소 스패닝 트리
-    tags: ["최소 스패닝 트리", "크루스칼", "유니온-파인드"]
-    id: 1197
-    rank: G4
-    link: https://www.acmicpc.net/problem/1197
-    solved:
-      - date: 2025-05-20
-        sole_solved: False
-  - site: 백준
-    title: 도시 분할 계획
-    tags: ["최소 스패닝 트리", "크루스칼", "유니온-파인드"]
-    id: 1647
-    rank: G4
-    link: https://www.acmicpc.net/problem/1647
-    solved:
-      - date: 2025-05-21
-        sole_solved: False
-  - site: 백준
-    title: 사이클 게임
-    tags: ["유니온-파인드"]
-    id : 20040
-    rank: G4
-    link: https://www.acmicpc.net/problem/20040
-    solved:
-      - date: 2025-05-28
-        sole_solved: True
-  - site: 백준
-    title: 음악 프로그램
-    tags: ["위상 정렬"]
-    id: 2623
-    rank: G3
-    link: https://www.acmicpc.net/problem/2623
-    solved:
-      - date: 2025-05-29
-        sole_solved: False
-        time: 23
-  - site: 백준
-    title: 스도쿠
-    tags: ["backtracking", "csp"]
-    id: 2239
-    rank: G4
-    link: https://www.acmicpc.net/problem/2239
-    solved:
-      - date: 2025-06-02
-        sole_solved: False
-        time: 60
+- site: 백준
+  title: ATM
+  id: 11399
+  rank: S4
+  link: https://www.acmicpc.net/problem/11399
+  tags: [동적 계획법]
+  review_required: False
+  solved: 
+    - date: 2025-03-22
+      time: 20
+      note: 너무 쉬워서 오히려 당황
+      sole_solved: True
+- site: 백준
+  title: 카드 정렬하기
+  id: 1715
+  rank: G4
+  link: https://www.acmicpc.net/problem/1715
+  tags: [그리디, 우선순위 큐]
+  review_required: True
+  solved: 
+    - date: 2025-03-24
+      time: 30
+      note: 어려움
+      sole_solved: False
+    - date: 2025-05-28
+      time: 16
+      sole_solved: True
+- site: 백준
+  title: 수열
+  id: 2491
+  rank: S4
+  link: https://www.acmicpc.net/problem/2491
+  tags: [동적 계획법]
+  review_required: False
+  solved:
+    - date: 2025-03-26
+      time: 20
+      note: |
+        DP 문제인 줄 알았는데, 아닌가봄
+      sole_solved: False
+- site: 백준
+  title: 줄 세우기
+  id: 2252
+  rank: G3
+  link: https://www.acmicpc.net/problem/2252
+  tags: ["위상 정렬"]
+  solved: 
+    - date: 2025-03-15
+      sole_solved: False;
+    - date: 2025-05-29
+      sole_solved: True
+      time: 6
+      note: 가장 기본적인 형태의 위상 정렬 문제
+- site: 백준
+  title: 문제집
+  id: 1766
+  rank: G2
+  link: https://www.acmicpc.net/problem/1766
+  tags: ["위상 정렬", "우선 순위 큐"]
+  solved: 
+    - date: 2025-03-15
+      sole_solved: False
+      note: 우선 순위 큐 정의법 한 번 정리할 것
+    - date: 2025-05-29
+      sole_solved: False
+      time: 20
+      note: 우선 순위 큐를 사용하는 특이한 형태의 위상 정렬 문제이므로 주의할 것
+- site: 백준
+  title: N-Queen
+  id: 9663
+  rank: G4
+  link: https://www.acmicpc.net/problem/9663
+  tags: ["backtracking", "csp"]
+  solved: 
+    - date: 2025-03-16
+      sole_solved: False
+    - date: 2025-06-03
+      sole_solved: False
+    - date: 2025-06-04
+      sole_solved: False
+- site: 백준
+  title: N과 M (1)
+  id: 15649
+  rank: S3
+  tags: ["backtracking"]
+  solved: 
+    - date: 2025-03-16
+  link: https://www.acmicpc.net/problem/15649
+- site: 백준
+  title: N과 M (2)
+  id: 15650
+  rank: S3
+  tags: ["backtracking"]
+  link: https://www.acmicpc.net/problem/15650
+  solved: 
+    - date: 2025-03-16
+- site: 백준
+  title: N과 M (3)
+  id: 15651
+  rank: S3
+  tags: ["backtracking"]
+  link: https://www.acmicpc.net/problem/15651
+  solved: 
+    - date: 2025-03-16
+- site: 백준
+  title: N과 M (4)
+  id: 15652
+  rank: S3
+  tags: ["backtracking"]
+  link: https://www.acmicpc.net/problem/15652
+  solved: 
+    - date: 2025-03-16
+- site: 백준
+  title: N과 M (5)
+  id: 15654
+  rank: S3
+  tags: ["backtracking"]
+  link: https://www.acmicpc.net/problem/15654
+  solved: 
+    - date: 2025-04-02
+- site: 백준
+  title: 연산자 끼워넣기
+  id: 14888
+  rank: S1
+  tags: ["backtracking"]
+  link: https://www.acmicpc.net/problem/14888
+  solved: 
+    - date: 2025-03-16
+- site: 백준
+  title: 순열 사이클
+  id: 10451
+  rank: S3
+  tags: ["backtracking"]
+  link: https://www.acmicpc.net/problem/10451
+  solved: 
+    - date: 2025-03-16
+      note: 사이클 탐색 (이지만 사실 그냥 그래프 덩어리 세기)
+- site: 백준
+  title: 적록색약
+  id: 10026
+  rank: G5
+  tags: ["graph_traversal", "bfs", "dfs", "grid_graph"]
+  link: https://www.acmicpc.net/problem/10026
+  solved: 
+    - date: 2025-03-16
+      sole_solved: True
+      note: 인접을 재정의하여 그래프 덩어리 세기
+    - date: 2025-06-02
+      sole_solved: True
+      time: 60
+- site: 백준
+  title: 테트로미노
+  id: 14500
+  rank: G4
+  link: https://www.acmicpc.net/problem/14500
+  solved:
+    - date: 2025-03-14
+- site: 백준
+  title: 마인크래프트
+  id: 18111
+  rank: S2
+  link: https://www.acmicpc.net/problem/18111
+  solved:
+    - date: 2025-03-11
+- site: 백준
+  title: 암호 만들기
+  id: 1759
+  rank: G5
+  link: https://www.acmicpc.net/problem/1759
+  solved:
+    - date: 2025-03-11
+- site: 백준
+  title: 한수
+  id: 1065
+  rank: S4
+  link: https://www.acmicpc.net/problem/1065
+  solved:
+    - date: 2025-03-09
+- site: 백준
+  title: AC
+  id: 5430
+  rank: G4
+  link: https://www.acmicpc.net/problem/5430
+  solved:
+    - date: 2025-03-07
+- site: 백준
+  title: 팰린드롬 만들기
+  id: 1213
+  rank: S3
+  link: https://www.acmicpc.net/problem/1213
+  solved:
+    - date: 2025-03-06
+- site: 백준
+  title: 오큰수
+  id: 17298
+  rank: G4
+  link: https://www.acmicpc.net/problem/17298
+  solved:
+    - date: 2025-03-05
+- site: 백준
+  title: 에디터
+  id: 1406
+  rank: S3
+  link: https://www.acmicpc.net/problem/1406
+  solved:
+    - date: 2025-03-04
+- site: 백준
+  title: 스택 수열
+  id: 1874
+  rank: S2
+  link: https://www.acmicpc.net/problem/1874
+  solved:
+    - date: 2025-03-03
+- site: 백준
+  title: 계단 오르기
+  tags: [동적 계획법]
+  id: 2579
+  rank: S3
+  link: https://www.acmicpc.net/problem/2579
+  solved:
+    - date: 2025-03-26
+    - date: 2025-03-27
+- site: 백준
+  title: 동전 1
+  tags: [동적 계획법]
+  id: 2293
+  rank: G4
+  link: https://www.acmicpc.net/problem/2293
+  solved:
+    - date: 2025-03-31
+      sole_solved: False
+      note: |
+        ++c인 이유에 대해서 다시 생각해보기
+    - date: 2025-03-27
+      sole_solved: False
+      note: |
+        dp를 생각하는 것 자체가 어렵고, 왜 금액 기준 순회는 안되는지?
+- site: 백준
+  title: 수강신청
+  tags: [해시 테이블]
+  id: 13414
+  rank: S3
+  link: https://www.acmicpc.net/problem/13414
+  solved:
+    - date: 2025-03-31
+      sole_solved: False
+      note: |
+        왜 내 방식이 실제로 더 빠르다고 나오는지?
+    - date: 2025-04-01
+      sole_solved: False
+      note: "rbegin.base()는 end()임. std::list도 범위 기반 순회 가능"
+- site: 백준
+  title: 무한 수열
+  tags: [해시 테이블, 메모이제이션]
+  id: 1351
+  rank: G5
+  link: https://www.acmicpc.net/problem/1351
+  solved:
+    - date: 2025-03-31
+      sole_solved: False
+      note: |
+        왜 메모이제이션을 꼭 해야하는지에 대한 내용을 기술할 것
+    - date: 2025-04-01
+      sole_solved: True
+      note: "단일 재귀시 복잡도"
+- site: 백준
+  title: 두 배열의 합
+  tags: [해시 테이블, 메모이제이션, 이진 탐색]
+  id: 2143
+  rank: G3
+  link: https://www.acmicpc.net/problem/2143
+  solved:
+    - date: 2025-04-01
+      sole_solved: False
+      note: |
+        풀려던게 맞았음, 복잡도 구하는 연습 아무리 해봐야 실전에서 못 써먹으면 소용 없음
+    - date: 2025-04-02
+      sole_solved: False
+      note: |
+        마지막에 왜 long long을 써야 하는지에 대해서 고찰할 것
+    - date: 2025-04-02
+      sole_solved: True
+      note: "이진 탐색을 이용한 풀이"
+- site: 백준
+  title: 비슷한 단어
+  tags: [문자열]
+  id: 2607
+  rank: S2
+  link: https://www.acmicpc.net/problem/2607
+  solved:
+    - date: 2025-04-02
+      sole_solved: True
+      note: 근데 조금 지저분함
+- site: 백준
+  title: 최소비용 구하기
+  tags: [최단 경로, 다익스트라]
+  id: 1916
+  rank: G5
+  link: https://www.acmicpc.net/problem/1916
+  solved:
+    - date: 2025-04-02
+      sole_solved: False
+- site: 백준
+  title: LCS
+  tags: [문자열, 동적 계획법]
+  id: 9251
+  rank: G5
+  link: https://www.acmicpc.net/problem/9251
+  solved:
+    - date: 2025-04-02
+      sole_solved: False
+      note: 이거 반드시 복습 해야함, 그리고 시리즈가 있음
+    - date: 2025-04-02
+- site: 백준
+  title: 어린 왕자
+  tags: [수학]
+  id: 1004
+  rank: S3
+  link: https://www.acmicpc.net/problem/1004
+  solved:
+    - date: 2025-04-07
+      sole_solved: True
+    - date: 2024-05-20
+      sole_solved: True
+- site: 백준
+  title: 행렬 곱셈
+  tags: [분할 정복, 행렬]
+  id: 10830
+  rank: G4
+  link: https://www.acmicpc.net/problem/10830
+  solved:
+    - date: 2025-04-08
+      sole_solved: False
+      note: 잘 와닿지 않음
+- site: 백준
+  title: 단어 뒤집기 2
+  tags: [문자열, 회문]
+  rank: S3
+  id: 17413
+  link: https://www.acmicpc.net/problem/17413
+  solved:
+    - date: 2025-04-09
+      sole_solved: True
+- site: 백준
+  title: 괄호의 값
+  tags: [스택]
+  rank: G5
+  id: 2504
+  link: https://www.acmicpc.net/problem/2504
+  solved:
+    - date: 2025-04-10
+      sole_solved: False
+    - date: 2025-04-11
+      sole_solved: False
+- site: 백준
+  title: 숫자 정사각형
+  tags: [완전 탐색]
+  id: 1051
+  rank: S3
+  link: https://www.acmicpc.net/problem/1051
+  solved:
+    - date: 2025-04-11
+      sole_solved: False
+- site: 백준
+  title: 선분 위의 점
+  tags: [이진 탐색]
+  id: 11663
+  rank: S3
+  link: https://www.acmicpc.net/problem/11663
+  solved:
+    - date: 2025-04-14
+      sole_solved: False
+- site: 백준
+  title: 캠프 가는 영식
+  tags: [탐색]
+  id: 1590
+  rank: S4
+  link: https://www.acmicpc.net/problem/1590
+  solved:
+    - date: 2025-04-15
+      sole_solved: True
+- site: 백준
+  title: 체스
+  tags: [그래프]
+  id: 9204
+  rank: G5
+  link: https://www.acmicpc.net/problem/9204
+  solved:
+    - date: 2025-04-16
+      sole_solved: False
+- site: 백준
+  title: 트리 노드 합의 최대값
+  tags: [동적 계획법, 트리 누적합, 깊이 우선 탐색]
+  id: 25515
+  rank: G4
+  link: https://www.acmicpc.net/problem/25515
+  solved:
+    - date: 2025-04-17
+      sole_solved: False
+      note: "반드시 다시 풀어볼 것"
+- site: 백준
+  title: 나무 위의 벌레
+  tags: [트리 누적합, 깊이 우선 탐색]
+  id: 2132
+  rank: G3
+  link: https://www.acmicpc.net/problem/2132
+  solved:
+    - date: 2025-04-18
+      sole_solved: False
+      note: "반드시 다시 풀어볼 것"
+- site: 백준
+  title: 트리의 지름
+  tags: [트리 누적합, 깊이 우선 탐색]
+  id: 1967
+  rank: G4
+  link: https://www.acmicpc.net/problem/1967
+  solved: 
+    - date: 2025-04-18
+      sole_solved: False
+      note: "위 문제와 함꼐 반드시 다시 풀어볼 것"
+- site: 백준
+  title: A → B
+  tags: [트리, 너비 우선 탐색, 깊이 우선 탐색]
+  id: 16953
+  rank: S2
+  link: https://www.acmicpc.net/problem/16953
+  solved: 
+    - date: 2025-04-21
+      sole_solved: True
+      note: "DFS가 아닌 BFS로 푸는 것이 정석"
+- site: 백준
+  title: LCS 2
+  tags: [LCS, 문자열]
+  id: 9252
+  rank: G4
+  link: https://www.acmicpc.net/problem/9252
+  solved: 
+    - date: 2025-04-21
+      sole_solved: True
+      note: "LCS 복원하는 것 주의"
+- site: 백준
+  title: LCS 3
+  tags: [LCS, 문자열]
+  id: 1958
+  rank: G4
+  link: https://www.acmicpc.net/problem/1958
+  solved: 
+    - date: 2025-04-21
+      sole_solved: True
+      note: "솔직히 왜 그런지는 잘 모르겠다."
+- site: 백준
+  title: 가장 긴 증가하는 부분 수열
+  tags: [LIS]
+  id: 11053
+  rank: S2
+  link: https://www.acmicpc.net/problem/11053
+  solved: 
+    - date: 2025-04-21
+      sole_solved: True
+      note: "LIS 에 대한 정리가 반드시 다시 필요함"
+- site: 백준
+  title: 가장 긴 증가하는 부분 수열 2
+  tags: [LIS, 이진 탐색]
+  id: 12015
+  rank: G2
+  link: https://www.acmicpc.net/problem/12015
+  solved: 
+    - date: 2025-04-21
+      sole_solved: True
+      note: "이진 탐색 아니면 터짐"
+- site: 백준
+  title: 가장 긴 증가하는 부분 수열 3
+  tags: [LIS, 이진 탐색]
+  id: 12738
+  rank: G2
+  link: https://www.acmicpc.net/problem/12738
+  solved: 
+    - date: 2025-04-21
+      sole_solved: True
+      note: "이진 탐색 아니면 터짐(의도를 모르겠음)"
+- site: 백준
+  title: 사전 순 최대 공통 부분 수열
+  tags: [LCS, 그리디]
+  id: 30805
+  rank: G4
+  link: https://www.acmicpc.net/problem/30805
+  solved: 
+    - date: 2025-04-22
+      sole_solved: False
+      note: "(못품) 진짜 왜캐 어렵지"
+- site: 백준
+  title: 스티커
+  tags: [동적 계획법]
+  id: 9465
+  rank: S1
+  link: https://www.acmicpc.net/problem/9465
+  solved: 
+    - date: 2025-04-23
+      sole_solved: False
+      note: "으레 그렇듯 DP를 생각해 내는게 왜 어려울까"
+- site: 백준
+  title: 내려가기
+  tags: [동적 계획법]
+  id: 2096
+  rank: G5
+  link: https://www.acmicpc.net/problem/2096
+  solved: 
+    - date: 2025-04-24
+      sole_solved: True
+- site: 백준
+  title: 블로그
+  tags: [누적 합, 슬라이딩 윈도우]
+  id: 21921
+  rank: S3
+  link: https://www.acmicpc.net/problem/21921
+  solved: 
+    - date: 2025-04-28
+      sole_solved: True
+- site: 백준
+  title: 연구소
+  tags: [완전 탐색, 너비 우선 탐색, "backtracking", 조합]
+  id: 14502
+  rank: G4
+  link: https://www.acmicpc.net/problem/14502
+  solved: 
+    - date: 2025-04-28
+      sole_solved: True
+- site: 백준
+  title: 구간 합 구하기 5
+  tags: [누적 합, 2차원 누적 합]
+  id: 11660
+  rank: S1
+  link: https://www.acmicpc.net/problem/11660
+  solved: 
+    - date: 2025-04-29
+      sole_solved: False
+- site: 백준
+  title: 부분 합
+  tags: [누적 합, 투 포인터]
+  id: 1806
+  rank: G4
+  link: https://www.acmicpc.net/problem/1806
+  solved: 
+    - date: 2025-04-30
+      sole_solved: False
+- site: 백준
+  title: 거듭 제곱
+  tags: [수학, 비트마스킹]
+  id: 1740
+  rank: S3
+  link: https://www.acmicpc.net/problem/1740
+  solved: 
+    - date: 2025-05-01
+      sole_solved: False
+      note: 진심 개 디러운 문제
+- site: 백준
+  title: 중복 제거
+  tags: [비트 마스크]
+  id: 13701
+  rank: G4
+  link: https://www.acmicpc.net/problem/13701
+  solved: 
+    - date: 2025-05-02
+      sole_solved: False
+- site: 백준
+  title: 문자열 폭발
+  tags: [자료 구조, 스택, 문자열, KMP]
+  id: 9935
+  rank: G4
+  link: https://www.acmicpc.net/problem/9935
+  solved: 
+    - date: 2025-05-05
+      sole_solved: False
+- site: 백준
+  title: 후위 표기식
+  tags: [자료 구조, 스택]
+  id: 1918
+  rank: G2
+  link: https://www.acmicpc.net/problem/1918
+  solved: 
+    - date: 2025-05-06
+      sole_solved: False
+- site: 백준
+  title: 후위 표기식
+  tags: [자료 구조, 스택]
+  id: 1935
+  rank: S3
+  link: https://www.acmicpc.net/problem/1935
+  solved: 
+    - date: 2025-05-06
+      sole_solved: False
+- site: 백준
+  title: 잃어버린 괄호
+  tags: [그리디, 문자열, 파싱]
+  id: 1541
+  rank: S2
+  link: https://www.acmicpc.net/problem/1541
+  solved: 
+    - date: 2025-05-07
+      sole_solved: False
+- site: 백준
+  title: 개미굴
+  tags: [트라이]
+  id: 14725
+  rank: G3
+  link: https://www.acmicpc.net/problem/14725
+  solved: 
+    - date: 2025-05-09
+      sole_solved: False
+    - date: 2025-05-20
+      sole_solved: True
+- site: 백준
+  title: 다각형의 면적
+  tags: ["다각형의 넓이", "수학"]
+  id: 2166
+  rank: G1
+  link: https://www.acmicpc.net/problem/2166
+  solved:
+    - date: 2025-05-12
+      sole_solved: False
+- site: 백준
+  title: 최소 스패닝 트리
+  tags: ["최소 스패닝 트리", "크루스칼", "유니온-파인드"]
+  id: 1197
+  rank: G4
+  link: https://www.acmicpc.net/problem/1197
+  solved:
+    - date: 2025-05-20
+      sole_solved: False
+- site: 백준
+  title: 도시 분할 계획
+  tags: ["최소 스패닝 트리", "크루스칼", "유니온-파인드"]
+  id: 1647
+  rank: G4
+  link: https://www.acmicpc.net/problem/1647
+  solved:
+    - date: 2025-05-21
+      sole_solved: False
+- site: 백준
+  title: 사이클 게임
+  tags: ["유니온-파인드"]
+  id : 20040
+  rank: G4
+  link: https://www.acmicpc.net/problem/20040
+  solved:
+    - date: 2025-05-28
+      sole_solved: True
+- site: 백준
+  title: 음악 프로그램
+  tags: ["위상 정렬"]
+  id: 2623
+  rank: G3
+  link: https://www.acmicpc.net/problem/2623
+  solved:
+    - date: 2025-05-29
+      sole_solved: False
+      time: 23
+- site: 백준
+  title: 스도쿠
+  tags: ["backtracking", "csp"]
+  id: 2239
+  rank: G4
+  link: https://www.acmicpc.net/problem/2239
+  solved:
+    - date: 2025-06-02
+      sole_solved: False
+      time: 60
+- site: 백준
+  title: 계단 수
+  tags: ["dp", "dp_bitmask"]
+  id: 1562
+  rank: G1
+  link: https://www.acmicpc.net/problem/1562
+  solved: 
+    - date: 2025-06-04
+      sole_solved: False
+      time: 60

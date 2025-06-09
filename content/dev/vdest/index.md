@@ -1,5 +1,6 @@
 ---
-title: "[C++] 가상 메서드와 가상 소멸자"
+title: "가상 메서드와 가상 소멸자"
+categories: [C++]
 date: 2025-03-11
 toc: true
 ---

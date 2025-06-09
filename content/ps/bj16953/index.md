@@ -1,10 +1,8 @@
 ---
-title: "[백준] 16953 S2 A → B"
+title: "백준 16953 S2 A → B"
 date: 2025-04-20
 toc: true
-ps:
-  site: 백준
-  id: 16953
+mathjax: true
 ---
 
 # 트리 탐색 문제로 접근
@@ -31,9 +29,7 @@ $A$를 루트로 하는 트리에서 존재 여부를 알 수 없는 $B$ 노드�
 
 탐색 경로는 위와 같다. 최단 경로임이 보장된다. 코드는 아래와 같다.
 
-{{< ch "BFS 코드" >}}
-{{< hlc "assets/code.cc" "cpp" >}}
-{{</ ch >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}
 
 ## 근데 DFS로도 통과할 수 있다.
 
@@ -54,11 +50,4 @@ BFS를 사용하면 그래프 내에 $B$가 몇 개 있더라도, $A$로부터 �
 
 코드는 아래와 같다.
 
-{{< ch "DFS 코드" >}}
-{{< hlc "assets/code_01.cc" "cpp" >}}
-{{< /ch >}}
-
-
-
-
-
+{{< hls source="assets/code_01.cc" syntax="cpp" >}}

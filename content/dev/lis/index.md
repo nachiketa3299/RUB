@@ -1,7 +1,11 @@
 ---
-title: "[알고리즘] LIS: 최장 증가 부분 수열"
+title: "LIS: 최장 증가 부분 수열"
+categories: ["알고리즘"]
 toc: true
 date: 2025-04-30
+draft: true
+
+mathjax: true
 ---
 
 # LIS란?

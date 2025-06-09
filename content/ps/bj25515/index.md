@@ -1,10 +1,8 @@
 ---
-title: "[백준] 25515 G4 트리 노드 합의 최대값"
+title: "백준 25515 G4 트리 노드 합의 최대값"
 date: 2025-04-16
 toc: true
-ps:
-  site: 백준
-  id: 25515
+mathjax: true
 ---
 
 # 알고리즘 설명
@@ -83,8 +81,6 @@ ps:
 
 이에 가장 적절한 알고리즘은 단연 DFS이다.
 
-코드는 아래와 같다.
+# 코드
 
-{{< ch "<h3>코드</h3>" >}}
-{{< hlc "assets/code.cc" "cpp" >}}
-{{</ ch >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}

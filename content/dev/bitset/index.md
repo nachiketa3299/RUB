@@ -1,7 +1,11 @@
 ---
-title: "[C++] 비트 마스크"
+title: "비트 마스크"
+
+categories: ["C++", "자료구조"]
+
 date: 2025-05-01
 lastmod: 2025-05-05
+
 toc: true
 ---
 
@@ -119,6 +123,8 @@ cout << b << '\n';
 | `^`, `^=` | XOR |
 | `<<`, `<<=` | Left Shift |
 | `>>`, `>>=` | Right Shift |
+
+<br>
 
 {{<admo type="NOTE">}}
 

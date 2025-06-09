@@ -1,11 +1,9 @@
 ---
-title: "[백준] 1715 G4 카드 정렬하기"
+title: "백준 1715 G4 카드 정렬하기"
 date: 2025-03-22
 lastmod: 2025-03-24
 toc: true
-ps:
-  site: 백준
-  id: 1715
+mathjax: true
 ---
 
 # 잘못된 접근과 올바른 접근
@@ -50,4 +48,4 @@ ps:
 
 # 코드
 
-{{< hlc "assets/code.cc" "cpp" >}}
+{{< hls source="assets/code.cc" syntax="cpp" >}}

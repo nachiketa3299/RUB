@@ -1,7 +1,9 @@
 ---
-title: "[유니티] 유니티 핵심 클래스"
+title: "유니티 핵심 클래스"
 date: 2025-03-08
+categories: ["Unity"]
 toc: true
+plantuml: true
 ---
 
 # 개요

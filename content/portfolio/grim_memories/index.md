@@ -1,20 +1,10 @@
 ---
-title: "그림 메모리즈"
+title: "그림 메모리즈 프로젝트"
 date: 2025-01-24
 toc: true
 
-project:
-  type: team
-  order: 0
-  start_date: "2024-10"
-  end_date: "진행 중"
-  position: 
-    - "메인 프로그래머"
-    - "PM"
-  size: 8
-  genres:
-    - 1인칭 방탈출
-  github: https://github.com/WHALE59/Project_BM
+plantuml: true
+mathjax: true
 ---
 
 <br>
@@ -39,39 +29,45 @@ project:
 
 ## 1인칭 캐릭터 컨트롤러 구현
 
-```mermaid
-stateDiagram
-	direction LR
-	[*] --> Idle
-	Idle --> [*]
+{{<caption text="Locomotion 상태 다이어그램" noparse="true">}}
 
-	state Jog {
-		direction LR
-		[*] --> NormalJog
-		[*] --> CrouchedJog
-		[*] --> WalkedJog
+{{<puml>}}
+left to right direction
+[*] --> Idle
+Idle --> [*]
 
-		NormalJog --> [*]
-		NormalJog --> CrouchedJog
-		NormalJog --> WalkedJog
+Idle --> Jog
+Jog --> Idle
 
-		CrouchedJog --> [*]
-		CrouchedJog --> NormalJog
+state Jog {
+  [*] --> NormalJog
+  [*] --> CrouchedJog
+  [*] --> WalkedJog
 
-		WalkedJog --> [*]
-		WalkedJog --> NormalJog
-		WalkedJog --> CrouchedJog
-	}
+  NormalJog --> [*]
+  NormalJog --> CrouchedJog
+  NormalJog --> WalkedJog
 
-	Idle --> Jog
-	Jog --> Idle
-```
+  CrouchedJog --> [*]
+  CrouchedJog --> NormalJog
+
+  WalkedJog --> [*]
+  WalkedJog --> NormalJog
+  WalkedJog --> CrouchedJog
+}
+{{</puml>}}
+
+{{</caption>}}
 
 캐릭터의 이동 상태를 효율적으로 관리하고, 각 상태에 따라 다양한 이동 효과(예: 발소리, 카메라 떨림 효과)를 유연하고 체계적으로 적용할 수 있는 구조를 설계하는 것이 목표였습니다.
 
 이를 위해 메인 이동 컴포넌트 `LocomotiveAction`의 4가지 배타적 이동 상태와 그에 따른 행동들을 명확히 선별하고 관리하였습니다. 또한, 해당 상태들의 변경  시점을 다른 컴포넌트들이 쉽게 인지할 수 있도록 관찰자 패턴을 적용하였습니다.
 
-![Locomotion System](images/LocomotionSystem.jpg "Locomotion 시스템 개괄")
+{{<caption text="Locomotion 시스템 개괄">}}
+
+![Locomotion System](images/LocomotionSystem.jpg)
+
+{{</caption>}}
 
 이동 상태가 변경되면 이동에 따른 충격의 강도와 빈도가 동적으로 조정됩니다. 충격 발생을 처리하는 컴포넌트는 관찰자 패턴을 통해 해당 정보가 필요한 다른 컴포넌트에게 알립니다. 카메라 충격이나 발소리 재생과 같은 구체적인 효과를 담당하는 컴포넌트는 이를 구독하면서 자신의 효과를 적용합니다. 이러한 구조는 컴포넌트간 결합도를 낮추고, 새로운 효과를 추가하거나 기존 효과를 수정 및 제거하는 작업을 용이하게 만들어 주었습니다. 
 
@@ -81,7 +77,9 @@ stateDiagram
 
 이러한 설계는 카메라 흔들림을 하드코딩하는 것보다, 에디터에서 쉽게 수정하고 테스트할 수 있는 환경을 제공했습니다. 
 
-{{< ytb "https://www.youtube.com/embed/wIU7-DIbJHs?si=O6OLzsyhpoMB1-HY" "각 상태별 이동 충격의 발생을 디버그 모드에서 시각화하는 영상" >}}
+{{<caption text="각 상태별 이동 충격의 발생을 디버그 모드에서 시각화하는 영상" noparse="true">}}
+{{< youtube id="wIU7-DIbJHs" class="ytb" >}}
+{{</caption>}}
 
 ## 상호작용 시스템 구현
 
@@ -110,21 +108,34 @@ stateDiagram
 * 상호작용을 감지하는 콜라이더의 형태는 상호작용 오브젝트의 메쉬의 형태와 관련이 없을 수도 있다.
 * 여러 상호작용 오브젝트들끼리 공유하는 상태가 존재하기는 하지만, 전이하는 상태와 행동이 기본적으로 매우 다르다.
 
-![Interactable Editor Example](images/InteractableExample.png "상호작용 오브젝트 'GirlsChest'의 예시")
+{{<caption text="상호작용 오브젝트 'GirlsChest'의 예시">}}
+
+![Interactable Editor Example](images/InteractableExample.png "")
+
+{{</caption>}}
 
   
-{{< ytb "https://www.youtube.com/embed/jboTbFeA7Ys?si=RhgfaL5SJVG6ItEp" "완성된 상호작용 시스템" >}}
+{{<caption text="완성된 상호작용 시스템" noparse="true">}}
+{{< youtube id="jboTbFeA7Ys" class="ytb">}}
+{{</caption>}}
 
 ## FMOD Unity를 활용한 사운드 시스템 구축
 
 사운드 디자이너 분과 게임에서 더 질좋은 사운드 경험을 위해 FMOD Unity를 사용하기로 협의하였습니다.  FMOD Event 디자인의 일부에 참여하였고, 전체 게임의 사운드 프로그래밍을 담당하였습니다.
 
-![FMOD Example](images/FMODExample.png "바닥의 재질과 이동 상태에 따라 다른 발소리 세트를 재생하도록 디자인된 FMOD Event")
+{{<caption text="바닥의 재질과 이동 상태에 따라 다른 발소리 세트를 재생하도록 디자인된 FMOD Event">}}
+
+![FMOD Example](images/FMODExample.png)
+
+{{</caption>}}
 
 FMOD Unity를 사용하는 것은 디자이너 분과 저 모두 처음이었지만, 서로 주도적으로 학습한 후 워크플로우를 구축하였습니다. 그래서 작업 영역이 서로 충돌하지 않으면서, 서로의 피드백이 빠르게 반영되어 멋진 작업물이 나올 수 있어 기뻤습니다.
 
+{{<caption text="발소리 시스템" noparse="true">}}
 
-{{< ytb "https://www.youtube.com/embed/b9WOPtTx5T4?si=K8wXhzubScijbV1x" "발소리 시스템" >}}
+{{< youtube id="b9WOPtTx5T4" class="ytb">}}
+
+{{</caption>}}
 
 발소리 시스템
 
@@ -140,11 +151,15 @@ FMOD Unity를 사용하는 것은 디자이너 분과 저 모두 처음이었지
 
 Unity의 Localization 패키지를 이용하여 스트링 테이블로 최종 플레이어에게 전달되는 모든 문자열을 관리하였습니다. 그리고 해당 문자열 테이블을 Google SpreadSheet로 Push / Pull 할 수 있게 만들어 기획자분들이 쉽게 내용을 변경하고 게임에 적용할 수 있게 시스템을 구축하였습니다.
 
-![Localization](images/LocalizationExample.png "구글 시트를 사용한 Localization String 워크플로우")
+{{<caption text="구글 시트를 사용한 Localization String 워크플로우">}}
+![Localization](images/LocalizationExample.png)
+{{</caption>}}
 
 다음처럼 중첩된 Smart String을 적용하여 Localized UI를 구현하였습니다.
 
-![Localization-In-Game](images/LocalizationIngame.png "인게임")
+{{<caption text="인게임">}}
+![Localization-In-Game](images/LocalizationIngame.png)
+{{</caption>}}
 
 ## 개발 편의를 위한 에디터 도구 개발
 
@@ -152,14 +167,18 @@ Unity의 Localization 패키지를 이용하여 스트링 테이블로 최종 �
 
 저희는 커밋을 하기 전에 빌드를 해서 문제없이 돌아가야 한다는 규칙이 있었는데요, 비개발 직군이 해당 테스트를 쉽게 진행하기 위해 에디터 ~ 빌드게임 간 스크립트를 작성했습니다.
 
-![CharacterStart](images/CharacterStart.png "모든 씬의 시작 지점을 테스트해 볼 수 있는 Character Start")
+{{<caption text="모든 씬의 시작 지점을 테스트해 볼 수 있는 Character Start">}}
+
+![CharacterStart](images/CharacterStart.png)
+
+{{</caption>}}
 
 `CharacterStart` 클래스는 Unreal Engine에서 작업했던 경험을 되살려 작성하였습니다. 에디터에서 작동할 때, 상주 씬이 중첩 로드되지 않아 있다면, 이 오브젝트는 상주 씬을 자동으로 중첩 로드하고 자신이 속한 씬을 활성 씬으로 만든 후, 상주씬의 캐릭터 오브젝트의 트랜스폼을 자신의 트랜스폼과 일치시킵니다.
 
 빌드 게임에서는 약간 다르게 작동합니다. 
 상주 씬에 게임의 시작 월드 씬을 로드하는 로직이 들어있기 때문에, 상주 씬은 게임에서 가장 먼저 로드되어야 하고, 빌드 인덱스 0번이어야 합니다. 이를 비개발 팀원에게 이해시키는 것은 어렵고 필요하지도 않았기 때문에 상주 씬의 빌드 인덱스를 강제로 0번으로 만드는 `PreBuilder` 네이티브 C# 클래스를 작성하였습니다.
 
-```csharp
+```csharp{lineNos=false}
 using System.Linq;
 
 using UnityEditor;
@@ -243,11 +262,18 @@ public static class PreBuilder
 }
 ```
 
-![StartScene](images/StartScene.png "Start Scene Selector")
+
+{{<caption text="Start Scene Selector">}}
+
+![StartScene](images/StartScene.png)
+
+{{</caption>}}
 
 또한 빌드 게임의 진입 월드 씬을 설정할 수 있도록 에디터 전용 메뉴를 만들었고, 해당 메뉴에서 Scriptable Object의 내용을 수정하는 방식으로 상주 씬이 빌드 게임의 시작 시점에 어떤 씬을 로드할 지 결정할 수 있도록 만들었습니다. 상주 씬의 `SceneLoadManager`가 해당 Scriptable Object에 기록된 씬을 게임 시작 시점에 로드하고, 해당 씬의 `CharacterStart`를 찾아 플레이어를 이동시키고 초기화합니다.
 
-![DeveloperOverlay](images/DevOverlay.png "Developer Overlay")
+{{<caption text="Developer Overlay">}}
+![DeveloperOverlay](images/DevOverlay.png)
+{{</caption>}}
 
 이에 더해 여러 씬의 테스트를 빌드 게임에서 편하게 만들기 위해, Developer Overlay를 만들어 빌드 게임에서 씬 전환을 쉽게 만들었습니다.
 다른 팀원들, 특히 비개발 팀원들에게 반응이 좋았던 기능입니다.

@@ -14,7 +14,7 @@
 
   <p><span class="rub-section-text">{{ upper .Section }}</span> 섹션에 속하는 모든 게시물:</p>
 
-  {{ partial "post_list.html" (dict "context" . "section" .Section)}}
+  {{ partial "post_list.html" (dict "ctx" . "section" .Section)}}
 
   {{"# 전체 데이터베이스" | markdownify}}
 
