@@ -7,6 +7,7 @@ date: 2025-05-01
 lastmod: 2025-05-05
 
 toc: true
+mathjax: true
 ---
 
 # C++에서 비트 마스킹
