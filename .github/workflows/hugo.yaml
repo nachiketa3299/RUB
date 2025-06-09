@@ -45,6 +45,8 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+      - name: Check if themes exists
+        run: ls -al ./themes/
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
