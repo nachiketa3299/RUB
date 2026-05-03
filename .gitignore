@@ -1,3 +1,5 @@
 public/
 resources/
 *.exe
+hugo_stats.json
+.hugo_build.lock
