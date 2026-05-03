@@ -29,22 +29,10 @@ taxonomies:
 capitalizeListTitles: false
 
 services:
+  disqus:
+    shortname: 'even-idiots-can-make-games'
   googleAnalytics:
     id: G-TF4NJ6XV1W
-
-params:
-  giscus:
-    repo: "nachiketa3299/RUB"
-    repoId: "R_kgDOMCjEUg"
-    category: "Announcements"
-    categoryId: "DIC_kwDOMCjEUs4C8O0b"
-    mapping: "pathname"
-    strict: "0"
-    reactionsEnabled: "1"
-    emitMetadata: "0"
-    inputPosition: "bottom"
-    theme: "light"
-    lang: "ko"
 
 markup:
   highlight:
