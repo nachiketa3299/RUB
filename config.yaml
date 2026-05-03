@@ -19,7 +19,7 @@ menu:
       url: "/all-posts/"
       weight: 5
 
-languageCode: ko-kr
+locale: ko-kr
 timezone: Asia/Seoul
 
 taxonomies:

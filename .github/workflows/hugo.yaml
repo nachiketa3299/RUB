@@ -6,6 +6,10 @@ on:
   push:
     branches:
       - master
+  # Runs on pull requests targeting master so we can validate builds before merge
+  pull_request:
+    branches:
+      - master
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,7 +36,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.141.0
+      HUGO_VERSION: 0.161.1
     steps:
       - name: Install Hugo CLI
         run: |
@@ -65,6 +69,8 @@ jobs:
 
   # Deployment job
   deploy:
+    # Only deploy on push to master; pull_request runs validate the build only
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
