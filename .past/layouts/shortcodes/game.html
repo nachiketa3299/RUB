@@ -1,7 +1,0 @@
-{{ $game_name := .Get 0 }}
-{{ $game_url := printf "games/%s" $game_name | relURL }}
-
-<iframe class="game-player" src="{{ $game_url }}" frameborder="1" scrolling="no"
-  width="{{ .Get 1 }}"
-  height="{{ .Get 2 }}"
-></iframe>
