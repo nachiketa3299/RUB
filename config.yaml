@@ -6,8 +6,8 @@ menu:
     - name: "Home"
       url: "/"
       weight: 1
-    - name: "PS"
-      url: "/ps/"
+    - name: "Sections"
+      url: "/sections/"
       weight: 2
     - name: "Categories"
       url: "/categories/"
@@ -44,7 +44,7 @@ markup:
     lineNos: true
     lineNoStart: 1
     tabWidth: 2
-    style: monokai
+    style: vs
   tableOfContents:
     startLevel: 1
     endLevel: 3
