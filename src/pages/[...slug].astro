@@ -25,8 +25,8 @@ const backLabel = backToPortfolio ? '← 포트폴리오' : '← 글 목록';
   <nav><a href={backHref}>{backLabel}</a></nav>
   <article>
     <h1>{post.data.title}</h1>
-    {post.data.date && <time datetime={post.data.date.toISOString()}>{post.data.date.toISOString().slice(0, 10)}</time>}
-    {post.data.updated && <small> · 수정 {post.data.updated.toISOString().slice(0, 10)}</small>}
+    {post.data.date && <time datetime={post.data.date.toISOString()}>생성 {post.data.date.toISOString().slice(0, 10)}</time>}
+    {post.data.updated && <time datetime={post.data.updated.toISOString()}> 수정 {post.data.updated.toISOString().slice(0, 10)}</time>}
     {projects.length > 0 && (
       <section aria-labelledby="portfolio-projects">
         <h2 id="portfolio-projects">프로젝트</h2>
@@ -34,12 +34,12 @@ const backLabel = backToPortfolio ? '← 포트폴리오' : '← 글 목록';
       </section>
     )}
     {headings.length > 3 && (
-      <details>
-        <summary>목차</summary>
+      <nav aria-label="목차">
+        <p>목차</p>
         <ul>
           {headings.filter(({ depth }) => depth <= 2).map(({ slug, text }) => <li><a href={`#${slug}`}>{text}</a></li>)}
         </ul>
-      </details>
+      </nav>
     )}
     <Content />
   </article>

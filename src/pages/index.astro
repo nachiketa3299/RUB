@@ -13,6 +13,7 @@ const tags = [...new Set(['일반', '코딩테스트', ...posts.flatMap(({ data 
   <nav aria-label="글 분류">
     {tags.map((tag, index) => <><a href={`#tag-${index}`}>{tag}</a>{' '}</>)}
   </nav>
+  <p><img src={`${import.meta.env.BASE_URL}logo.jpg`} width="300" height="300" alt="블로그 캐릭터 그림" /></p>
   {tags.map((tag, index) => (
     <section aria-labelledby={`tag-${index}`}>
       <h2 id={`tag-${index}`}>{tag}</h2>
