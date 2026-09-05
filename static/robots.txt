@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://nachiketa3299.github.io/RUB/sitemap.xml

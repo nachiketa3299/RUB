@@ -1,5 +1,7 @@
-public/
-resources/
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
 *.exe
-hugo_stats.json
-.hugo_build.lock

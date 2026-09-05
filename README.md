@@ -1,38 +1,31 @@
-* hugo 로 관리하는 블로그입니다.
-* no-style-please 테마를 수정해서 사용중입니다.
+# RUB
 
-# TODO
+Astro로 만드는 작은 Markdown 블로그. 글 목록과 글 페이지만 있습니다.
 
-우선순위로 정렬
+Node.js 24 LTS 권장.
 
-* [ ] Admonition 구현
-* [ ] "뒤로" 버튼이 플로팅하도록
-* [ ] ToC 를 접을 수 있게
-* [ ] ToC와 타이틀에서 섹션 리스트 인덴테이션 간격 수정
-* [ ] 모바일에서 헤딩 크기가 비일관적인 점 수정
-* [ ] 중첩된 섹션에 대해서
-* [ ] PS 문제 정보 CSS 수정
-* [ ] PS 싱글 목록을 표로 변환
+```sh
+npm ci
+npm run dev
+npm run build
+```
 
-# DONE
+개발 주소: `http://localhost:4321/RUB/`
 
-* [x] TOC 렌더 후킹해서 CSS 수정 - TOC가 우측에 호버링 되도록 (이거 방법 찾아봐야 함) (250313)
-* [x] CSS 클래스 정리 (250313)
-* [x] 일관성 없는 html/md Shortcode / MD 후킹 정리 (250313)
-* [x] MD Link Shortcode 작성 (250313)
-* [x] SEO를 위해 `keyword` 및 `description` 프론트매터 추가 및 헤더 생성
-* [x] 빌드 사이트에서 헤더 앵커 여백이 없는 문제 (250312)
-* [x] PlantUML 렌더링 지원 추가(250308)
-* [x] 검색 엔진 서비스에 걸리도록 (250308)
-* [x] 마지막 수정 날짜가 존재한다면, 가장 높은 정렬 순위를 갖고 그것을 표시하도록 (250308)
-* [x] 기존 Tistory 서비스 삭제 (250302)
-* [x] Google Analytics 추가 (250225)
-* [x] 댓글 시스템(Disqus) (250225)
-* [x] PS 싱글 페이지 헤더 생성 (250225)
-* [x] Footer에 Github 리포로 가는 링크 추가 (250225)
-* [x] 코드 폰트 가독성 좋은 것으로 수정 (250224)
-  * Iosevka를 IBM Plex Mono로 변경
-* [x] 메인 메뉴 가독성 향상 (250224)
-* [x] 이미지 캡션 설정 (250224)
-* [x] 프로젝트 섹션 정리 (250224)
-* [x] 파비콘 설정 (250224)
+`posts/글-이름.md`를 만들면 목록에 나타납니다.
+
+```md
+---
+title: 글 제목
+date: 2026-09-05
+---
+
+여기에 글을 씁니다.
+```
+
+- `draft: true`인 글은 배포하지 않습니다. `updated`는 수정일입니다.
+- 기존 글의 `slug`는 예전 주소를 유지합니다. 새 글에서는 생략할 수 있습니다.
+- 첨부파일은 `public/media/`에 두고 `![설명](/media/이미지.png)`로 연결합니다.
+- 일반 Markdown, HTML, `$수식$`, `$$수식$$`, `plantuml` 코드 블록을 지원합니다. PlantUML은 HTTPS 렌더링 서버를 사용합니다.
+- 화면과 CSS는 `src/layouts/Page.astro`에 있습니다. 외부 웹폰트와 사이트 JavaScript는 없습니다.
+- `master`에 push하면 GitHub Actions가 빌드해서 GitHub Pages에 배포합니다. 배포 주소는 `astro.config.mjs`에서 설정합니다.
