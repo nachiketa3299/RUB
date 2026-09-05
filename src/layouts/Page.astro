@@ -34,11 +34,11 @@ const name = 'Even Idiots Can Make Game';
   th, td { border: 1px solid; padding: .25rem .5rem; }
   blockquote { margin-inline: 1rem; padding-left: 1rem; border-left: 2px solid #aaa; }
   figure { margin-inline: 0; }
-  figcaption, time { color: #555; }
+  figcaption { color: #555; }
   .katex { display: inline-block; max-width: 100%; overflow-x: auto; vertical-align: middle; }
   math[display="block"] { display: block; overflow-x: auto; padding-block: .25rem; }
-  .posts { list-style: none; padding: 0; }
-  .posts li { display: grid; grid-template-columns: 6.5em 1fr; gap: 1rem; margin-bottom: .6rem; }
+  .posts { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: .5rem; list-style: none; padding: 0; }
+  .posts li { display: grid; grid-template-columns: subgrid; grid-column: 1 / -1; margin-bottom: .6rem; }
   .posts time { white-space: nowrap; font-variant-numeric: tabular-nums; }
   details { margin-block: 1rem; }
   summary { cursor: pointer; }
