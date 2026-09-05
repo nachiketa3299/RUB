@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import PostList from '../components/PostList.astro';
 import Page from '../layouts/Page.astro';
 
 export async function getStaticPaths() {
@@ -11,14 +12,27 @@ export async function getStaticPaths() {
 interface Props { post: CollectionEntry<'posts'> }
 const { post } = Astro.props;
 const { Content, headings } = await render(post);
+const isPortfolioIndex = (post.data.slug ?? post.id) === 'portfolio';
+const projects = isPortfolioIndex
+  ? await getCollection('posts', ({ id, data }) => !data.draft && data.portfolio && id !== post.id)
+  : [];
+const backToPortfolio = post.data.portfolio && !isPortfolioIndex;
+const backHref = `${import.meta.env.BASE_URL}${backToPortfolio ? 'portfolio/' : ''}`;
+const backLabel = backToPortfolio ? '← 포트폴리오' : '← 글 목록';
 ---
 
 <Page title={post.data.title} description={post.data.description}>
-  <nav><a href={import.meta.env.BASE_URL}>← 글 목록</a></nav>
+  <nav><a href={backHref}>{backLabel}</a></nav>
   <article>
     <h1>{post.data.title}</h1>
     {post.data.date && <time datetime={post.data.date.toISOString()}>{post.data.date.toISOString().slice(0, 10)}</time>}
     {post.data.updated && <small> · 수정 {post.data.updated.toISOString().slice(0, 10)}</small>}
+    {projects.length > 0 && (
+      <section aria-labelledby="portfolio-projects">
+        <h2 id="portfolio-projects">프로젝트</h2>
+        <PostList posts={projects} />
+      </section>
+    )}
     {headings.length > 3 && (
       <details>
         <summary>목차</summary>
@@ -29,5 +43,5 @@ const { Content, headings } = await render(post);
     )}
     <Content />
   </article>
-  <p><a href={import.meta.env.BASE_URL}>← 글 목록</a></p>
+  <p><a href={backHref}>{backLabel}</a></p>
 </Page>

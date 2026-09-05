@@ -2,6 +2,7 @@
 title: 언리얼 랩스
 date: 2025-02-14
 slug: portfolio/unreal_labs
+portfolio: true
 ---
 
 ## 개요

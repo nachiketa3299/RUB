@@ -2,6 +2,7 @@
 title: '[모작] 똥피하기'
 date: 2025-03-03
 slug: gamejam/rdong
+portfolio: true
 ---
 
 [github](https://github.com/nachiketa3299/RDong)

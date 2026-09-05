@@ -2,6 +2,7 @@
 title: 그림 메모리즈 프로젝트
 date: 2025-01-24
 slug: portfolio/grim_memories
+portfolio: true
 ---
 
 <br>

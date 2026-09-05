@@ -2,6 +2,7 @@
 title: 먼치킨
 date: 2025-01-23
 slug: portfolio/munchkin
+portfolio: true
 ---
 
 # 프로젝트 개괄

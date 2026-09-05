@@ -1,0 +1,17 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props { posts: CollectionEntry<'posts'>[] }
+const posts = Astro.props.posts.toSorted((a, b) =>
+  (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0)
+  || a.data.title.localeCompare(b.data.title, 'ko'));
+---
+
+<ul class="posts">
+  {posts.map(({ id, data }) => (
+    <li>
+      <time datetime={data.date?.toISOString()}>{data.date?.toISOString().slice(0, 10) ?? '—'}</time>
+      <a href={`${import.meta.env.BASE_URL}${data.slug ?? id}/`}>{data.title}</a>
+    </li>
+  ))}
+</ul>

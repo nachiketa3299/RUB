@@ -4,7 +4,7 @@ import type { APIRoute } from 'astro';
 export const GET: APIRoute = async ({ site }) => {
   const escape = (text: string) => text.replace(/[<>&"']/g, (c) => `&#${c.charCodeAt(0)};`);
   const home = new URL(import.meta.env.BASE_URL, site).href;
-  const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  const posts = (await getCollection('posts', ({ data }) => !data.draft && !data.portfolio))
     .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
   const items = posts.map(({ id, data }) => {
     const link = escape(`${home}${data.slug ?? id}/`);

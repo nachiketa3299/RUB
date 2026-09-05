@@ -1,6 +1,7 @@
 ---
 title: '송재민: 포트폴리오'
 slug: portfolio
+portfolio: true
 ---
 
 # 소개

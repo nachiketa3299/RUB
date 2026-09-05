@@ -2,6 +2,7 @@
 title: 에일리언 프로젝트
 date: 2025-01-24
 slug: portfolio/alien
+portfolio: true
 ---
 
 # 프로젝트 개괄

@@ -2,6 +2,7 @@
 title: CAlgo
 date: 2025-02-24
 slug: portfolio/calgo
+portfolio: true
 ---
 
 [github](https://github.com/nachiketa3299/CAlgo)
