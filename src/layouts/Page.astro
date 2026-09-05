@@ -24,12 +24,27 @@ const name = 'Even Idiots Can Make Game';
 </html>
 
 <style is:global>
+  @font-face {
+    font-family: 'Fira Code';
+    src: url('../fonts/fira-code/FiraCode-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Fira Code';
+    src: url('../fonts/fira-code/FiraCode-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+  }
   body { max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; overflow-wrap: anywhere; }
   img, video, iframe { max-width: 100%; }
   img, video { height: auto; }
   .youtube { width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; }
+  pre, code { font-family: 'Fira Code', Consolas, monospace; font-size: .875em; }
   pre { padding: .75rem; overflow-x: auto; line-height: 1.45; }
-  pre code { overflow-wrap: normal; }
+  pre code { font-size: inherit; overflow-wrap: normal; }
   table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
   th, td { border: 1px solid; padding: .25rem .5rem; }
   blockquote { margin-inline: 1rem; padding-left: 1rem; border-left: 2px solid #aaa; }

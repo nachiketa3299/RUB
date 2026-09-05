@@ -31,4 +31,5 @@ tags: [일반, 코딩테스트]
 - 첨부파일은 `public/media/`에 두고 `![설명](/media/이미지.png)`로 연결합니다.
 - 일반 Markdown, HTML, `$수식$`, `$$수식$$`, `plantuml` 코드 블록을 지원합니다. PlantUML은 HTTPS 렌더링 서버를 사용합니다.
 - 화면과 CSS는 `src/layouts/Page.astro`에 있습니다. 외부 웹폰트와 사이트 JavaScript는 없습니다.
+- 코드 글꼴은 함께 배포하는 [Fira Code 6.2](https://github.com/tonsky/FiraCode/releases/tag/6.2)입니다. 폰트와 라이선스는 `src/fonts/fira-code/`에 있습니다.
 - `master`에 push하면 GitHub Actions가 빌드해서 GitHub Pages에 배포합니다. 배포 주소는 `astro.config.mjs`에서 설정합니다.
